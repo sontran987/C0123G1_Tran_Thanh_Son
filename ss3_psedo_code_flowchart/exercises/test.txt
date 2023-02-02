@@ -1,0 +1,9 @@
+BEGIN
+cnt=0
+WHILE(cnt<1000)
+DO
+         DISPLAY"scooby"
+         cnt=cnt+1
+END DO
+END
+
