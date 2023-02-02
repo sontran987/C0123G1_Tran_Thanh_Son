@@ -1,2 +1,16 @@
-hello my thanh son
 
+BEGIN
+  Input N, a1,...,aN
+  a1=max,i=2
+  While (i>N)
+  Display "a max"
+  DO
+      If(ai>max)
+      ai=max
+      Else
+      i=i+1
+      END IF
+    i=i+1 
+  END DO
+
+END
