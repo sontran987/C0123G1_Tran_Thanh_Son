@@ -1,0 +1,5 @@
+BEGIN
+  INPUT " Điểm Toán, Điểm Lý, Điểm Hoá "
+    Average = (Math + Physics + Chemistry) / 3
+  DISPLAY Average
+END
