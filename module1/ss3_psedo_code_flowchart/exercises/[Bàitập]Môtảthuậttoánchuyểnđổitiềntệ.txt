@@ -1,0 +1,5 @@
+BEGIN
+  Input "tiền Đô la Mỹ"
+  Tiền Việt Nam = tiền Đô la Mỹ*23000
+  Display "Tiền Việt Nam"
+END
