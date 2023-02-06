@@ -3,27 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Form đơn giản</title>
+    <style>
+        input{
+            margin-top: 10px;
+            height: 20px;
+        }
+        h1{
+            background-color: orangered;
+            text-align: center;
+            color: white;
+
+        }
+        #email{
+            text-align-all: center;
+        }
+        #hobby{
+
+        }
+        #and{
+            background: khaki;
+        }
+
+
+    </style>
 </head>
 <body>
- <form action="" name="tạo form đơn giản">
+ <form action="" method="post" style="width:50%">
      <fieldset>
-         <legend>Sở Thích Của Bạn</legend>
-         <label for="yourname">Họ và tên</label>
-         <input type="text" id="yourname" name="name"><br><br>
-         <label for="email">Email</label>
-         <input type="email" id="email" name="email"><br><br>
-         <label for="hobby">Sở Thích</label><br>
-         <input type="checkbox" id="hobby" name="hobby"> Thể Thao
-         <input type="checkbox" name="hobby"> Âm Nhạc
-         <input type="checkbox">Đọc Sách <br>
-         <input type="checkbox">Lưới web
-         <input type="checkbox">Chơi game
-         <input type="checkbox">Điện ảnh <br>
-         <input type="checkbox">Du lịch <br>
-         <input type="submit" value="Gửi Thông Tin" name="Submit Form">
-         <input type="reset" value="Nhập Lại" name=" Reset Form">
+             <h1>SỞ THÍCH CỦA BẠN </h1>
+         <table>
+            <tr>
+             <th><label for="yourname"> <font color="#1e90ff"> Họ và tên:</font></label></th>
+             <th><input type="text" id="yourname" name="name"><br></th>
+            </tr>
+             <tr>
+             <th><label for="email"><font color="#1e90ff">Email:</font></label></th>
+             <th><input type="email" id="email" name="email"><br></th>
+             </tr>
+             <tr>
+             <th><label for="hobby"><font color="#1e90ff">Sở Thích</font></label></th>
+             <td><font color="orange">
+                 <input type="checkbox" id="hobby" name="hobby"> Thể Thao
+                 <input type="checkbox"  name="hobby"> Âm Nhạc
+                 <input type="checkbox" name="hobby">Đọc Sách <br>
+                 <input type="checkbox" name="hobby">Lưới web
+                 <input type="checkbox" name="hobby">Chơi game
+                 <input type="checkbox" name="hobby">Điện ảnh<br>
+                 <input type="checkbox" name="hobby">Du lịch <br>
+             </font></td>
+             </tr>
+             <tr>
+                 <th></th>
+                 <th><input type="submit" value="Gửi Thông Tin" name="Submit Form">
+             <input type="reset" value="Nhập Lại" name=" Reset Form"></tr></th>
+         </table>
      </fieldset>
- </form>
+ </form><br><hr>
+<form action="" method="post" style="width: 50%">
 
+    <div id="and">
+        <fieldset>
+            <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+            <label for="name"> <font color="blue">Họ và tên</font> </label>
+            <input type="text" id="name" name="uname"><br><br>
+            <label for="date"> <font color="blue"> Ngày sinh</font></label>
+            <input type="text" id="date" name="date"><br><br>
+            <label for="nam"> <font color="blue">Giới tính</font> </label>
+            <input type="radio" id="nam" name="gerder">Nam
+            <label for="Nu"></label>
+            <input type="radio" id="Nu" name="gerder">Nữ <br><br>
+            <label for="address"> <font color="blue" >Địa chỉ</font> </label>
+            <input type="text" id="address" name="address" style="height: 80px;width: 300px"><br><br>
+            <label for="class"><font color="blue">Lớp</font></label>
+            <select id="class" name="class">
+                <option value="class">-chọn Lớp-</option>
+            </select><br>
+            <label for="email2"> <font color="blue">Email</font></label>
+            <input type="email" id="email2" name="email"><br>
+            <label for="phone"> <font color="blue">Điện thoại</font></label>
+            <input type="text" id="phone" name="phone"><br>
+            <input type="submit" value="Đăng ký">
+            <input type="reset" value="Nhập lại">
+
+        </fieldset>
+    </div>
+
+
+
+</form>
 </body>
 </html>
