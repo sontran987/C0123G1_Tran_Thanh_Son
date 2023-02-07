@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<!--Demo JS-->
+<!--Viet chuong trinh hien thi ra danh sach cac so chia het cho 3, va so do nho hon 20-->
+<h1>Chuong trinh hien thi cac so chia het cho 3 va nho hon 20</h1>
+<button onclick="onClick()">Click me</button>
+
+<button onclick="alert('HELLO WORLD'); alert('HELLO WORLD AGAIN')">Click me again</button>
+
+<button onclick="onClickMeAgainAgain()">Click me again again</button>
+
+<div id="result"></div>
+
+<script>
+  var counter = 1;
+  var result = "";
+
+  function onClick() {
+    if (counter % 3 === 0) {
+      result += "<br/>" + counter;
+      document.getElementById("result").innerHTML = result;
+    }
+    if (counter <= 20) {
+      counter++;
+    }
+  }
+</script>
+
+<script>
+  var resultFromConfirm;
+
+  function onClickMeAgainAgain() {
+    resultFromConfirm = confirm("Do you love me?");
+    alert(resultFromConfirm);
+  }
+
+</script>
+
+<script>
+  var numb = prompt("Nhap tuoi cua ban");
+  alert(numb);
+
+  console.log('Age: ' + numb);
+  document.write('Age: ' + numb);
+</script>
+</body>
+</html>
