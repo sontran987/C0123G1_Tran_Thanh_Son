@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4 timGiaTriLonNhat</title>
+</head>
+<body>
+<h1>Tim gia tr lon nhat</h1>
+<input type="number" id="somot" placeholder="số thứ nhất">
+<input type="number" id="sohai" placeholder="số thứ hai">
+<input type="number" id="soba" placeholder="số thứ ba">
+<button onclick="result()">Result</button>
+<p id="value"></p>
+</body>
+</html>
+<script>
+  function result() {
+    let one = document.getElementById("somot").value;
+    let two = document.getElementById("sohai").value;
+    let three = document.getElementById("soba").value;
+    if (one>two && one>three)
+        document.getElementById("value").innerHTML="value lớn nhất" + one;
+      else if (two>three)
+          document.getElementById("value").innerHTML="value lớn nhất" + two;
+      else
+          document.getElementById("value").innerHTML="value lớn nhất" + three;
+  }
+</script>

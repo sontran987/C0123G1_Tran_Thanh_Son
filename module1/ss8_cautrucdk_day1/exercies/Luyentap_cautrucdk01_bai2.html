@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<input type="text" id="old" placeholder="Nhap tuoi" name="">
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+  function result() {
+    let old = document.getElementById("old").value;
+    if (old<16)
+      document.getElementById("print").innerHTML="Bạn không đủ điều kiện vào lớp 10";
+    else
+        document.getElementById("print").innerHTML="Bạn đủ điêu kiện vào lớp 10"
+  }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<input type="number" id="somot" placeholder="nhap so dau tien">
+<input type="number" id="sohai" placeholder="nhap so thu hai"><br>
+<button onclick="check()">check</button><br><br>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function check() {
+    let one =document.getElementById("somot").value;
+    let two =document.getElementById("sohai").value;
+    if (one%two===0)
+      document.getElementById("result").innerHTML = "chia hết";
+    else
+      document.getElementById("result").innerHTML = "không chia hết";
+
+  }
+</script>

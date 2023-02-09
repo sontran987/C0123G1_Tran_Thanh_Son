@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5 xep hang hoc luc</title>
+</head>
+<body>
+<input type="number"id="mouth"placeholder="Điểm Miệng" min="1" max="10">
+<input type="number"id="minute"placeholder="Điểm 15 Phút" min="1" max="10">
+<input type="number"id="period"placeholder="Điểm 1 Tiết" min="1" max="10">
+<input type="number"id="mid_term"placeholder="ĐIểm giữa kỳ" min="1" max="10">
+<input type="number"id="end"placeholder="Điểm cuối kỳ" min="1" max="10"><br>
+<button onclick="ranking()">Ranking</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function ranking() {
+    let mouth=+document.getElementById("mouth").value;
+    let minute=+document.getElementById("minute").value;
+    let period=+document.getElementById("period").value;
+    let mid_term=+document.getElementById("mid_term").value;
+    let end=+document.getElementById("end").value;
+    let toTal = (mouth + minute + period + mid_term + end)/5;
+    let result;
+    if (toTal<5)
+      document.getElementById("result").innerHTML="Học lực yếu: " +toTal;
+    else if(toTal===5)
+      document.getElementById("result").innerHTML="Học Lực Trung Bình: " +toTal;
+    else if(toTal<10)
+      document.getElementById("result").innerHTML="Học Lực Khá: " +toTal;
+    else
+      document.getElementById("result").innerHTML="Học Giỏi" + toTal;
+
+  }
+</script>

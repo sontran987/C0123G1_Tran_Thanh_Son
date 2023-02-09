@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+<label for="hoa_hong">Tien Hoa Hong:</label>
+<input type="text" id="hoa_hong"><br><br>
+<label for="sale">Doanh so:</label>
+<input type="text" id="sale">
+<button onclick="calCulate()">Tính toán</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function calCulate() {
+        let hoaHong =document.getElementById("hoa_hong").value;
+        let sale =document.getElementById("sale").value;
+        let result =hoaHong*sale;
+        document.getElementById("result").innerHTML="Tiền hoa Hồng:" + result + "VNĐ";
+    }
+</script>
