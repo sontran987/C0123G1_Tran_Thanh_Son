@@ -28,9 +28,9 @@
 <script>
 function result() {
     let loan =+document.getElementById("loan").value;
-    let interest =+document.getElementById("interest").value;
+    let inTerest =+document.getElementById("interest").value;
     let cycle =+document.getElementById("cycle").value;
-    let a =loan*Math.pow(1+interest,cycle)
+    let a =loan*Math.pow(1+inTerest,cycle)
 document.getElementById("print").innerHTML="Số tiền bạn phải trả: " + a +"VNĐ"
 }
 </script>

@@ -6,15 +6,16 @@
 </head>
 <body>
 <label for="age">Nhập Tuổi:</label>
-<input id="age" type="text">
+<input id="age" type="number">
 <button onmousedown="result()">Result</button>
 <p id="print"></p>
 </body>
 </html>
 <script>
     function result() {
-        let age=parseInt(document.getElementById("age").value);
-        if (age<120 && age>0)
+        let age=Number(document.getElementById("age").value);
+        let a = Number.isInteger(age)
+        if (a && age<120 && age>0  )
             document.getElementById("print").innerHTML="là Tuổi của một người";
         else
             document.getElementById("print").innerHTML="Không phải người";
