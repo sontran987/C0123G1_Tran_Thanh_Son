@@ -15,9 +15,10 @@
     function result() {
         let age=Number(document.getElementById("age").value);
         let a = Number.isInteger(age)
-        if (a && age<120 && age>0  )
+        if (a && age<120 && age>0  ){
             document.getElementById("print").innerHTML="là Tuổi của một người";
-        else
+    }else{
             document.getElementById("print").innerHTML="Không phải người";
+        }
     }
 </script>

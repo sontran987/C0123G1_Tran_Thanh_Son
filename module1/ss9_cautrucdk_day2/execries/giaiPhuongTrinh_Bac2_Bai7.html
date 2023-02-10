@@ -22,13 +22,14 @@ function result() {
     let b =+document.getElementById("inputb").value;
     let c =+document.getElementById("inputc").value;
     let delta = Math.pow(b,2)-4*a*c
-    if (delta ===0)
+    if (delta ===0){
         document.getElementById("print").innerHTML="Phương trình có nghiệm kép: " + "x= " + -b/2*a;
-    else if (a ===0)
+}else if (a ===0){
         document.getElementById("print").innerHTML="Phương Trình có nghiệm khi a khác 0"
-    else if (delta >0)
+}else if (delta >0){
         document.getElementById("print").innerHTML="Phương Trình có 2 nghiệm: " + "x1=" + -b+Math.sqrt(delta)/(2*a) +"x2= " + -b-Math.sqrt(delta)/(2*a);
-    else
-        document.getElementById("print").innerHTML="Phương trình vô nghiệm: "
+}else {
+        document.getElementById("print").innerHTML = "Phương trình vô nghiệm: "
+    }
 }
 </script>

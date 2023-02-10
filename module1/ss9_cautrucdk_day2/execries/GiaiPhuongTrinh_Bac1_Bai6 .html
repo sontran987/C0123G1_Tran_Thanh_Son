@@ -18,11 +18,12 @@
     let soa = +document.getElementById("soA").value;
     let sob = +document.getElementById("soB").value;
     let test =-sob/soa;
-    if ( soa !==0)
-        document.getElementById("print").innerHTML="PT có nghiệm là: " + test;
-        else if (soa ===0 && sob!==0)
-            document.getElementById("print").innerHTML="PT vô số nghiệm";
-        else
-        document.getElementById("print").innerHTML="PY vô nghiệm";
+    if ( soa !==0) {
+        document.getElementById("print").innerHTML = "PT có nghiệm là: " + test;
+    }else if (soa === 0 && sob !== 0){
+            document.getElementById("print").innerHTML = "PT vô số nghiệm";
+  }else{
+            document.getElementById("print").innerHTML = "PY vô nghiệm";
+    }
   }
 </script>
