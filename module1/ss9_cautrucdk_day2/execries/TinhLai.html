@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Lãi Kép</title>
+    <style>
+        form{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset>
+<h3 style="color: brown; background: aqua">Tính lãi kép khi vay ngân hàng </h3>
+<label for="loan">Số Tiền Bạn vay:</label><br>
+<input id="loan" type="text"><br>
+<label for="interest">lãi vay:</label><br>
+<input id="interest" type="text"><br>
+<label for="cycle">chu kỳ:</label><br>
+<input id="cycle" type="text"><br>
+<button onmouseover="result()">Result</button><br>
+<p id="print"></p>
+    </fieldset>
+</form>
+</body>
+</html>
+<script>
+function result() {
+    let loan =+document.getElementById("loan").value;
+    let interest =+document.getElementById("interest").value;
+    let cycle =+document.getElementById("cycle").value;
+    let a =loan*Math.pow(1+interest,cycle)
+document.getElementById("print").innerHTML="Số tiền bạn phải trả: " + a +"VNĐ"
+}
+</script>

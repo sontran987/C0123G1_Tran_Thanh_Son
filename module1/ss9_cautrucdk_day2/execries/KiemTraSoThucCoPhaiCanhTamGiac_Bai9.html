@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra có phải cạch của tam giác</title>
+</head>
+<body>
+<label for="inputa">Nhập cạnh a</label>
+<input id="inputa" type="number">
+<label for="inputb">Nhập cạnh b</label>
+<input id="inputb" type="number">
+<label for="inputc">Nhập cạnh c</label>
+<input id="inputc" type="number"><br>
+<button onclick="result()"> Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+    function result() {
+        let a=+document.getElementById("inputa").value;
+        let b=+document.getElementById("inputb").value;
+        let c=+document.getElementById("inputc").value;
+        if (a>0 && b>0 &&c >0 && a+b>0 && b+c>0 && a+c>0)
+            document.getElementById("print").innerHTML="Là Tam Giác";
+        else
+            document.getElementById("print").innerHTML="Không phải tam giác";
+
+
+    }
+</script>

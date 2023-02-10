@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<label for="edge">Cạnh hình vuông:</label>
+<input id="edge" type="text" >
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+    function result() {
+        let a =+document.getElementById("edge").value;
+        let area = Math.pow(a,2);
+        document.getElementById("print").innerHTML="S: " + area +" m2"
+
+    }
+</script>

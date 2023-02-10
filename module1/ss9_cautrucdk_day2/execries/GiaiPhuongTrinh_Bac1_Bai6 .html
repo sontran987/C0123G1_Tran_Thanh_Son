@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải Phương Trình Bậc 1</title>
+</head>
+<body>
+<label for="soA">Nhập Số a</label>
+<input id="soA" type="text">
+<label for="soB">Nhập Số b</label>
+<input id="soB" type="text"><br>
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+  function result() {
+    let soa = +document.getElementById("soA").value;
+    let sob = +document.getElementById("soB").value;
+    let test =-sob/soa;
+    if ( soa !==0)
+        document.getElementById("print").innerHTML="PT có nghiệm là: " + test;
+        else if (soa ===0 && sob!==0)
+            document.getElementById("print").innerHTML="PT vô số nghiệm";
+        else
+        document.getElementById("print").innerHTML="PY vô nghiệm";
+  }
+</script>

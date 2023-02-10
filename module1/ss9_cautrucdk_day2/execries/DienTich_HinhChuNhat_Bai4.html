@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Chữ Nật</title>
+</head>
+<body>
+<label for="length">Chiều dài:</label>
+<input id="length" type="text" placeholder="a" >
+<label for="width"></label>
+<input id="width" type="text" placeholder="b"><br>
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+  function result() {
+    let length =document.getElementById("length").value;
+    let width =document.getElementById("width").value;
+    let area =length*width;
+    document.getElementById("print").innerHTML="S: " + area + "m2";
+  }
+</script>

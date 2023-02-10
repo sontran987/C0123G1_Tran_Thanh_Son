@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện Tích Tam Giác Vuông</title>
+</head>
+<body>
+<label for="canha">cạnh kề A</label>
+<input type="text" id="canha"><br>
+<label for="canhb"> cạnh kề B</label>
+<input type="text" id="canhb">
+<button onclick="change()">Kết Quả</button><br>
+<p id="result"></p>
+</body>
+</html>
+<script>
+  function change() {
+    let canha =+document.getElementById("canha").value;
+    let canhb =+document.getElementById("canhb").value;
+    let aera = (canha*canhb)/2;
+    document.getElementById("result").innerHTML="S: " + aera +"m2"
+
+  }
+</script>

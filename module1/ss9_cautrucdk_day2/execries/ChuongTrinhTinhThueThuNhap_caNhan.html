@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thue thuNhap ca nhan</title>
+
+</head>
+<body>
+<h3 style="color: red">Thuế Thu Nhập Cá Nhân Phải Nộp</h3>
+<label for="inCom">Thu Nhập tính thuế:</label><br>
+<input type="text" id="inCom"><br>
+<label for="tax">Thuế suất:</label><br>
+<input type="text" id="tax"><br><br>
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+    function result() {
+        let incom = Number(document.getElementById("inCom").value)
+        let tax = Number(document.getElementById("tax").value)
+        switch (tax) {
+            case 5:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+            break;
+            case 10:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+                break;
+            case 15:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+                break;
+            case 20:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+                break;
+            case 25:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+                break;
+            case 30:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+                break;
+            default:
+                document.getElementById("print").innerHTML = "Thuế Phải Nộp: " + incom * tax / 100 +"VNĐ"
+
+        }
+    }
+</script>

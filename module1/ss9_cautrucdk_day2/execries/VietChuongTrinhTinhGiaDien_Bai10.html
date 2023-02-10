@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cách tính điện</title>
+</head>
+<body>
+<label for="letTers">lượng điện tiêu thụ:</label><br>
+<input id="letTers" type="number"><br>
+<!--<label for="money"Đơn giá ></label>-->
+<!--<input id="money" type="number">-->
+<button onclick="result()">Result</button>
+<p id="print"></p>
+</body>
+</html>
+<script>
+    function result() {
+        let sochu =+document.getElementById("letTers").value;
+        // let sotien =+document.getElementById("money").value;
+        // let total =sochu*sotien;
+        if (sochu<50)
+        document.getElementById("print").innerHTML="Tiền điện: " + sochu*1678 +"VNĐ";
+        else if (sochu>=51 && sochu<=100)
+            document.getElementById("print").innerHTML="Tiền điện: " + sochu*1734 +"VNĐ";
+        else if (sochu>=101 && sochu<=200)
+            document.getElementById("print").innerHTML="Tiền điện: " + sochu*2014 +"VNĐ";
+        else if (sochu>=201 && sochu<=300)
+            document.getElementById("print").innerHTML="Tiền điện: " + sochu*2536 +"VNĐ";
+        else if (sochu>=301 && sochu<=400)
+            document.getElementById("print").innerHTML="Tiền điện: " + sochu*2834 +"VNĐ";
+        else
+            document.getElementById("print").innerHTML="Tiền điện: " + sochu*2927 +"VNĐ";
+
+
+    }
+</script>
