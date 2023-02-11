@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sinh bảng cửu chương</title>
+    <style>
+        table{
+            background-color: darkturquoise;
+            border: black;
+        }
+    </style>
+</head>
+<body>
+<h1>Bảng Sinh Cửu Chương </h1>
+<script>
+    let shark,i,j;
+    shark="<table border='1' width='300' cellspacing='0' cellpadding='10'>";
+    debugger;
+    for (i=1;i<=10;i++){
+        shark = shark +"<tr>";
+        for (j=1;j<=10;j++){
+            shark = shark + "<td>" + j +"x" + i + "=" + i*j + "</td>";
+        }
+        shark =shark +"</tr>";
+    }
+    shark = shark + "</table>";
+    document.write(shark);
+</script>
+</body>
+</html>

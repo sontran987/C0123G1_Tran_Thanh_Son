@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lấy Thông Tin Nhiệt Độ</title>
+</head>
+<body>
+<script>
+  function check(temPeraTure) {
+    let i
+     for ( i=temPeraTure;i<10000;i++){
+      if (i<20){
+        document.write("Yêu Cầu người Dùng Tăng Nhiệt Độ");
+        break;
+      }else if (i>100){
+        document.write("Yêu Cầu người dùng Giảm nhiệt độ");
+        break;
+      }else{
+        document.write("Nhiệt độ ổn định");
+        break;
+      }
+    }
+  }let temPeraTure=parseInt(prompt("Nhập nhiệt độ"));
+  check(temPeraTure);
+</script>
+</body>
+</html>
