@@ -13,13 +13,12 @@
 <body>
 <h1>Bảng Sinh Cửu Chương </h1>
 <script>
-    let shark,i,j;
-    shark="<table border='1' width='300' cellspacing='0' cellpadding='10'>";
+    let shark="<table border='1'>";
     debugger;
-    for (i=1;i<=10;i++){
+    for (let i=1;i<=10;i++){
         shark = shark +"<tr>";
-        for (j=1;j<=10;j++){
-            shark = shark + "<td>" + j +"x" + i + "=" + i*j + "</td>";
+        for (let j=1;j<=10;j++){
+            shark = shark + "<td>" + i +"x" + j + "=" + i*j + "</td>";
         }
         shark =shark +"</tr>";
     }

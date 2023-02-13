@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy viết một chương trình in ra các số từ 1 đến 100</title>
+</head>
+<body>
+<script>
+
+ for (let naturalNumBer = 1;naturalNumBer<100;naturalNumBer++){
+   if (naturalNumBer%3==0){
+     document.write("Fizz" +'<br>');
+   }else if (naturalNumBer%5==0){
+     document.write("Buzz" +'<br>');
+   }else if (naturalNumBer%3==0 && naturalNumBer%5==0){
+     document.write("FizzBuzz" +"<br>");
+   }else
+     document.write(naturalNumBer +"<br>");
+ }
+
+
+</script>
+</body>
+</html>

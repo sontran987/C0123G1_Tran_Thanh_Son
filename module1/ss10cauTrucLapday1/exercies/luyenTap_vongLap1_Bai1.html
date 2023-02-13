@@ -5,20 +5,15 @@
     <title>lặp biến Đếm</title>
 </head>
 <body>
-<button onclick="checkNumber()">check</button>
 <script>
-  function checkNumber() {
-    let i=1;
-    for (i;i<=100;i++){
-        if (i<99){
-            document.write(i +"<br>")
-        } else if (i === 99) {
-              alert("Đã Hoàn Thành");
-          } else {
-              document.write(i + "<br>");
-          }
-      }
-  }
+
+    for (let i=1;i<=100;i++) {
+        document.write(i+"<br>");
+        if (i === 99) {
+            alert("Đã Hoàn Thành");
+
+        }
+    }
 </script>
 </body>
 </html>
