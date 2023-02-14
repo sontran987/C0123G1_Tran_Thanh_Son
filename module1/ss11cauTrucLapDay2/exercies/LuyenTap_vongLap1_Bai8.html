@@ -8,7 +8,29 @@
 <button onclick="choi()">Chơi</button>
 <script>
 function choi() {
-  let randomNumBer
+  let randomNumBer=parseInt(prompt("Bạn muốn đoán số khoảng nào?"));
+  let numberRandom=Math.floor( Math.random()*randomNumBer);
+  console.log(numberRandom);
+  let number=parseInt(prompt("Nhập số bạn đoán?"));
+  let count=0;
+  while(number!==numberRandom){
+  count++;
+  if (count ==4){
+    alert("Bạn hết số lần đoán")
+    break;
+  }  else if (number<numberRandom){
+        alert("Số bạn đoán nhỏ hơn");
+  }else {
+      alert("số bạn đoán lớn hơn");
+  }
+    number =prompt("Nhập số bạn đoán?");
+
+    }
+    if (count == 4) {
+          document.write("Bạn hết số lần đoán");
+      } else {
+          document.write("Bạn đã đoán đúng số. Chúc mừng bạn!");
+}
 }
 </script>
 </body>

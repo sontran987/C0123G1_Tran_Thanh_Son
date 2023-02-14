@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</title>
+</head>
+<body>
+<script>
+    const H=10;
+    //cach1:
+    for (let i=0;i<H;i++){
+        for (let j=0;j<=i;j++){
+            document.write("*");
+        }
+    document.write("<br>");
+    }
+    document.write("<br>");
+    //cach2
+    for (let i=0;i<H;i++){
+        for (let j=H;j>i;j--){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    //cach3:
+    for (let i=0;i<H;i++){
+        for (let k=H;k>i;k--){
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j=0;j<=i;j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    //cach4:
+    for (let i=0;i<H;i++){
+        for (let k=0;k<=i;k++){
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j=H;j>i;j--){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>")
+    //cach5:
+    for (let i=1;i<=H;i++){
+        for (let k=H;k>=i;k--){
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j=1;j<=i*2-1;j++){
+                // document.write("*");
+           if (i==1||i==H||j==1||j==i*2-1){
+               document.write("*");
+           }else{
+               document.write("&nbsp;&nbsp;")
+           }
+
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+//cach6:
+    for (let i=0;i<=H;i++){
+        for (let j=0;j<=i;j++){
+            if (i==0||i==H||j==0||j==i){
+            document.write("*");
+            }else{
+                document.write("&nbsp;&nbsp;")
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
