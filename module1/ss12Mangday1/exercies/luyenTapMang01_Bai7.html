@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai7</title>
+</head>
+<body>
+<script>
+  let array =[123,32,3,23,223,23,30,32,23,2];
+  let element =+prompt("Nhập phần tử số nguyên V: ");
+  for (let x=0;x< array.length;x++){
+      if (element ===array[x]){
+          array.push([0]);
+          array.splice(x,1);
+      }
+  }document.write(array);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let array = [123, 32, 3, 23, 223, 23, 20, 32, 23, 2, 77];
+    let element = +prompt("Nhập phần tử số nguyên V: ");
+    let n=0;
+    for (let x = 0; x < array.length; x++) {
+        if (element === array[x]) {
+            n=1;
+            document.write("V is in the array");
+            break;
+        }
+    }if(n==0){
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

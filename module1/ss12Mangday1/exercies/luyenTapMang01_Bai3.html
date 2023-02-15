@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+<script>
+    let sphericalArray = [12, 40, 104, 15, 1760, 130, 104, 16, 210, 910];
+    let max = sphericalArray[0];
+    let medium = 0;
+    let sum = 0;
+    for (let x = 0; x < sphericalArray.length; x++) {
+        if (sphericalArray[x] > max) {
+            max = sphericalArray[x];
+        }
+        sum = sum + sphericalArray[x];
+        medium = sum / sphericalArray.length;
+    }
+    document.write("Giá trị lớn nhất: " + max);
+    document.write("<br>");
+    document.write("Giá trị trung bình: " + medium);
+</script>
+</body>
+</html>

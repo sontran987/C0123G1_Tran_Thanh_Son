@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+    //Bai1:
+    let myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString() + "<br>");
+    //Bai2:
+    let num = prompt("Bạn nhập số bạn muốn?");
+    // const num=window.prompt();
+    // let num = numBer.toString();
+    let result = [num[0]];
+    for (let x = 1; x < num.length; x++) {
+        if ((num[x - 1] % 2 === 0) && (num[x] % 2 === 0)) {
+            result.push('-', num[x]);
+        } else {
+            result.push(num[x]);
+        }
+    }
+    document.write(result.join(''));
+    document.write("<br>");
+    //Bai3:
+    let str = prompt("enter what you want?");
+    let capitalize = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+    let resultTr = [];
+    for (let x = 0; x < str.length; x++) {
+        if (capitalize.indexOf(str[x]) !== -1) {
+            resultTr.push(str[x].toLowerCase());
+        } else if (lowerCase.indexOf(str[x]) !== -1) {
+            resultTr.push(str[x].toUpperCase());
+        } else {
+            resultTr.push(str[x]);
+        }
+    }
+    document.write(resultTr.join(''));
+</script>
+</body>
+</html>

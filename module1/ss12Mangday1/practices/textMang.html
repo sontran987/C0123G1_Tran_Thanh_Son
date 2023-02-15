@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+​
+</body>
+<script>
+    // NHAP CHUOI 10 SO
+    let mangSoNguyen = [10];
+    for (let i = 0; i < 10; i++) {
+        let phanTu = Number(prompt("Vui lòng nhập phần tử thứ " + (i + 1) + " / 10 phần tử"));
+        mangSoNguyen[i] = phanTu;
+    }
+    document.write("Mảng số nguyên bạn đã nhập theo thứ tự giảm dần : " + mangSoNguyen+"<br>")
+
+    for(let i =0; i< 10;i++) {
+        for (let j = i + 1; j< 10;j++) {
+            if (mangSoNguyen[j] < mangSoNguyen[i]) {
+                let bienTam = mangSoNguyen[i]
+                mangSoNguyen[i] = mangSoNguyen[j]
+                mangSoNguyen[j] = bienTam
+            }
+        }
+    }
+    document.write("Mảng số được sắp xếp : " + mangSoNguyen)
+    document.write("<br/>")
+</script>
+</html>

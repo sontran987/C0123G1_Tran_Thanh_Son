@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+<label for="string">Nhập từ: </label>
+<input id="string" type="text" placeholder="nhập từ bạn muốn tìm">
+<button onclick="panDemic()">Dịch</button>
+<p id="result"></p>
+<script>
+    function panDemic() {
+        //orange
+        let arrEng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+        let arrVie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+        let string = document.getElementById("string").value;
+        let indexEng = 0;
+        let result = "";
+        for (let i = 0; i < arrEng.length; i++) {
+            if (string == arrEng[i]) {
+                indexEng = i; //2
+                for (let j = 0; j < arrVie.length; j++) {
+                    if (indexEng == j) { //2 == 2
+                        result = arrVie[j]; // táo
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+        for (let i = 0; i < arrVie.length; i++) {
+            if (string == arrVie[i]) {
+                indexEng = i; //2
+                for (let j = 0; j < arrEng.length; j++) {
+                    if (indexEng == j) { //2 == 2
+                        result = arrEng[j]; // táo
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
