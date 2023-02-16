@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = [10];
+    for (let i = 0; i < 10; i++) {
+        let phanTu = Number(prompt("Vui lòng nhập Mảng 1 phần tử thứ " + (i + 1) + " / 10 phần tử"));
+        mangSoNguyen[i] = phanTu;
+    }
+    document.write("mảng số nguyên nhập A :" + mangSoNguyen);
+    document.write("<br>");
+
+    let mangSoNguyen2 =  [10];
+    for (let i = 0; i < 10; i++) {
+        let phanTu = Number(prompt("Vui lòng nhập Mảng 2 phần tử thứ " + (i + 1) + " / 10 phần tử"));
+        mangSoNguyen2[i] = phanTu;
+    }
+    document.write("mảng số nguyên nhập B: " + mangSoNguyen2);
+    document.write("<br>");
+    let mangSoNguyen3 =  [20]
+    for(let i = 0; i < 10;i++) {
+        mangSoNguyen3[i] = mangSoNguyen[i]
+        mangSoNguyen3[i+10] = mangSoNguyen2[i]
+    }
+
+    document.write("mảng số nguyên C: " + mangSoNguyen3);
+    document.write("<br>");
+</script>
+</body>
+</html>

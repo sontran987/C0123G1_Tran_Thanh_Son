@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let array=[];
+        for (let x=0;x<10;x++){
+           let entry = prompt("Nhập các ký tự bạn muốn:");
+            array[x]=entry;
+        }
+    let count=0;
+    for (let x=0;x<array.length;x++){
+        if (array[x]>=0){
+            count++;
+        }
+    }document.write(array.toString());
+    document.write("<br>");
+    document.write( "Các ký tự số :"+ count);
+</script>
+</body>
+</html>

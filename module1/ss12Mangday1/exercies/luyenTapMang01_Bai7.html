@@ -6,14 +6,33 @@
 </head>
 <body>
 <script>
-  let array =[123,32,3,23,223,23,30,32,23,2];
-  let element =+prompt("Nhập phần tử số nguyên V: ");
-  for (let x=0;x< array.length;x++){
-      if (element ===array[x]){
-          array.push([0]);
-          array.splice(x,1);
-      }
-  }document.write(array);
+    let array = [123, 32, 3, 23, 223, 23, 30, 32, 23, 2];
+    let element = +prompt("Nhập phần tử số nguyên V: ");
+    let viTriV = -1;
+    // for (let x = 0; x < array.length; x++) {
+    //     if (array[x] === element) {
+    //         array.push([0]);
+    //         array.splice(x, 1);
+    //     }
+    // }document.write("Mảng số nguyên khi mình xoá:"+ array);
+    // document.write("<br>");
+    for (let x = 0; x < array.length; x++) {
+        if (array[x] === element) {
+            viTriV = x;
+            if (viTriV !== -1) {
+                for (let i = viTriV; i < array.length; i++) {
+                    if (i !== array.length - 1) {
+                        array[i] = array[i + 1];
+                    } else {
+                        array[i] = 0;
+                    }
+                }
+                document.write("Mảng số nguyên khi xoá: " + array);
+            }
+        }
+    }
+
+
 </script>
 </body>
 </html>

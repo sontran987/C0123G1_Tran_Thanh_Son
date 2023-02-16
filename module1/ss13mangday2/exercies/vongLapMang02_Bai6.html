@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let array = [5];
+    for (let x = 0; x < 5; x++) {
+        element = prompt("nhập các kí tự");
+        array[x] = element;
+    }
+    let arr = [];
+    for (let i in array) {
+        for (let j =0;j<array[i];j++) {
+            if (array[i][j] === "-") {
+                arr.push("_")
+            }else{
+                arr.push(array[j]);
+            }
+        }
+    }
+
+    document.write("Mảng ký tự nhập vào: " + array);
+    document.write("<br>");
+    document.write("Thay đổi ký tự'-'thành '_':" + arr);
+
+
+</script>
+</body>
+</html>
