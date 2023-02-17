@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f6c6ef69-f7ce-4ab0-9183-92cbefff05ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/HamKiemTraSoNguyenTo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSuDungHam01_Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSuDungHam01_Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSuDungHam02_Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSuDungham01_Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSuDungham02_Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTapTaovaSudungHam01_Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/exercies/luyenTaptaovaSuDungHam01_Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss14HamDay1/practices/text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss10cauTrucLapday1/exercies/SoNguyenTo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10cauTrucLapday1/exercies/SoNguyenTo.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LrK57F97tW8H5oMPclQW7oiFtQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/C0123G1_Tran_Thanh_Son/module1/ss14HamDay1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6c6ef69-f7ce-4ab0-9183-92cbefff05ea" name="Changes" comment="" />
+      <created>1676623574315</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676623574315</updated>
+      <workItem from="1676623575408" duration="1209000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

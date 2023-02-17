@@ -6,30 +6,30 @@
 </head>
 <body>
 <script>
-  // function checkNT() {
-  //     let numBer =20;
+    // function checkNT() {
+    //     let numBer =20;
     //đếm số ước của số đang xét;
     let countSNT = 0; //Đếm xem đã đủ số lượng nguyên tố cần in ra chưa ;
-    for (let i =2;countSNT<20;i++){
-      // if (countSNT < 20){
+    for (let i = 2; countSNT < 20; i++) {
+        // if (countSNT < 20){
         let count = 0;
-        for (let j = 1;j<=i;j++){
-          if (i % j == 0){
-            count +=1;
-          }
+        for (let j = 1; j <= i; j++) {
+            if (i % j == 0) {
+                count += 1;
+            }
         }
-        if (count == 2){
+        if (count == 2) {
             countSNT += 1;
-          document.write(i+"<br>");
+            document.write(i + "<br>");
 
         }
         // count =0;
 
-      // }
+        // }
     }
 
-  // }
-  // checkNT();
+    // }
+    // checkNT();
 </script>
 </body>
 </html>

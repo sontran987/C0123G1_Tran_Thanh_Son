@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let numberR = +prompt("nhập Bán kính hình tròn");
+    let acreage;
+    let perimeter;
+
+    function calculate(radius) {
+        acreage = 3.14 * Math.pow(radius, 2);
+        perimeter = 2 * 3.14 * radius;
+    }
+
+    calculate(numberR);
+    document.write("Diện tích hình tròn: S= " + acreage + "cm");
+    document.write("<br>");
+    document.write("Chu vi hình tròn: C= " + perimeter + "cm");
+</script>
+</body>
+</html>

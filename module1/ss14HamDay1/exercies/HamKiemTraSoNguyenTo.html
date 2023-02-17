@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function check(number) {
+        let count = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            // return true;
+            document.write(number + "Là số nguyên tố");
+        } else {
+            // return false;
+            document.write(number + "Không là số nguyên tố");
+        }
+
+    }
+
+    let enterNumber = prompt("Nhập số bạn muốn kiểm tra: ");
+    check(enterNumber);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let starName = prompt("Nhập tên sao bạn muốn: ");
+    let stars1;
+    let consTellation2;
+
+    function lookForStars(stars) {
+        stars1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        consTellation2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let location = -1;
+        for (let i = 0; i < stars1.length; i++) {
+            if (stars === stars1[i]) {
+                location = i;
+                document.write(consTellation2[i]);
+            }
+        }
+        if (location === -1) {
+            document.write("không tìm thấy sao bạn muốn tìm");
+        }
+
+
+        //
+        // stars1===consTellation2;
+        // for (let i = 0; i < stars1.length; i++){
+        //     if (stars===stars1[i]){
+        //       document.write(consTellation2[i]) ;
+        //     }else {
+        //         document.write("không tìm thấy sao bạn muốn tìm");
+        //         break;
+        //     }
+        // }
+
+
+    }
+
+    lookForStars(starName);
+</script>
+</body>
+</html>
