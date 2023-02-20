@@ -5,28 +5,36 @@
     <title>Title</title>
 </head>
 <body>
-<!--<h1>Add New Product</h1>-->
-<!--<input id>-->
+<label for="product"><h1>Add New Product</h1></label>
+<input id="product" type="text" placeholder="New Product">
+<button id="add" style="background-color: green;color: white">Add</button>
+<br>
+<!--<label for="display"><h1>Display All Product</h1></label>-->
+<!--<table id="display" border="2">-->
+<!--    <tr>-->
+<!--        <th colspan="3">product Name</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td id="display()" colspan="5"></td>-->
+<!--        <td>-->
+<!--            <button id="fix" style="background-color: green;color: white">Edit</button>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <button style="background-color: green;color: white">Delete</button>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--</table>-->
 <script>
-    let listOfProducts = [
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        ['đồ ăn', 'thức uống', 'đồ dùng']
-    ];
-
+    let shack="<table>";
+    shack="<tr>";
     function display(listOfProducts) {
-        let shack = "<table border=1>";
-
-            for (let i = 0; i < listOfProducts.length; i++) {
-                shack="<tr>";
-                for (let j = 0; j < listOfProducts[i].length; j++) {
-                document.write("<td>"+listOfProducts[i][j]+"</td>")
+        let listOfProduct = ['đồ ăn', 'thức uống', 'đồ dùng'];
+        for (let i = 0; i < listOfProducts.length; i++){
+            for (let j = 0; j < listOfProducts[i].length; j++) {
+                document.write( listOfProducts[i][j])
             }
-                shack="</tr>"
-            }
-
-shack="<table>"
+        }
     }
-    display(listOfProducts);
 </script>
 </body>
 </html>
