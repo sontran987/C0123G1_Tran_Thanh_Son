@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt("Nhập số nguyên bất kỳ:");
+    let number2 = +prompt("Nhập số nguyên bất kỳ:");
+    let number3 = +prompt("Nhập số nguyên bất kỳ:");
+
+    function check(num1, num2, num3) {
+        if (num1 < num2 && num1 < num3) {
+            return num1;
+        } else if (num2 < num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    document.write("Số nhỏ nhất: " + check(number1, number2, number3));
+</script>
+</body>
+</html>

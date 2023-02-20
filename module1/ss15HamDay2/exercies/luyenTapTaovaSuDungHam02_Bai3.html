@@ -5,6 +5,19 @@
     <title>Bài 3</title>
 </head>
 <body>
+<script>
+    let integer = +prompt("Nhâp số muốn kiểm tra giai thừa: ");
+    let facTorial = 1;
 
+    function check(number) {
+        for (let i = 1; i <= number; i++) {
+            facTorial *= i;
+        }
+        return facTorial;
+
+    }
+
+    document.write(check(integer));
+</script>
 </body>
 </html>

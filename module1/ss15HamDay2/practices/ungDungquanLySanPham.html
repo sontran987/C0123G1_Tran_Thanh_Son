@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Add New Product</h1>-->
+<!--<input id>-->
+<script>
+    let listOfProducts = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        ['đồ ăn', 'thức uống', 'đồ dùng']
+    ];
+
+    function display(listOfProducts) {
+        let shack = "<table border=1>";
+
+            for (let i = 0; i < listOfProducts.length; i++) {
+                shack="<tr>";
+                for (let j = 0; j < listOfProducts[i].length; j++) {
+                document.write("<td>"+listOfProducts[i][j]+"</td>")
+            }
+                shack="</tr>"
+            }
+
+shack="<table>"
+    }
+    display(listOfProducts);
+</script>
+</body>
+</html>

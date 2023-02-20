@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let arr = prompt("nhập ký tự bạn muốn: ");
+    let element = prompt("Nhập ký tự bạn kiểm tra: ");
+
+    function compareCharacter(ele, array) {
+        for (let i = 0; i < array.length; i++) {
+            if (ele === array[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            count = -1;
+        }
+        return "Số lần xuất hiện: " + count;
+    }
+
+    document.write(compareCharacter(element, arr));
+</script>
+</body>
+</html>
