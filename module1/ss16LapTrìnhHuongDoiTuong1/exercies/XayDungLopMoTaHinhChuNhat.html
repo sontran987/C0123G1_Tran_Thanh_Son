@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập Xây Dựng lớp Mô Tả Hình chữ Nhật</title>
+</head>
+<body>
+<canvas style="background-color: green" id="myCanvas" width="500" height="300"></canvas>
+<button onclick="change()">Thay Đổi Kích Thước</button>
+<p id="length"></p>
+<p id="width"></p>
+<p id="perimeter"></p>
+<p id="acreage"></p>
+<script>
+
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getLength() {
+            return this.length;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setLength(length) {
+            this.length = length;
+        }
+
+
+        getAcreage() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        drawCanvas(color) {
+            let canvas = document.getElementById("myCanvas");
+            let rectangle = canvas.getContext('2d');
+            rectangle.clearRect(0, 0, canvas.width, canvas.height);
+            rectangle.fillStyle = color;
+            rectangle.fillRect(20, 20, this.length, this.width);
+        }
+
+    }
+
+    let length = +prompt("Nhập chiều dài: ");
+    let width = +prompt("Nhập chiều rộng: ");
+    let myRectangle = new Rectangle(length, width);
+
+    function change() {
+        let length = +prompt("Nhập chiều dài Cần đổi: ");
+        let width = +prompt("Nhập chiều rộng Cần Đổi: ");
+        let color = prompt("màu Bạn Muốn: ");
+        myRectangle.setWidth(width);
+        myRectangle.setLength(length);
+        myRectangle.drawCanvas(color);
+        document.getElementById("length").innerHTML = "Chiều Dài: " + myRectangle.getLength() ;
+        document.getElementById("width").innerHTML = "Chiều Rộng: " + myRectangle.getWidth()+"m";
+        document.getElementById("perimeter").innerHTML = "chu vi: " + myRectangle.getPerimeter()+"m";
+        document.getElementById("acreage").innerHTML = "Diện tích: " + myRectangle.getAcreage()+"m2";
+    }
+
+
+
+</script>
+</body>
+</html>

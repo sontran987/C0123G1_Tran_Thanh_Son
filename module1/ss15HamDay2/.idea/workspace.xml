@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6c6ef69-f7ce-4ab0-9183-92cbefff05ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSudungHam02_Bai8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practices/ungDungquanLySanPham.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss13mangday2/exercies/vongLapMang02_Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13mangday2/exercies/vongLapMang02_Bai2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercies/luyenTapTaovaSuDungHam02_Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practices/ungDungquanLySanPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/practices/ungDungquanLySanPham.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/C0123G1_Tran_Thanh_Son/module1/ss12Mangday1",
+    "last_opened_file_path": "D:/codegym/C0123G1_Tran_Thanh_Son/module1/ss10cauTrucLapday1/exercies/SoNguyenTo.html",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,6 +57,7 @@
       <workItem from="1676846370694" duration="1614000" />
       <workItem from="1676855171171" duration="8333000" />
       <workItem from="1676863945115" duration="2386000" />
+      <workItem from="1676866538346" duration="13561000" />
     </task>
     <servers />
   </component>
