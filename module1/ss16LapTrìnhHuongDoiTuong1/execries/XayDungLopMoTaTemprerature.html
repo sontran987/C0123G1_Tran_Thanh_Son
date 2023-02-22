@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập Xây Dựng Lớp Mô Tả Temprerature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(poison) {
+
+            while (poison < -273) {
+                poison = prompt("Nhập lại nhiệt độ: ")
+            }
+            this.poison = poison;
+        }
+
+        getpoison() {
+            return this.poison;
+        }
+
+        getFahrenheit() {
+            return (9 / 5) * this.poison + 32;
+        }
+
+        getKelvin() {
+            return this.poison + 273.15;
+        }
+    }
+
+    let poison = +prompt("Nhập nhiệt độ: ");
+    let myTemperature = new Temperature(poison);
+    document.write("Độ C: " + myTemperature.getpoison() + " Độ C");
+    document.write("<br>");
+    document.write("Fahrenheit: " + "F= " + myTemperature.getFahrenheit() + " Độ F");
+    document.write("<br>");
+    document.write("Kelvin:  " + "Kelvin= " + myTemperature.getKelvin() + " Kelvin");
+</script>
+</body>
+</html>

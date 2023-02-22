@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onkeydown="gameBoard.moveNinja(event)">
+<canvas style="background-color: green" id="gameCanvas" width="500" height="500"></canvas>
+
+<script>
+  const GAMEBOARD_WIDTH = 500;
+  const GAMEBOARD_HEIGHT = 500;
+
+  const ORIENTATION_LEFT = "left";
+  const ORIENTATION_RIGHT = "right";
+  const ORIENTATION_UP = "up";
+  const ORIENTATION_DOWN = "down";
+
+  const NINJA_WIDTH = 59;
+  const NINJA_HEIGHT = 86;
+
+  const DEFAULT_NINJA_X_POSITION = 100;
+  const DEFAULT_NINJA_Y_POSITION = 100;
+  const DEFAULT_NINJA_ORIENTATION = ORIENTATION_DOWN;
+  const DEFAULT_NINJA_SPEED = 20;
+</script>
+</body>
+</html>
