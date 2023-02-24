@@ -6,20 +6,6 @@
 </head>
 <body>
 <script>
-    // let a = [];
-    // let b = [];
-    // let sum = 0;
-    // let n = +prompt("Nhap chieu dai mang:");
-    // for (let i = 0; i < n; i++) {
-    //     a.push(+prompt("Nhap cac ky tu trong mang:"));
-    // }
-    // for (let i = 0; i < a.length; i++) {
-    //     sum += a[i];
-    //     b[i] = sum;
-    // }
-    // document.write("Mang a la: " + a + "<br>" + "prefixSums la:" + b);
-
-    //Bài 2:
     let arrA = [];
     let arrB = [];
     let otherValue = [];
@@ -28,15 +14,21 @@
     for (let i = 0; i < siseA; i++) {
         arrA.push(+prompt("Nhap cac số trong mang c:"));
     }
+
     for (let i = 0; i < siseB; i++) {
         arrB.push(+prompt("Nhap cac số trong mang d:"));
 
     }
-
+// let checkExist=false;
     for (let i = 0; i < siseB; i++) {
-       if (arrA.indexOf(arrB[i])===-1&&otherValue.indexOf(arrB[i])===-1){
-           otherValue.push(arrB)
-       }
+        if (arrA.indexOf(arrB[i]) === -1) {
+            // checkExist=true;
+
+        // }else{
+        //     checkExist=false;
+            otherValue.push(arrB[i]);
+        }
+
     }
     document.write("Phần tử khác nhau trong mảng là: " + otherValue);
 </script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let sum = 0;
+    let n = +prompt("Nhap chieu dai mang:");
+    for (let i = 0; i < n; i++) {
+        a.push(+prompt("Nhap cac ky tu trong mang:"));
+    }
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+        b[i] = sum;
+    }
+    document.write("Mang a la: " + a + "<br>" + "prefixSums la:" + b);
+
+
+</script>
+</body>
+</html>

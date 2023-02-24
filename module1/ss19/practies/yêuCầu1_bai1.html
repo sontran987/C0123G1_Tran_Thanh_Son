@@ -6,23 +6,20 @@
 </head>
 <body>
 <script>
-    let length = +prompt("Nhập chiều dài:");
-    let weidth = +prompt("Nhập chiều rộng:");
-    let shack = "";
-    for (let i = 1; i <= weidth; i++) {
-        for (let j = 1; j <= length; j++) {
-            if (i === 1 || i === weidth) {
-                shack += "*";
-            } else if (j === 1 || j ===length ) {
-                shack += "*";
-
-            } else {
-                shack += "&ensp;";
-            }
-        }
-        shack += "<br>";
+    let salary = +prompt("Nhập lương của nhân viên (Đồng):");
+    let tax = 0;
+    let netsalary=0;
+    if (salary < 7000000) {
+        tax = salary * 5 / 100;
+    } else if (salary >= 7000000 && salary < 15000000) {
+        tax = salary * 10 / 100;
+    } else if (salary >= 15000000) {
+        tax = salary * 20 / 100;
     }
-    document.write(shack);
+    netsalary=salary-tax;
+    document.write("Tiền thuế phải trả là:"+tax +"Đồng"+"<br>"+
+    "Tiền còn lại được nhận là:"+netsalary+"Đồng");
 </script>
+
 </body>
 </html>
