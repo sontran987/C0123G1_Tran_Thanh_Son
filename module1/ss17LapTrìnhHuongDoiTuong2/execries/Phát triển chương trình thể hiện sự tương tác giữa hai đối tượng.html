@@ -5,18 +5,24 @@
     <title>Bài Tập</title>
 </head>
 <body>
-<button onclick="on()">Bật Đèn</button>
-<button onclick="off()"> Tắt Đèn</button>
+<button id="swtn" onclick="on()">Bật</button>
 <p id="result"></p>
 <script>
-    class ElectricLamp {
+    class Lamp {
         constructor(status) {
             this.status = status;
         }
 
-        getStatus() {
-            return this.status;
+        turnOn() {
+            this.status = true;
+            return " Đèn Bật";
         }
+
+        turnOff() {
+            this.status = false;
+            return "Đèn Tắt";
+        }
+
     }
 
     class SwitchButton {
@@ -24,49 +30,40 @@
             this.status = status;
             this.lamp = lamp;
         }
-
-        getStatus() {
-            return this.status;
-        }
-
-        setStatus(status) {
-            this.status = status;
-        }
-
-        getLammp() {
-            return this.lamp;
-        }
-
-        setLamp(lamp) {
-            this.lamp = lamp;
-        }
-
-        connectToLamp(Electriclamp) {
-            return this.lamp = Electriclamp;
+        connectToLamp(lamp){
+            this.lamp=lamp;
         }
 
         switchOff() {
-            this.lamp.status = " Đèn Tắt";
+            this.lamp.turnOff();
             return this.status = false;
         }
 
         switchOn() {
-            this.lamp.status = " Đèn Bật";
+            this.lamp.turnOn();
             return this.status = true;
         }
     }
 
-    let electricLamp1 = new ElectricLamp(false);
+    let electricLamp1 = new Lamp(false);
     let switchButton1 = new SwitchButton(electricLamp1, false);
 
     function on() {
-        switchButton1.switchOn();
-        document.getElementById("result").innerHTML = electricLamp1.getStatus();
+        if (!switchButton1.status) {
+            switchButton1.switchOn();
+            document.getElementById("swtn").innerText = "Tắt";
+            document.getElementById("result").innerHTML = electricLamp1.turnOn();
+
+        }else{
+            switchButton1.switchOff();
+            document.getElementById("swtn").innerText="Bật"
+            document.getElementById("result").innerHTML = electricLamp1.turnOff();
+
+        }
     }
 
     function off() {
-        switchButton1.switchOff();
-        document.getElementById("result").innerHTML = electricLamp1.getStatus();
+
     }
 </script>
 </body>

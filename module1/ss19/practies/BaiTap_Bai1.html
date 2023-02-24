@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let lengthN =+prompt("Nhập độ  dài mảng: ");
+  let array=[];
+  let sum=0;
+  for (let i=0;i<lengthN;i++){
+    array.push(+prompt("Nhập các số nguyên cho mảng:"));
+  }
+  document.write("Mảng của bạn là: "+array.join(","));
+  for (let i=0;i<lengthN;i++){
+    if (i%2!==0 && array[i]%2===0){
+      sum+=array[i];
+    }
+  }
+  document.write("Tổng phần tử chẵn là: "+sum);
+</script>
+</body>
+</html>

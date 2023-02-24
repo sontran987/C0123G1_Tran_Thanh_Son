@@ -113,13 +113,15 @@
 
     function adamEatApple() {
         adam.eat(apple1);
-        document.getElementById("adam").innerHTML = "Adam ăn táo: " + "<br>" + "Quả táo còn: " + apple1.getWeight() + "Đơn vị: " + "<br>" +
+        document.getElementById("adam").innerHTML = "Adam ăn táo: " + "<br>" +
+            "Quả táo còn: " + apple1.getWeight() + "Đơn vị: " + "<br>" +
             "Cân nặng của Adam là: " + adam.getWeight() + "Đơn vị";
     }
 
     function evaEatApple() {
         eva.eat(apple1);
-        document.getElementById("eva").innerHTML = "Eva ăn táo" + "<br>" + "Quả táo còn: " + apple1.getWeight() + "Đơn vị" + "<br>" +
+        document.getElementById("eva").innerHTML = "Eva ăn táo" +
+            "<br>" + "Quả táo còn: " + apple1.getWeight() + "Đơn vị" + "<br>" +
             "Cân nặng của Eva là: " + eva.getWeight() + "Đơn vị";
     }
 </script>

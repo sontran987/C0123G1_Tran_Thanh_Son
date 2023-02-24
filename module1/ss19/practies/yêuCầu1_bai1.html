@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Nhập chiều dài:");
+    let weidth = +prompt("Nhập chiều rộng:");
+    let shack = "";
+    for (let i = 1; i <= weidth; i++) {
+        for (let j = 1; j <= length; j++) {
+            if (i === 1 || i === weidth) {
+                shack += "*";
+            } else if (j === 1 || j ===length ) {
+                shack += "*";
+
+            } else {
+                shack += "&ensp;";
+            }
+        }
+        shack += "<br>";
+    }
+    document.write(shack);
+</script>
+</body>
+</html>

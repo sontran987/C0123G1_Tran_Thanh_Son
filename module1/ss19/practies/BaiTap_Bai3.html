@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số lượng phần tử: ");
+    let charac = [];
+    for (let i = 0; i < n; i++) {
+        charac[i] = +prompt("Nhập phần thử thứ " + (i + 1));
+    }
+
+    function array(character) {
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < character.length; i++) {
+            let n = character[0] - character[1];
+            let m = character[1] - character[0];
+            if (character[i + 1] - character[i] === m) {
+                count1++;
+            } else if (character[i] - character[i + 1] === n) {
+                count2++;
+            }
+        }
+        if (count1 === character.length - 1
+            || count2 === character.length - 1) {
+            alert("True");
+        } else {
+            alert("False");
+        }
+    }
+
+    array(charac);
+</script>
+</body>
+</html>

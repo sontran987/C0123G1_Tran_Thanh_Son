@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Độ dài mảng: ");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i]=+prompt("Nhap cac phan tu:") ;
+    }
+    document.write("Mảng các phần tử: " +arr);
+    document.write("<br>");
+    let count=0;
+    for (let i = 0; i < n/2; i++) {
+        if (arr[i] === arr[arr.length - 1 - i]) {
+            count++;
+        }
+    }
+    if(count === Math.round(n/2)){
+        document.write("OK");
+    }else{
+        document.write("NO");
+    }
+</script>
+</body>
+</html>

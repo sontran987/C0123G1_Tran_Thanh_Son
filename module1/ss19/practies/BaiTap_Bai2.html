@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let lengthArr=+prompt("Nhập độ dài mảng: ");
+  let array=[];
+  let countEven=0;
+  let countOdd=0;
+  for (let i=0;i<lengthArr;i++){
+    array.push(+prompt("nhập số nguyên vào mảng: "));
+  }
+  document.write("Mảng của bạn vừa nhập là: "+array);
+  for (let i=0;i<lengthArr;i++){
+    if(array[i]%2===0){
+      countEven++;
+    }else{
+      countOdd++;
+    }
+  }
+  if (countEven===countOdd){
+    alert("OK");
+  }else{
+    alert("NO");
+  }
+</script>
+</body>
+</html>
