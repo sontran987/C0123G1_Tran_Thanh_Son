@@ -6,16 +6,25 @@
 </head>
 <body>
 <script>
-  let n=+prompt("nhập độ dài mảng: ");
-  let arr=[];
-  for (let i=0;i<n;i++){
-    arr[i]=prompt("Nhập các phần tử cho mảng: ");
-    while (arr[i]===arr){
-      arr[i]=prompt("Nhập lại phần tử cho mảng: ");
+    let n = +prompt("nhập độ dài mảng: ");
+    let arr = [];
+    for (let i = 0; i < n ; i++) {
+        let checkExist;
+        let e;
+        do {
+            checkExist=false;
+            e = prompt("Nhập các phần tử cho mảng: "+(i+1));
+            if(arr.indexOf(e)===-1){
+                checkExist=true;
+            }
+        }while (!checkExist);
+        arr.push(e);
 
     }
 
-  }
+
+
+    document.write(arr);
 </script>
 </body>
 </html>

@@ -18,14 +18,13 @@
         for (let i = 0; i < character.length; i++) {
             let n = character[0] - character[1];
             let m = character[1] - character[0];
-            if (character[i + 1] - character[i] === m) {
+            if (character[i + 1] - character[i] === m && character[i+1]>character[i]) {
                 count1++;
-            } else if (character[i] - character[i + 1] === n) {
+            } else if (character[i] - character[i + 1] === n && character[i+1]<character[i]) {
                 count2++;
             }
         }
-        if (count1 === character.length - 1
-            || count2 === character.length - 1) {
+        if (count1 === character.length - 1 || count2 === character.length - 1 ) {
             alert("True");
         } else {
             alert("False");
