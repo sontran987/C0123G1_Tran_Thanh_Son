@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = +prompt("Nhập chiều cao của tam giác :");
+    let shack = "";
+    for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= height; j++) {
+            if (i === height) {
+                shack += "*";
+            } else if (i === j || j === 1) {
+                shack += "*";
+            } else {
+                shack += "&ensp;";
+            }
+        }
+        shack += "<br>";
+    }
+    document.write(shack);
+</script>
+</body>
+</html>
