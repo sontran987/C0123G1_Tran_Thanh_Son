@@ -12,20 +12,15 @@
     let siseA = +prompt("Nhập độ dài của mảng a:");
     let siseB = +prompt("Nhập độ dài của mảng b:");
     for (let i = 0; i < siseA; i++) {
-        arrA.push(+prompt("Nhap cac số trong mang c:"));
+        arrA.push(+prompt("Nhap cac số trong mang a:"));
     }
 
     for (let i = 0; i < siseB; i++) {
-        arrB.push(+prompt("Nhap cac số trong mang d:"));
+        arrB.push(+prompt("Nhap cac số trong mang b:"));
 
     }
-// let checkExist=false;
     for (let i = 0; i < siseB; i++) {
         if (arrA.indexOf(arrB[i]) === -1) {
-            // checkExist=true;
-
-        // }else{
-        //     checkExist=false;
             otherValue.push(arrB[i]);
         }
 

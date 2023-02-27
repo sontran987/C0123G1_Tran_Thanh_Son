@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="select(menu,price)">order</button>
+<br>
+<script>
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let price = [10000, 10000, 20000, 15000, 10000, 15000];
+    for (let i = 0; i < menu.length; i++) {
+        document.write((i + 1) + ". " + menu[i] + "<br>");
+    }
+    document.write((menu.length + 1) + ". " + "Thoát gọi món." + "<br>");
+
+    function select(drinks, pric) {
+        let inName;
+        do {
+            inName = +prompt("Nhập số thứ tự của thức uống : ");
+            let unitPrice = "";
+            for (let i = 0; i < drinks.length; i++) {
+                if (inName === i + 1) {
+                    alert("Giá của " + drinks[i] + " bạn chọn là: " + pric[i]);
+                    let quantity = +prompt("Nhập số lượng: ");
+                    unitPrice = quantity * pric[i];
+                    alert("Tổng số tiền người dùng cần trả là: " + unitPrice);
+
+                }
+            }
+        } while (inName !== drinks.length + 1);
+        alert("Bạn đã dừng gọi món:");
+    }
+
+</script>
+</body>
+</html>

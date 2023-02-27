@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4,];
+
+    function maxFraction(numera, denomi) {
+        let max = 0;
+        let index;
+        for (let i = 0; i < numera.length; i++) {
+            if (numera[i] / denomi[i] > max) {
+                max = numera[i] / denomi[i];
+                index = i;
+            }
+        }
+        document.write(numera[index] + "/" + denomi[index] + " là phân số lớn nhất, có chỉ số là:" + index)
+
+    }
+
+    maxFraction(numerators, denominators);
+</script>
+</body>
+</html>

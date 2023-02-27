@@ -8,7 +8,7 @@
 <script>
     let salary = +prompt("Nhập lương của nhân viên (Đồng):");
     let tax = 0;
-    let netsalary=0;
+    let netsalary = 0;
     if (salary < 7000000) {
         tax = salary * 5 / 100;
     } else if (salary >= 7000000 && salary < 15000000) {
@@ -16,9 +16,9 @@
     } else if (salary >= 15000000) {
         tax = salary * 20 / 100;
     }
-    netsalary=salary-tax;
-    document.write("Tiền thuế phải trả là:"+tax +"Đồng"+"<br>"+
-    "Tiền còn lại được nhận là:"+netsalary+"Đồng");
+    netsalary = salary - tax;
+    document.write("Tiền thuế phải trả là:" + tax + "Đồng" + "<br>" +
+        "Tiền còn lại được nhận là:" + netsalary + "Đồng");
 </script>
 
 </body>
