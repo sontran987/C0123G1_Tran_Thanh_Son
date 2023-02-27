@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function change(name) {
+        name = name.trim().toLowerCase();
+       let nameArray = Array.from(name);
+        for (let i = 0; i < nameArray.length; i++) {
+            if (nameArray[i] === " " && nameArray[i + 1] === " ") {
+                for (let j = i + 1; j < nameArray.length; j++) {
+                    nameArray[j] = nameArray[j + 1];
+                }
+            }
+            i--;
+            nameArray.pop();
+        }
+        nameArray[0] = nameArray[0].toUpperCase();
+
+        for (let i = 0; i < nameArray.length; i++) {
+            if (nameArray[i] === " ") {
+                nameArray[i + 1] = nameArray[i + 1].toUpperCase();
+            }
+        }
+        return nameArray.join(" ");
+    }
+    let nameI = prompt(" Nhập tên của bạn: ");
+    document.write("Tên của bạn khi nhập: " + nameI + "<br>" );
+</script>
+</body>
+</html>
