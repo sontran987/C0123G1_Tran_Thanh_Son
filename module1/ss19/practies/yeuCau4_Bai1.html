@@ -8,27 +8,45 @@
 <script>
     function change(name) {
         name = name.trim().toLowerCase();
-       let nameArray = Array.from(name);
+        console.log(name);
+        let nameArray = Array.from(name);
         for (let i = 0; i < nameArray.length; i++) {
             if (nameArray[i] === " " && nameArray[i + 1] === " ") {
                 for (let j = i + 1; j < nameArray.length; j++) {
                     nameArray[j] = nameArray[j + 1];
                 }
+                i--;
+                nameArray.pop();
             }
-            i--;
-            nameArray.pop();
+
         }
-        nameArray[0] = nameArray[0].toUpperCase();
+        alert(nameArray);
 
         for (let i = 0; i < nameArray.length; i++) {
+            nameArray[0] = nameArray[0].toUpperCase();
             if (nameArray[i] === " ") {
                 nameArray[i + 1] = nameArray[i + 1].toUpperCase();
             }
         }
-        return nameArray.join(" ");
+        return nameArray.join("");
     }
-    let nameI = prompt(" Nhập tên của bạn: ");
-    document.write("Tên của bạn khi nhập: " + nameI + "<br>" );
+
+    function maxLength(name) {
+        let nameArray = name.split(" ");
+        let max = nameArray[0];
+        for (let i = 0; i < nameArray.length; i++) {
+            if (nameArray[i].length > max.length) {
+                max = nameArray[i];
+            }
+        }
+        return max;
+
+    }
+
+    let name = prompt(" Nhập tên của bạn: ");
+    document.write("Tên của bạn nhập: " + name + "<br>"
+       +"Tên của bạn đã sửa: " + change(name)+"<br>"+
+        "Chữ có độ dài dài nhất:" +maxLength(change(name)));
 </script>
 </body>
 </html>

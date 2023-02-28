@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let character = prompt("Nhập chuỗi ký tự: ");
+    let character1 = prompt("Nhập chuỗi ký tự thứ 2: ");
+
+    function find(charac1, charac2) {
+        let char1 = charac1.split("");
+        let char2 = charac2.split("");
+        let arr = [];
+        let count = 0;
+        for (let i = 0; i < char1.length; i++) {
+            for (let j = 0; j < char2.length; j++) {
+                if (char1[i] === char2[j]) {
+                    arr.push(char1[i]);
+                    char1.splice(i, 1);
+                    char2.splice(j, 1);
+                    count++;
+                }
+            }
+        }
+        alert("Số ký tự chung là: " + count + '\n' + "Các ký tự là: " + arr);
+    }
+
+    find(character, character1);
+</script>
+</body>
+</html>

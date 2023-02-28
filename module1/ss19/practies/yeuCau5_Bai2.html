@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let m = +prompt("Nhập chiều dài mảng");
+    let n = +prompt("Nhập chiều rộng mảng");
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt('Nhập các số vào mảng: ');
+        }
+    }
+
+    function find(prime) {
+        let array = [];
+        for (let i = 0; i < prime.length; i++) {
+            for (let j = 0; j < prime[i].length; j++) {
+                let count = 0;
+                for (let k = 1; k < prime[i][j]; k++) {
+                    if (prime[i][j] % i === 0) {
+                        count++;
+                    }
+                }
+                if (count === 2) {
+                    array.push(prime[i][j]);
+                }
+
+            }
+        }
+        return "Các số nguyên tố là: " + array +
+            "<br>"+"Số lượng số nguyên tố là: "+array.length;
+    }
+
+    document.write(find(arr));
+</script>
+</body>
+</html>

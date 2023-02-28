@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let character = prompt("nhập ký tự: ");
+
+    function find(charac) {
+        let arr = [];
+        for (let i = 0; i < charac.length; i++) {
+            if (arr.indexOf(charac[i]) === -1) {
+                arr.push(charac[i]);
+            }
+        }
+        return "Các kí tự khác nhau là: " + arr +
+            "<br>" + "Số ký tự khác nhau là: " + arr.length;
+    }
+
+    document.write(find(character));
+</script>
+</body>
+</html>
