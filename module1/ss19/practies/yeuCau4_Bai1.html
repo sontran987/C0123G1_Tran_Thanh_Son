@@ -8,7 +8,6 @@
 <script>
     function change(name) {
         name = name.trim().toLowerCase();
-        console.log(name);
         let nameArray = Array.from(name);
         for (let i = 0; i < nameArray.length; i++) {
             if (nameArray[i] === " " && nameArray[i + 1] === " ") {
@@ -28,6 +27,7 @@
                 nameArray[i + 1] = nameArray[i + 1].toUpperCase();
             }
         }
+        console.log(nameArray);
         return nameArray.join("");
     }
 

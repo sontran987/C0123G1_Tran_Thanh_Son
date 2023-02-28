@@ -16,27 +16,28 @@
         }
     }
 
-    function find(prime) {
-        let array = [];
-        for (let i = 0; i < prime.length; i++) {
-            for (let j = 0; j < prime[i].length; j++) {
-                let count = 0;
-                for (let k = 1; k < prime[i][j]; k++) {
-                    if (prime[i][j] % i === 0) {
-                        count++;
-                    }
-                }
-                if (count === 2) {
-                    array.push(prime[i][j]);
-                }
-
+    function isPrime(number) {
+        let count = 0;
+        for (let k = 1; k <= number; k++) {
+            if (number % k === 0) {
+                count++;
             }
         }
-        return "Các số nguyên tố là: " + array +
-            "<br>"+"Số lượng số nguyên tố là: "+array.length;
+        if ( count === 2){
+            return number;
+        }
     }
 
-    document.write(find(arr));
+    let array = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (isPrime(arr[i][j])) {
+                array.push(arr[i][j]);
+            }
+        }
+    }
+    document.write("Các số nguyên tố là: " + array +
+        "<br>" + "Số lượng số nguyên tố là: " + array.length);
 </script>
 </body>
 </html>
