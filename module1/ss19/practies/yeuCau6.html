@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    label {
+        color: #0f46e1;
+    }
+</style>
+<body>
+<div>
+    <form>
+        <h2 style="color: dodgerblue">Biểu Mẫu Thêm-Sửa Học Sinh</h2>
+        <label for="name">Tên học sinh: </label>
+        <input id="name" type="text" maxlength="50" placeholder="Nhập tên học sinh"><br><br>
+        <label for="class">Lớp: </label>
+        <input id="class" type="text" placeholder="Nhập lớp">
+        <br>
+        <br>
+        <label for="email">Email: </label>
+        <input id="email" type="email" placeholder="@gmail.com"><br><br>
+        <label for="dateOfBirth">Birthday: </label>
+        <input type="date" id="dateOfBirth"><br><br>
+        <label for="gender">Giới tính: </label>
+        <select id="gender">
+            <option>khác</option>
+            <option>Nam</option>
+            <option>Nu</option>
+        </select>
+        <br><br>
+        <label for="module">Module: </label>
+        <input type="number" max="6" min="1" id="module" placeholder="Module bạn đang học"
+               style="border: darkmagenta;width: 150px"><br><br>
+        <button type="button" id="createStu" onclick="newStudent()">Thêm mới vào danh sách</button>
+        <button type="button" id="updateStu" onclick="saveUpdate()">Sửa</button>
+    </form>
+</div>
+<hr>
+<h2 style="color: darkmagenta">Danh Sach Hoc Sinh</h2>
+<div id="tableStudentList"></div>
+<script>
+    class Student {
+        constructor(name, classes, email, dateOfBirth, modules, gender) {
+            this.name = name;
+            this.classes = classes;
+            this.email = email;
+            this.dateOfBirth = dateOfBirth;
+            this.module = modules;
+            this.gender = gender;
+        }
+
+    }
+
+    let student1 = new Student("Tran Thanh Son", "C0123G1", "thanhson@gmail.com", "2002", "01");
+    let studentList = [];
+    studentList.push(student1);
+    displayStudentList(studentList);
+
+    function displayStudentList(studentList) {
+        let table = "<table border='1' style='border-collapse: collapse'>";
+        table += "<tr>" +
+            "<th>StudentCode</th>" +
+            "<th>Name</th>" +
+            "<th>Class</th>" +
+            "<th>Email</th>" +
+            "<th>Date Of Birth</th>" +
+            "<th>Modules</th>" +
+            "<th>gender</th>" +
+            "<th colspan='3'>Thao tac</th>" +
+            "</tr>"
+        for (let i = 0; i < studentList.length; i++) {
+            table += "<tr>" +
+                "<td style='text-align: center'>" + "HV-" + (i < 9 ? "000" + (i + 1) :
+                    i < 99 ? "00" + (i + 1) :
+                        i < 999 ? "0" + (i + 1) : (i + 1)) + "</td>" +
+                "<td>" + studentList[i].name + "</td>" +
+                "<td>" + studentList[i].classes + "</td>" +
+                "<td>" + studentList[i].email + "</td>" +
+                "<td>" + studentList[i].dateOfBirth + "</td>" +
+                "<td>" + studentList[i].module + "</td>" +
+                "<td>" + studentList[i].gender + "</td>" +
+                "<td><button onclick=\"updateStudent(" + i + ")\">Sửa</button>" +
+                "<button id='deleteStu' onclick=\"deleteStudent(" + i + ")\">Xoá</button></td>" +
+                "</tr>"
+        }
+        table += "</table>";
+        document.getElementById("tableStudentList").innerHTML = table;
+        console.log(studentList);
+    }
+
+    function newStudent() {
+        let name = document.getElementById("name").value;
+        let classes = document.getElementById("class").value;
+        let email = document.getElementById("email").value;
+        let dateOfBirth = document.getElementById("dateOfBirth").value;
+        let module = document.getElementById("module").value;
+        let gender = document.getElementById("gender").value;
+        let newStudent = new Student(name, classes, email, dateOfBirth, module, gender);
+        if (newStudent.name === "") {
+            return false;
+        }
+        studentList.displayStudentListpush(newStudent);
+        (studentList);
+        document.getElementById("name").value = "";
+        document.getElementById("class").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("dateOfBirth").value = "";
+        document.getElementById("module").value = "";
+    }
+
+    function updateStudent(indexStudent) {
+        currentStudentUpdateId = indexStudent;
+        document.getElementById("updateStu").style.display = "block";
+        document.getElementById("createStu").style.display = "none";
+        alert("Tên học học viên cần sửa là: " + studentList[indexStudent].name)
+        let updateStudent = studentList[indexStudent];
+        document.getElementById("name").value = updateStudent.name;
+        document.getElementById("class").value = updateStudent.classes;
+        document.getElementById("email").value = updateStudent.email;
+        document.getElementById("dateOfBirth").value = updateStudent.dateOfBirth;
+        document.getElementById("module").value = updateStudent.module;
+        document.getElementById("gender").value = updateStudent.gender;
+        studentList[indexStudent].name = document.getElementById("name").value;
+        studentList[indexStudent].classes = document.getElementById("class").value;
+        studentList[indexStudent].email = document.getElementById("email").value;
+        studentList[indexStudent].dateOfBirth = document.getElementById("dateOfBirth").value;
+        studentList[indexStudent].module = document.getElementById("module").value;
+        studentList[indexStudent].gender = document.getElementById("gender").value;
+        displayStudentList(studentList);
+    }
+
+    let currentStudentUpdateId;
+
+    function saveUpdate() {
+        let name = document.getElementById("name").value;
+        let classes = document.getElementById("class").value;
+        let email = document.getElementById("email").value;
+        let dateOfBirth = document.getElementById("dateOfBirth").value;
+        let module = document.getElementById("module").value;
+        let gender = document.getElementById("gender").value;
+        alert(name)
+        alert(currentStudentUpdateId)
+        studentList[currentStudentUpdateId].name = name;
+        studentList[currentStudentUpdateId].classes = classes;
+        studentList[currentStudentUpdateId].email = email;
+        studentList[currentStudentUpdateId].dateOfBirth = dateOfBirth;
+        studentList[currentStudentUpdateId].module = module;
+        studentList[currentStudentUpdateId].gender = gender;
+        displayStudentList(studentList)
+        document.getElementById("updateStu").style.display = "none";
+        document.getElementById("createStu").style.display = "block";
+        document.getElementById("name").value = "";
+        document.getElementById("class").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("dateOfBirth").value = "";
+        document.getElementById("module").value = "";
+    }
+
+    function deleteStudent(indexStudent) {
+        const comfirmDelete = confirm("Bạn muốn xoá học sinh " +
+            studentList[indexStudent].name + " ko?");
+        if (comfirmDelete) {
+            studentList.splice(indexStudent, 1);
+            displayStudentList(studentList);
+            alert("Bạn đã xoá thành công.");
+        } else {
+            alert("Bạn đã không xoá.");
+        }
+    }
+
+    window.onload = function () {
+        document.getElementById("updateStu").style.display = "none";
+    }
+</script>
+</body>
+</html>

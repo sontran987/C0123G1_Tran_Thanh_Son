@@ -9,7 +9,7 @@
     <form>
         <h2 style="color: dodgerblue">Biểu Mẫu Thêm-Sửa Học Sinh</h2>
         <label for="nameStudent">Tên Học Sinh</label>
-        <input id="nameStudent" type="text"placeholder="Nhập tên học sinh">
+        <input id="nameStudent" type="text" placeholder="Nhập tên học sinh">
         <label for="genderStudent">Giới tính</label>
         <select name="gender" id="genderStudent">
             <option value="Male">Nam</option>
@@ -22,7 +22,7 @@
         <label for="birthday">Ngày sinh</label>
         <input type="date" id="birthday">
         <button type="button" onclick="createStudent()">Thêm mới</button>
-<!--        <button type="reset">Làm sạch</button>-->
+        <!--        <button type="reset">Làm sạch</button>-->
     </form>
 </div>
 <h2 style="color: darkmagenta">Danh Sach Hoc Sinh</h2>
@@ -57,20 +57,18 @@
             table += "<tr>" +
                 "<td>" + (i + 1) + "</td>" +
                 "<td>" + studentList[i].studentName + "</td>" +
-                "<td>" + studentList[i].birthday+ "</td>" +
-                "<td>" + studentList[i].gender+ "</td>" +
+                "<td>" + studentList[i].birthday + "</td>" +
+                "<td>" + studentList[i].gender + "</td>" +
                 "<td>" + studentList[i].classes + "</td>" +
                 "<td><button onclick=\"deleteStudent(" + i + ")\">Xoá</button></td>" +
                 "<td><button onclick=\"updateStudent(" + i + ")\">Sửa</button></td>" +
                 "</tr>";
-            table+= "<tr>" +
-                "<td></td>" +
-                "</tr>"
         }
 
         table += "</table>"
         document.getElementById("tableStudentList").innerHTML = table;
     }
+
     // Chức năng xoá
     function deleteStudent(indexStudent) {
         const confirmDelete = confirm("Bạn muốn xoá học sinh " +
@@ -91,7 +89,7 @@
         let classes = document.getElementById("classes").value;
         let birthday = document.getElementById("birthday").value;
         let newStudent = new Student(name, birthday, gender, classes);
-        if (newStudent.value===0){
+        if (newStudent.value === 0) {
             return false;
         }
         studentList.push(newStudent);
