@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo;
+    let uoc = 0;
+    let mang = [];
+    do {
+        nhapSo = +prompt("Nhap vao so nguyen:");
+        for (let i = 1; i <= nhapSo; i++) {
+            if (nhapSo > 0) {
+                uoc = parseInt(nhapSo / i);
+                if (mang.indexOf(uoc) === -1)
+                    mang.push(uoc);
+            } else {
+                alert("hay nhap lai");
+            }
+        }
+        document.write("Cac uoc: " + mang.reverse());
+    } while (nhapSo <= 0);
+
+</script>
+
+</body>
+</html>

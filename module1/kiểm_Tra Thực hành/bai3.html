@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let motSo = +prompt("nhap so ");
+    let doDai = +prompt("nhap do dai mang:");
+    for (let i = 0; i < doDai; i++) {
+        mang = +prompt("Nhap phan tu cho mang: ");
+    }
+
+    function kiemTra(mang,motSo) {
+        let mangKetQua = [];
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] % motSo === 0 ) {
+                mangKetQua.push(mang[i]);
+
+            }mang.join(",");
+        }
+        console.log(mangKetQua);
+        return mangKetQua.length;
+    }
+
+    document.write("So luong phan tu khac nhau chia het la: " + kiemTra(mang,motSo));
+
+</script>
+</body>
+</html>

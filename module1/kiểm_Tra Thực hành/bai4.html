@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh Sách Bệnh Nhân</h1>
+<div id="hienThi"></div>
+<script>
+  class BenhNhan {
+    constructor(ten,tuoi,diaChi,soDienThoai) {
+      this.ten=ten;
+      this.tuoi=tuoi;
+      this.diaChi=diaChi;
+      this.soDienThoai=soDienThoai;
+    }
+  }
+  let benhNhan1=new BenhNhan('Nguyễn Lê Hoàng Anh','20','Quảng Nam',"0923434564");
+  let benhNhan2=new BenhNhan('Nguyễn Trần Cảnh','30','Quảng Nam',"09234345123");
+  let benhNhan3=new BenhNhan('Hoàng Thanh Hùng','15','Quảng Nam',"0946434564");
+  let benhNhan4=new BenhNhan('Trần lệ Quyên','20','Quảng Nam',"0922334564");
+  let danhSachBenhNhan=[];
+  danhSachBenhNhan.push(benhNhan1);
+  danhSachBenhNhan.push(benhNhan2);
+  danhSachBenhNhan.push(benhNhan3);
+  danhSachBenhNhan.push(benhNhan4);
+  hienThiDanhSach(danhSachBenhNhan);
+  console.log()
+  function hienThiDanhSach(danhSachBenhNhan) {
+    let table="<table border='1' style='border-collapse: collapse' >";
+    table+="<tr>" +
+            "<th>STT</th>" +
+            "<th>Họ và tên</th>" +
+            "<th>Tuổi</th>" +
+            "<th>Địa chỉ</th>" +
+            "<th>Số điện thoại</th>" +
+            "</tr>"
+    for (let i = 0; i < danhSachBenhNhan.length; i++) {
+      table+="<tr>" +
+              "<td>"+(i+1)+"</td>" +
+              "<td>"+danhSachBenhNhan[i].ten+"</td>" +
+              "<td>"+danhSachBenhNhan[i].tuoi+"</td>" +
+              "<td>"+danhSachBenhNhan[i].diaChi+"</td>" +
+              "<td>"+danhSachBenhNhan[i].soDienThoai+"</td>" +
+              "</tr>"
+    }
+    table+="<table>";
+    document.getElementById("hienThi").innerHTML=table;
+  }
+</script>
+</body>
+</html>

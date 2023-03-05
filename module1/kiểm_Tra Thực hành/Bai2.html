@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let mang1=[] ;
+    let doDai=+prompt("nhap do dai mang");
+    let lonNhat = mang[0];
+    let viTriLonNhat=0;
+    let viTriNhoNhat=0;
+    let nhoNhat = mang[0];
+    for (let i = 0; i < doDai; i++) {
+        mang = +prompt("nhap phan tu mang thu " + (i + 1));
+    }
+    for (let i = 0; i < doDai; i++) {
+        if (mang[i] > lonNhat) {
+            viTriLonNhat=i;
+        }
+    }
+    console.log(mang1);
+    for (let i = 0; i < doDai; i++) {
+        if (mang[i] < nhoNhat) {
+           viTriNhoNhat=i;
+        }
+    }
+    mang1.push(viTriLonNhat,viTriNhoNhat);
+    mang1.join(",");
+    document.write("ket qua la " +mang1);
+</script>
+</body>
+</html>
