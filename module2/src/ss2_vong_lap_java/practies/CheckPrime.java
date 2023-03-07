@@ -1,6 +1,4 @@
-package ss2_Vong_Lap_java.practies;
-
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+package ss2_vong_lap_java.practies;
 
 import java.util.Scanner;
 

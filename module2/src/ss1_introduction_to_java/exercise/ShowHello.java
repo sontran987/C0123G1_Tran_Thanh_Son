@@ -1,4 +1,4 @@
-package ss1_Introduction_to_java.exercise;
+package ss1_introduction_to_java.exercise;
 
 import java.util.Scanner;
 

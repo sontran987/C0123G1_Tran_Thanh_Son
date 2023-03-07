@@ -1,4 +1,4 @@
-package ss1_Introduction_to_java.exercise;
+package ss1_introduction_to_java.exercise;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class ReadNumber {
         while (1 > 0) {
             System.out.println("Nhập số muốn đọc(0-999): ");
             String number = scanner.nextLine();
-            while (!(number.matches("^[1-9][0-9][0-9]?[0-9]$") ||
+            while (!(number.matches("^[1-9][0-9]?[0-9]$") ||
                     number.matches("^[0-9]$"))) {
                 System.out.println("Khong hop le!");
                 System.out.println("nhap so can doc (0-999):");
