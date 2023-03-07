@@ -18,7 +18,7 @@ public class Display20Prime {
                     count++;
                 }
             }
-            if (count == 2&&numberPrime>=countSNT) {
+            if (count == 2 && numberPrime >= countSNT) {
                 countSNT++;
                 System.out.println(i);
 

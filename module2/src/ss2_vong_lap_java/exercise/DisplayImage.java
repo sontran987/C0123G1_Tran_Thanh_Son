@@ -28,14 +28,14 @@ public class DisplayImage {
         System.out.println("\n");
         System.out.println("Tam giác cân: ");
         for (int i = 1; i <= 10; i++) {
-            for (int j = 0; j <=(10*2-1)/2-i ; j++) {
+            for (int j = 0; j <= (10 * 2 - 1) / 2 - i; j++) {
                 System.out.print(" ");
             }
-                for (int k = 0; k < i*2-1; k++) {
+            for (int k = 0; k < i * 2 - 1; k++) {
 //                    if (i==10||k==0||k==i*2-2){
-                        System.out.print("*");
+                System.out.print("*");
 //                    }
-                }
+            }
 
             System.out.println("");
         }
