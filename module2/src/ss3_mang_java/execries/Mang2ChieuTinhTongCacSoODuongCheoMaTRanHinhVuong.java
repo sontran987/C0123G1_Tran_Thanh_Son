@@ -2,7 +2,7 @@ package ss3_mang_java.execries;
 
 import java.util.Scanner;
 
-public class Mang2Chieu_tinhTongCacSoODuongCheoMaTRanHinhVuong {
+public class Mang2ChieuTinhTongCacSoODuongCheoMaTRanHinhVuong {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[][] array = new double[3][3];
