@@ -3,9 +3,10 @@ package ss4_lop_va_doi_tuong_trong_java.exercises;
 import java.util.Scanner;
 
 public class StopWatch {
-long startTime=0;
-long endTime=0;
-boolean running=true;
+    long startTime = 0;
+    long endTime = 0;
+    boolean running = true;
+
     public long getStartTime() {
         return startTime;
     }
@@ -21,14 +22,17 @@ boolean running=true;
     public void setEndTime(int endTime) {
         this.endTime = endTime;
     }
-    public void start(){
-    this.startTime=System.currentTimeMillis();
-    this.running=true;
+
+    public void start() {
+        this.startTime = System.currentTimeMillis();
+        this.running = true;
     }
-    public void stop(){
-    this.endTime=System.currentTimeMillis();
-    this.running=false;
+
+    public void stop() {
+        this.endTime = System.currentTimeMillis();
+        this.running = false;
     }
+
     public long getElapsedTime() {
         long elapsed;
         if (running) {
@@ -38,8 +42,9 @@ boolean running=true;
         }
         return elapsed;
     }
-    public static void main(String[] args){
-    StopWatch stopWatch=new StopWatch();
-    System.out.println(stopWatch.getElapsedTime());
+
+    public static void main(String[] args) {
+        StopWatch stopWatch = new StopWatch();
+        System.out.println(stopWatch.getElapsedTime());
     }
 }

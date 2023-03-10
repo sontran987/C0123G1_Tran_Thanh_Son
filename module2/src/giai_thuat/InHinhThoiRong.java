@@ -7,10 +7,9 @@ public class InHinhThoiRong {
         int b = 5;
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 10; j++) {
-                if (j==a || j==b) {
-                    System.out.print(i+1);
-                }
-                else {
+                if (j == a || j == b) {
+                    System.out.print(i + 1);
+                } else {
                     System.out.print(" ");
                 }
             }
@@ -22,10 +21,9 @@ public class InHinhThoiRong {
         int d = 8;
         for (int i = 1; i < 5; i++) {
             for (int j = 0; j < 10; j++) {
-                if (j==c||j==d) {
-                    System.out.print(5-i);
-                }
-                else {
+                if (j == c || j == d) {
+                    System.out.print(5 - i);
+                } else {
                     System.out.print(" ");
                 }
             }

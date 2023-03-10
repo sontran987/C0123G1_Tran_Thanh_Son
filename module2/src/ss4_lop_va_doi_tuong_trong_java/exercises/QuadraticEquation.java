@@ -59,6 +59,7 @@ public class QuadraticEquation {
     public String getRoot3() {
         return ("The equation has no roots");
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a:");
