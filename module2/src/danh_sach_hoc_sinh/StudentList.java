@@ -42,11 +42,9 @@ public class StudentList {
 
     @Override
     public String toString() {
-        return "StudentList{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", clases='" + clases + '\'' +
-                '}';
+        return "id=" + id +
+                ", name= " + name +
+                " , clases= " + clases  ;
     }
 
 }
