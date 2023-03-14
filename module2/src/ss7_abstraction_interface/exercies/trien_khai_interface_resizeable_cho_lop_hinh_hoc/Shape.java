@@ -1,4 +1,5 @@
-package ss6_inheritance.practices;
+package ss7_abstraction_interface.exercies.trien_khai_interface_resizeable_cho_lop_hinh_hoc;
+
 
 public class Shape {
     private String color = "green";
@@ -36,4 +37,3 @@ public class Shape {
     }
 
 }
-
