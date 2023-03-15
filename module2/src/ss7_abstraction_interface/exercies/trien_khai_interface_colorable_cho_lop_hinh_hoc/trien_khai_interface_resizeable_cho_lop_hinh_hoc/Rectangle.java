@@ -1,6 +1,6 @@
 package ss7_abstraction_interface.exercies.trien_khai_interface_colorable_cho_lop_hinh_hoc.trien_khai_interface_resizeable_cho_lop_hinh_hoc;
 
-public class Rectangle extends Shape implements Colorable {
+public class Rectangle extends Shape{
     private double width = 1.0;
     private double length = 1.0;
 
@@ -52,10 +52,5 @@ public class Rectangle extends Shape implements Colorable {
                 + super.toString();
     }
 
-
-    @Override
-    public void howToColor() {
-
-    }
 }
 

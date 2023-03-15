@@ -1,6 +1,6 @@
 package ss7_abstraction_interface.exercies.trien_khai_interface_colorable_cho_lop_hinh_hoc.trien_khai_interface_resizeable_cho_lop_hinh_hoc;
 
-public class Circle extends Shape implements Colorable {
+public class Circle extends Shape  {
     private double radius = 2.0;
     private String color = "red";
 
@@ -49,9 +49,4 @@ public class Circle extends Shape implements Colorable {
                 ", Perimeter= " + perimeter();
     }
 
-
-    @Override
-    public void howToColor() {
-
-    }
 }
