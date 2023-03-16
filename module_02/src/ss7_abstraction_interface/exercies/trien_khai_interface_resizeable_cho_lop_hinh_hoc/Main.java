@@ -10,9 +10,9 @@ public class Main {
         array[1] = "S rectangle: " + String.valueOf(rectangle.getArea());
         array[2] = "S square: " + String.valueOf(square.getArea());
         array[3] = "Sau khi thay đổi: " + Math.round(Math.random() * 99 + 1);
-        circle.resize((int)(Math.random() * 100 + 1));
-        square.resize((int)(Math.random() * 100 + 1));
-        rectangle.resize((int)(Math.random() * 100 + 1));
+        circle.resize((int) (Math.random() * 100 + 1));
+        square.resize((int) (Math.random() * 100 + 1));
+        rectangle.resize((int) (Math.random() * 100 + 1));
         array[4] = "S circle: " + String.valueOf(circle.getArea());
         array[5] = "S rectangle: " + String.valueOf(rectangle.getArea());
         array[6] = "S square: " + String.valueOf(square.getArea());

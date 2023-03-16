@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-      Shape[] shapes=new Shape[3];
-      shapes[0]=new Circle();
-      shapes[1]=new Square();
-      shapes[2]=new Rectangle();
-      System.out.println(Arrays.toString(shapes));
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle();
+        shapes[1] = new Square();
+        shapes[2] = new Rectangle();
+        System.out.println(Arrays.toString(shapes));
         for (Shape s : shapes) {
-            if (s instanceof Colorable){
-                ((Colorable)s).howToColor();
+            if (s instanceof Colorable) {
+                ((Colorable) s).howToColor();
             }
         }
     }

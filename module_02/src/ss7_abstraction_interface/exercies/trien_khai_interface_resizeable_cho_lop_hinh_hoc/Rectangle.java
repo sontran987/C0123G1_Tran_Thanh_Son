@@ -1,6 +1,6 @@
 package ss7_abstraction_interface.exercies.trien_khai_interface_resizeable_cho_lop_hinh_hoc;
 
-public class Rectangle extends Shape implements InterfaceResizeable {
+public class Rectangle extends Shape implements IResizeable {
     private double width = 1.0;
     private double length = 1.0;
 

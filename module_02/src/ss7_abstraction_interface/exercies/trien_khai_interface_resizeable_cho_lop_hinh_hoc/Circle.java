@@ -1,6 +1,6 @@
 package ss7_abstraction_interface.exercies.trien_khai_interface_resizeable_cho_lop_hinh_hoc;
 
-public class Circle extends Shape implements InterfaceResizeable {
+public class Circle extends Shape implements IResizeable {
     private double radius = 2.0;
     private String color = "red";
 
