@@ -1,8 +1,8 @@
-package case_study_module2.controllers;
+package case_study_module02.controller;
 
 import java.util.Scanner;
 
-public class FuramaControllers {
+public class FuramaController {
 
     public static void displayMainMenu() {
         System.out.println(
