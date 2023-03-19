@@ -1,27 +1,27 @@
 package method_cua_array_list_theo_thu_vien.ve_nha.modele;
 
 public class Person {
-    private int studentCode;
+    private int code;
     private String name;
     private String birthday;
-    private boolean gender;
+    private String gender;
 
     public Person() {
     }
 
-    public Person(int studentCode, String name, String birthday, boolean gender) {
-        this.studentCode = studentCode;
+    public Person(int code, String name, String birthday, String gender) {
+        this.code = code;
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
     }
 
-    public int getStudentCode() {
-        return studentCode;
+    public int getCode() {
+        return code;
     }
 
-    public void setStudentCode(int studentCode) {
-        this.studentCode = studentCode;
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -40,21 +40,19 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public boolean isGender() {
+    public String isGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
-                "studentCode=" + studentCode +
-                ", name='" + name + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", gender=" + gender +
-                '}';
+        return "id= " + code +
+                ", name= " + name +
+                ", birthday= " + birthday +
+                ", gender= " + gender;
     }
 }

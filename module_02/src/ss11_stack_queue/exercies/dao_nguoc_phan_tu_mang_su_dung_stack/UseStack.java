@@ -49,11 +49,11 @@ public class UseStack {
         }
         stack = stack1;
         System.out.println("Mảng ký tự đảo: " + stack);
-        String string="";
+        String string = "";
         for (String i : stack) {
-            string+=i;
+            string += i;
         }
-        System.out.println("chuoi dao nguoc: "+ string);
+        System.out.println("chuoi dao nguoc: " + string);
     }
 
 }

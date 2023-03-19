@@ -5,7 +5,9 @@ import java.util.Stack;
 
 public class CheckBrackets {
     public static void main(String[] args) {
-        System.out.println(main());    }
+        System.out.println(main());
+    }
+
     public static boolean main() {
         Scanner scanner = new Scanner(System.in);
         Stack<Character> bStack = new Stack<>();

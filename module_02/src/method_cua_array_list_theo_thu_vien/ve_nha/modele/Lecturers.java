@@ -1,25 +1,31 @@
 package method_cua_array_list_theo_thu_vien.ve_nha.modele;
 
 public class Lecturers extends Person {
-    private String chuyenMon;
+    private String specialize;
 
     public Lecturers() {
     }
 
-    public Lecturers(String chuyenMon) {
-        this.chuyenMon = chuyenMon;
+    public Lecturers(String specialize) {
+        this.specialize = specialize;
     }
 
-    public Lecturers(int studentCode, String name, String birthday, boolean gender, String chuyenMon) {
-        super(studentCode, name, birthday, gender);
-        this.chuyenMon = chuyenMon;
+    public Lecturers(int code, String name, String birthday, String gender, String specialize) {
+        super(code, name, birthday, gender);
+        this.specialize = specialize;
     }
 
-    public String getChuyenMon() {
-        return chuyenMon;
+    public String getSpecialize() {
+        return specialize;
     }
 
-    public void setChuyenMon(String chuyenMon) {
-        this.chuyenMon = chuyenMon;
+    public void setSpecialize(String specialize) {
+        this.specialize = specialize;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", specialize= " + specialize;
     }
 }
