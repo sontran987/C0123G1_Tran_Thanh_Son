@@ -33,7 +33,7 @@ public class StudentManagement {
     }
 
     public static void displayMenuLecturers() {
-        LecturersService lecturersService=new LecturersService();
+        LecturersService lecturersService = new LecturersService();
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
