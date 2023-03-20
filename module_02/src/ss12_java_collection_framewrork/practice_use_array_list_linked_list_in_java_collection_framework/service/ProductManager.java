@@ -2,10 +2,7 @@ package ss12_java_collection_framewrork.practice_use_array_list_linked_list_in_j
 
 import ss12_java_collection_framewrork.practice_use_array_list_linked_list_in_java_collection_framework.modules.Product;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManager implements Functions {
     Scanner scanner = new Scanner(System.in);
@@ -14,7 +11,7 @@ public class ProductManager implements Functions {
     static {
         listProduct.add(new Product(1, "iphone5", 1200));
         listProduct.add(new Product(2, "iphone12", 30000));
-        listProduct.add(new Product(3, "iphone13", 3000000));
+        listProduct.add(new Product(3, "iphone13", 300));
         listProduct.add(new Product(4, "iphone14", 30000000));
     }
 
@@ -67,12 +64,25 @@ public class ProductManager implements Functions {
             if (id == listProduct.get(i).getId()) {
                 listProduct.remove(i);
                 System.out.println("deleted. ");
+            } else {
+                System.out.println("not found:");
+                break;
             }
         }
     }
 
     @Override
     public void displayProduct() {
+        for (Product p : listProduct) {
+            System.out.println(p);
+        }
+        System.out.println("-------");
+        Collections.sort(listProduct, new ProductSortPriceAscending());
+        for (Product p : listProduct) {
+            System.out.println(p);
+        }
+        System.out.println("-------");
+        Collections.sort(listProduct, new ProductSortPriceDescending());
         for (Product p : listProduct) {
             System.out.println(p);
         }
@@ -92,21 +102,5 @@ public class ProductManager implements Functions {
             }
         }
 //
-    }
-
-    @Override
-    public void priceAscending() {
-        for (int i = 0; i < listProduct.size(); i++) {
-            listProduct.sort((o1, o2) -> o1.getPrice() - o2.getPrice());
-            System.out.println(listProduct.get(i));
-        }
-    }
-
-    @Override
-    public void priceDescending() {
-        for (int i = 0; i < listProduct.size(); i++) {
-            listProduct.sort((o1, o2) -> o2.getPrice() - o1.getPrice());
-            System.out.println(listProduct.get(i));
-        }
     }
 }

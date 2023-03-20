@@ -11,8 +11,5 @@ public interface Functions {
 
     void seachProduct();
 
-    void priceAscending();
-
-    void priceDescending();
 
 }

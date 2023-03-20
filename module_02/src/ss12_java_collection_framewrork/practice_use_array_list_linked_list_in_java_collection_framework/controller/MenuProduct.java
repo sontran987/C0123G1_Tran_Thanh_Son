@@ -16,9 +16,7 @@ public class MenuProduct {
                             "3. Delete product\n" +
                             "4. Display list product\n" +
                             "5. Seach name product\n" +
-                            "6. Price product ascending\n" +
-                            "7. Price product descending\n" +
-                            "8. Exit");
+                            "6. Exit");
             System.out.println("Enter the number corresponding to the function:");
             choose = scanner.nextInt();
             switch (choose) {
@@ -38,17 +36,11 @@ public class MenuProduct {
                     productManager.seachProduct();
                     break;
                 case 6:
-                    productManager.priceAscending();
-                    break;
-                case 7:
-                    productManager.priceDescending();
-                    break;
-                case 8:
                     System.out.println("Exited");
                     break;
                 default:
                     System.out.println("Please re-enter:");
             }
-        } while (choose != 8);
+        } while (choose != 6);
     }
 }
