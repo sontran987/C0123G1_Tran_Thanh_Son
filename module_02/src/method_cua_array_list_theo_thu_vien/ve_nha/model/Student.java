@@ -1,6 +1,4 @@
-package method_cua_array_list_theo_thu_vien.ve_nha.modele;
-
-import method_cua_array_list_theo_thu_vien.ve_nha.service.Funtions;
+package method_cua_array_list_theo_thu_vien.ve_nha.model;
 
 public class Student extends Person {
 

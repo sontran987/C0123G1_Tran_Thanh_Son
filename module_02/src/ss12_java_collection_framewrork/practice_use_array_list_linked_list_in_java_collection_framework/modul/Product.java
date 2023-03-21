@@ -1,4 +1,4 @@
-package ss12_java_collection_framewrork.practice_use_array_list_linked_list_in_java_collection_framework.modules;
+package ss12_java_collection_framewrork.practice_use_array_list_linked_list_in_java_collection_framework.modul;
 
 public class Product {
     private int id;

@@ -1,4 +1,4 @@
-package method_cua_array_list_theo_thu_vien.ve_nha.modele;
+package method_cua_array_list_theo_thu_vien.ve_nha.model;
 
 public class Lecturers extends Person {
     private String specialize;

@@ -1,11 +1,10 @@
 package method_cua_array_list_theo_thu_vien.ve_nha.service;
 
 import method_cua_array_list_theo_thu_vien.ve_nha.controller.StudentManagement;
-import method_cua_array_list_theo_thu_vien.ve_nha.modele.Student;
+import method_cua_array_list_theo_thu_vien.ve_nha.model.Student;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class StudentService implements Funtions {
     static ArrayList<Student> stack = new ArrayList<>();
