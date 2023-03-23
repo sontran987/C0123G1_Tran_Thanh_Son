@@ -3,7 +3,7 @@ package ss14_thuat_toan_sap_xep;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MinhHoaThuatToanSapXepChon {
+public class MinhHoaThuatToanSapXepChen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] arr = new int[10];
@@ -25,10 +25,11 @@ public class MinhHoaThuatToanSapXepChon {
                 pos--;
                 System.out.println("Thay doi");
             }
-            array[pos]=temp;
-            System.out.println("Thay doi phan tu thu "+i+":"+Arrays.toString(array));
+            array[pos] = temp;
+            System.out.println("Thay doi phan tu thu " + i + ":" + Arrays.toString(array));
 
         }
+
 //        System.out.println(Arrays.toString(array));
     }
 }
