@@ -1,8 +1,11 @@
-package case_study_module02.controller;
+package case_study_module02.controllers;
+
+import case_study_module02.services.EmployeeServiceImpl;
 
 import java.util.Scanner;
 
 public class FuramaController {
+    EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
 
     public static void displayMainMenu() {
         System.out.println(
@@ -44,12 +47,12 @@ public class FuramaController {
     }
 
     public static void employeeManagement() {
-        System.out.println(
-                "Menu: " +
-                        "1.\tDisplay list employees\n" +
-                        "2.\tAdd new employees\n" +
-                        "3.\tEdit employees\n" +
-                        "4.\tReturn main menu");
+                System.out.println(
+                        "Menu: " +
+                                "1.\tDisplay list employees\n" +
+                                "2.\tAdd new employees\n" +
+                                "3.\tEdit employees\n" +
+                                "4.\tReturn main menu");
         Scanner sc = new Scanner(System.in);
         int choose;
         do {
@@ -57,13 +60,16 @@ public class FuramaController {
             choose = Integer.parseInt(sc.nextLine());
             switch (choose) {
                 case 1:
+                    EmployeeServiceImpl.displayEmploy();
                     break;
                 case 2:
+                    EmployeeServiceImpl.addEmploy();
                     break;
                 case 3:
+                    EmployeeServiceImpl.editInformationEmploy();
                     break;
                 case 4:
-                    displayMainMenu();
+                    System.out.println("Đã quay lại menu chính:");
                     break;
                 default:
                     System.out.println("Hãy nhập lại");

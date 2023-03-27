@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    static final String SOURCE_FILE_LINK = "D:\\codegym\\C0123G1_Tran_Thanh_Son\\module_02\\src\\ss16_io_test_file\\copy_file_test\\source_file.txt";
+    static final String SOURCE_FILE_LINK = "D:\\codegym\\C0123G1_Tran_Thanh_Son\\module_02\\src\\ss16_io_test_file\\copy_file_test\\source_file.dat.txt";
     static final String TARGET_FILE_LINK = "D:\\codegym\\C0123G1_Tran_Thanh_Son\\module_02\\src\\ss16_io_test_file\\copy_file_test\\target_file.txt";
 
     public static void main(String[] args) {
