@@ -1,10 +1,10 @@
 package case_study_module02.models;
 
 public abstract class Person {
-    private int employeeCode;
+    private int code;
     private String name;
     private String brithday;
-    private boolean gender;
+    private String gender;
     private int idNumber;
     private int phoneNumber;
     private String email;
@@ -12,8 +12,8 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(int employeeCode, String name, String brithday, boolean gender, int idNumber, int phoneNumber, String email) {
-        this.employeeCode = employeeCode;
+    public Person(int code, String name, String brithday, String gender, int idNumber, int phoneNumber, String email) {
+        this.code = code;
         this.name = name;
         this.brithday = brithday;
         this.gender = gender;
@@ -22,12 +22,12 @@ public abstract class Person {
         this.email = email;
     }
 
-    public int getEmployeeCode() {
-        return employeeCode;
+    public int getCode() {
+        return code;
     }
 
-    public void setEmployeeCode(int employeeCode) {
-        this.employeeCode = employeeCode;
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -46,11 +46,11 @@ public abstract class Person {
         this.brithday = brithday;
     }
 
-    public boolean isGender() {
+    public String isGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -80,7 +80,7 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Id=" + employeeCode +
+        return "Id=" + code +
                 ", name= " + name +
                 ", brithday= " + brithday +
                 ", gender= " + gender +

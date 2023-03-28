@@ -1,24 +1,24 @@
 package case_study_module02.controllers;
 
-import case_study_module02.services.EmployeeServiceImpl;
+import case_study_module02.services.employee.EmployeeServiceImpl;
 
 import java.util.Scanner;
 
 public class FuramaController {
-    EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
 
     public static void displayMainMenu() {
-        System.out.println(
-                "Menu: \n" +
-                        "1.\tEmployee Management\n" +
-                        "2.\tCustomer Management\n" +
-                        "3.\tFacility Management\n" +
-                        "4.\tBooking Management\n" +
-                        "5.\tPromotion Management\n" +
-                        "6.\tExit\n");
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu: \n" +
+                            "1.\tEmployee Management\n" +
+                            "2.\tCustomer Management\n" +
+                            "3.\tFacility Management\n" +
+                            "4.\tBooking Management\n" +
+                            "5.\tPromotion Management\n" +
+                            "6.\tExit\n");
             System.out.println("Nhap so tuong ung voi chuc nang: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
@@ -47,26 +47,29 @@ public class FuramaController {
     }
 
     public static void employeeManagement() {
-                System.out.println(
-                        "Menu: " +
-                                "1.\tDisplay list employees\n" +
-                                "2.\tAdd new employees\n" +
-                                "3.\tEdit employees\n" +
-                                "4.\tReturn main menu");
+        EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+
+
         Scanner sc = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu: \n" +
+                            "1.\tDisplay list employees\n" +
+                            "2.\tAdd new employees\n" +
+                            "3.\tEdit employees\n" +
+                            "4.\tReturn main menu");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(sc.nextLine());
             switch (choose) {
                 case 1:
-                    EmployeeServiceImpl.displayEmploy();
+                    employeeService.displayEmploy();
                     break;
                 case 2:
-                    EmployeeServiceImpl.addEmploy();
+                    employeeService.addEmploy();
                     break;
                 case 3:
-                    EmployeeServiceImpl.editInformationEmploy();
+                    employeeService.editInformationEmploy();
                     break;
                 case 4:
                     System.out.println("Đã quay lại menu chính:");
@@ -78,15 +81,16 @@ public class FuramaController {
     }
 
     public static void customerManagement() {
-        System.out.println(
-                "Menu: \n" +
-                        "1.\tDisplay list customers\n" +
-                        "2.\tAdd new customer\n" +
-                        "3.\tEdit customer\n" +
-                        "4.\tReturn main menu\n");
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu: \n" +
+                            "1.\tDisplay list customers\n" +
+                            "2.\tAdd new customer\n" +
+                            "3.\tEdit customer\n" +
+                            "4.\tReturn main menu\n");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
@@ -106,15 +110,16 @@ public class FuramaController {
     }
 
     public static void facilityManagement() {
-        System.out.println(
-                "Menu: \n" +
-                        "1\tDisplay list facility\n" +
-                        "2\tAdd new facility\n" +
-                        "3\tDisplay list facility maintenance\n" +
-                        "4\tReturn main menu\n");
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu: \n" +
+                            "1\tDisplay list facility\n" +
+                            "2\tAdd new facility\n" +
+                            "3\tDisplay list facility maintenance\n" +
+                            "4\tReturn main menu\n");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
@@ -134,16 +139,18 @@ public class FuramaController {
     }
 
     public static void bookingManagement() {
-        System.out.println(
-                "1.\tAdd new booking\n" +
-                        "2.\tDisplay list booking\n" +
-                        "3.\tCreate new contract\n" +
-                        "4.\tDisplay list contracts\n" +
-                        "5.\tEdit contracts\n" +
-                        "6.\tReturn main menu\n");
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu:\n" +
+                            "1.\tAdd new booking\n" +
+                            "2.\tDisplay list booking\n" +
+                            "3.\tCreate new contract\n" +
+                            "4.\tDisplay list contracts\n" +
+                            "5.\tEdit contracts\n" +
+                            "6.\tReturn main menu\n");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
@@ -167,14 +174,15 @@ public class FuramaController {
     }
 
     public static void promotionManagement() {
-        System.out.println(
-                "Menu: \n" +
-                        "1.\tDisplay list customers use service\n" +
-                        "2.\tDisplay list customers get voucher\n" +
-                        "3.\tReturn main menu\n");
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
+            System.out.println(
+                    "Menu: \n" +
+                            "1.\tDisplay list customers use service\n" +
+                            "2.\tDisplay list customers get voucher\n" +
+                            "3.\tReturn main menu\n");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {

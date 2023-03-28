@@ -1,15 +1,20 @@
 package ss17_binary_file.quan_ly_san_pham_file_nhi_phan.services;
 
-import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.moduls.Product1;
+import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.modul.Product1;
 import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.repo.ProductRepo;
+import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.util.ReadAndWrite;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class IProduct1Service implements Service {
     ProductRepo productRepo = new ProductRepo();
+    static List<Product1>list=new ArrayList<>();
+    public  void setList(List<Product1> list1){
+        list=list1;
+    }
     Scanner scanner = new Scanner(System.in);
-
     @Override
     public void add() {
         System.out.println("Enter code product:");
@@ -23,12 +28,12 @@ public class IProduct1Service implements Service {
         System.out.println("Enter describe:");
         String describe = scanner.nextLine();
         Product1 product1 = new Product1(id, name, price, producedGoods, describe);
-        productRepo.add(product1);
+        list.add(product1);
+        productRepo.add((Product1) list);
     }
 
     @Override
     public void display() {
-        List<Product1> list = productRepo.getAllDisplay();
         for (Product1 p : list) {
             System.out.println(p);
         }

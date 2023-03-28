@@ -6,6 +6,8 @@ public class Employee extends Person {
     private double wage;
 
     public Employee() {
+
+
     }
 
     public Employee(String level, String location, double wage) {
@@ -14,7 +16,7 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    public Employee(int employeeCode, String name, String brithday, boolean gender, int idNumber, int phoneNumber, String email, String level, String location, double wage) {
+    public Employee(int employeeCode, String name, String brithday, String gender, int idNumber, int phoneNumber, String email, String level, String location, double wage) {
         super(employeeCode, name, brithday, gender, idNumber, phoneNumber, email);
         this.level = level;
         this.location = location;

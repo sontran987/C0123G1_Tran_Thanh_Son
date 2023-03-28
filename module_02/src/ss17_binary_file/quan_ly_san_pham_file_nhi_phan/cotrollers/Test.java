@@ -1,12 +1,17 @@
 package ss17_binary_file.quan_ly_san_pham_file_nhi_phan.cotrollers;
 
 import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.services.IProduct1Service;
+import ss17_binary_file.quan_ly_san_pham_file_nhi_phan.util.ReadAndWrite;
 
 import java.util.Scanner;
 
 public class Test {
+   static IProduct1Service iProduct1Service = new IProduct1Service();
+static {
+    iProduct1Service.setList(ReadAndWrite.readFileBinary("src/ss17_binary_file/quan_ly_san_pham_file_nhi_phan/data/product1_file.dat"));
+}
     public static void main(String[] args) {
-        IProduct1Service iProduct1Service = new IProduct1Service();
+
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
