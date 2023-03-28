@@ -2,6 +2,7 @@ package case_study_module02.services.employee;
 
 import case_study_module02.models.Employee;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,6 +10,12 @@ import java.util.Scanner;
 public class EmployeeServiceImpl implements EmployeeService {
     static List<Employee> listEmployee = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
+    static String[] level = {
+            "Trung cấp",
+            "Cao đẳng",
+            "Đại học",
+            "Sau đại học"
+    };
 
     @Override
     public void displayEmploy() {
@@ -20,56 +27,81 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void addEmploy() {
         System.out.println("Enter id:");
-        int id= Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter name:");
-        String name= scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Enter brithday:");
-        String brithday= scanner.nextLine();
+        String brithday = scanner.nextLine();
         System.out.println("Enter gender:");
-        String gender= scanner.nextLine();
+        String gender = scanner.nextLine();
         System.out.println("Enter chứng minh nhân dân:");
-        int identityCard= Integer.parseInt(scanner.nextLine());
+        int identityCard = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter number phone:");
-        int phone=Integer.parseInt(scanner.nextLine());
+        int phone = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter email:");
-        String email=scanner.nextLine();
-        System.out.println("Enter level:");
-        String level= scanner.nextLine();
+        String email = scanner.nextLine();
+        String choose;
+        String levels = null;
+        boolean flag= true;
+        do {
+            for (int i = 0; i < level.length; i++) {
+                System.out.println((i+1)+". "+level[i]);
+            }
+            System.out.println("Enter level: ");
+            choose= scanner.nextLine();
+            switch (choose){
+                case"1":
+                   levels= level[0];
+                   break;
+                case"2":
+                    levels=level[1];
+                    break;
+                case"3":
+                    levels=level[2];
+                    break;
+                case"4":
+                    levels=level[3];
+                    break;
+                default:
+                    System.out.println("Try again !");
+                    flag=false;
+            }
+        }while(!flag);
         System.out.println("Enter location:");
-        String location= scanner.nextLine();
+        String location = scanner.nextLine();
         System.out.println("Enter wage:");
-        double wage= Double.parseDouble(scanner.nextLine());
-        listEmployee.add(new Employee(id,name,brithday,gender
-                ,identityCard,phone,email,level,location,wage));
+        double wage = Double.parseDouble(scanner.nextLine());
+        listEmployee.add(new Employee(id, name, brithday, gender
+                , identityCard, phone, email, levels, location, wage));
     }
 
     @Override
     public void editInformationEmploy() {
         System.out.println("Enter id you want to edit:");
-        int id= Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter name:");
-        String name= scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Enter brithday:");
-        String brithday= scanner.nextLine();
+        String brithday = scanner.nextLine();
         System.out.println("Enter gender:");
-        String gender= scanner.nextLine();
+        String gender = scanner.nextLine();
         System.out.println("Enter chứng minh nhân dân:");
-        int identityCard= Integer.parseInt(scanner.nextLine());
+        int identityCard = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter number phone:");
-        int phone=Integer.parseInt(scanner.nextLine());
+        int phone = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter email:");
-        String email=scanner.nextLine();
+        String email = scanner.nextLine();
         System.out.println("Enter level:");
-        String level= scanner.nextLine();
+        String level = scanner.nextLine();
         System.out.println("Enter location:");
-        String location= scanner.nextLine();
+        String location = scanner.nextLine();
         System.out.println("Enter wage:");
-        double wage= Double.parseDouble(scanner.nextLine());
-        Employee employee=new Employee(id,name,brithday,gender,
-                identityCard,phone,email,level,location,wage);
+        double wage = Double.parseDouble(scanner.nextLine());
+        Employee employee = new Employee(id, name, brithday, gender,
+                identityCard, phone, email, level, location, wage);
         for (int i = 0; i < listEmployee.size(); i++) {
-            if (listEmployee.get(i).getCode()==id){
-                listEmployee.set(i,employee);
+            if (listEmployee.get(i).getCode() == id) {
+                listEmployee.set(i, employee);
             }
         }
     }

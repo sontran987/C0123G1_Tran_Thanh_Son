@@ -2,7 +2,7 @@ package ss19_string_regex;
 
 import java.util.Scanner;
 
-public class Validate {
+public class ValidateClass {
     static final String REGEX ="^(A|C|P)[0-9]{4}(G|H|I|K)$";
 
     public static void main(String[] args) {
