@@ -5,17 +5,17 @@ public abstract class Facility {
     private String serviceName;
     private String usableArea;
     private double rentalCosts;
-    private int maximumPeson;
+    private int maximumPeople;
     private String rentalType;
 
     public Facility() {
     }
 
-    public Facility(String serviceName, String usableArea, double rentalCosts, int maximumPeson, String rentalType) {
+    public Facility(String serviceName, String usableArea, double rentalCosts, int maximumPeople, String rentalType) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCosts = rentalCosts;
-        this.maximumPeson = maximumPeson;
+        this.maximumPeople = maximumPeople;
         this.rentalType = rentalType;
     }
 
@@ -44,11 +44,11 @@ public abstract class Facility {
     }
 
     public int getMaximumPeson() {
-        return maximumPeson;
+        return maximumPeople;
     }
 
     public void setMaximumPeson(int maximumPeson) {
-        this.maximumPeson = maximumPeson;
+        this.maximumPeople = maximumPeson;
     }
 
     public String getRentalType() {
@@ -64,7 +64,7 @@ public abstract class Facility {
         return " service Name= " + serviceName +
                 ", usable Area= " + usableArea +
                 ", rental Costs= " + rentalCosts +
-                ", maximum Peson= " + maximumPeson +
+                ", maximum Peson= " + maximumPeople +
                 ", rentalType= " + rentalType  ;
     }
 }

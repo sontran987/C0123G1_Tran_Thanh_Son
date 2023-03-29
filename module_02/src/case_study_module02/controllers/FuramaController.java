@@ -1,6 +1,11 @@
 package case_study_module02.controllers;
 
+import case_study_module02.services.customer.CustomerService;
+import case_study_module02.services.customer.CustomerServiceImpl;
+import case_study_module02.services.employee.EmployeeService;
 import case_study_module02.services.employee.EmployeeServiceImpl;
+import case_study_module02.services.facility.FacilityService;
+import case_study_module02.services.facility.FacilityServiceImpl;
 
 import java.util.Scanner;
 
@@ -12,7 +17,7 @@ public class FuramaController {
         int choose;
         do {
             System.out.println(
-                    "Menu: \n" +
+                    "Menu Furama: \n" +
                             "1.\tEmployee Management\n" +
                             "2.\tCustomer Management\n" +
                             "3.\tFacility Management\n" +
@@ -47,14 +52,12 @@ public class FuramaController {
     }
 
     public static void employeeManagement() {
-        EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-
-
+        EmployeeService employeeService = new EmployeeServiceImpl();
         Scanner sc = new Scanner(System.in);
         int choose;
         do {
             System.out.println(
-                    "Menu: \n" +
+                    "Menu : \n" +
                             "1.\tDisplay list employees\n" +
                             "2.\tAdd new employees\n" +
                             "3.\tEdit employees\n" +
@@ -72,7 +75,7 @@ public class FuramaController {
                     employeeService.editInformationEmploy();
                     break;
                 case 4:
-                    System.out.println("Đã quay lại menu chính:");
+                    System.out.println("Back to menu furama.");
                     break;
                 default:
                     System.out.println("Hãy nhập lại");
@@ -81,7 +84,7 @@ public class FuramaController {
     }
 
     public static void customerManagement() {
-
+        CustomerService customerService=new CustomerServiceImpl();
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
@@ -95,13 +98,16 @@ public class FuramaController {
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
+                    customerService.displayCustomer();
                     break;
                 case 2:
+                    customerService.addCustomer();
                     break;
                 case 3:
+                    customerService.editInfomationCostomer();
                     break;
                 case 4:
-                    displayMainMenu();
+                    System.out.println("Back to menu furama.");
                     break;
                 default:
                     System.out.println("Hãy nhập lại");
@@ -110,7 +116,7 @@ public class FuramaController {
     }
 
     public static void facilityManagement() {
-
+        FacilityService facilityService=new FacilityServiceImpl();
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
@@ -124,13 +130,16 @@ public class FuramaController {
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
                 case 1:
+                    facilityService.displayListFacility();
                     break;
                 case 2:
+                    facilityService.addNewFacility();
                     break;
                 case 3:
+                    facilityService.displayListFacilityMaintenance();
                     break;
                 case 4:
-                    displayMainMenu();
+                    System.out.println("Back to menu furama");
                     break;
                 default:
                     System.out.println("Hãy nhập lại");

@@ -5,19 +5,19 @@ public abstract class Person {
     private String name;
     private String brithday;
     private String gender;
-    private int idNumber;
+    private int identityCard;
     private int phoneNumber;
     private String email;
 
     public Person() {
     }
 
-    public Person(int code, String name, String brithday, String gender, int idNumber, int phoneNumber, String email) {
+    public Person(int code, String name, String brithday, String gender, int identityCard, int phoneNumber, String email) {
         this.code = code;
         this.name = name;
         this.brithday = brithday;
         this.gender = gender;
-        this.idNumber = idNumber;
+        this.identityCard = identityCard;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
@@ -54,12 +54,12 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public int getIdNumber() {
-        return idNumber;
+    public int getIdentityCard() {
+        return identityCard;
     }
 
-    public void setIdNumber(int idNumber) {
-        this.idNumber = idNumber;
+    public void setIdentityCard(int identityCard) {
+        this.identityCard = identityCard;
     }
 
     public int getPhoneNumber() {
@@ -80,11 +80,11 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Id=" + code +
+        return "id=" + code +
                 ", name= " + name +
                 ", brithday= " + brithday +
                 ", gender= " + gender +
-                ", idNumber= " + idNumber +
+                ", idNumber= " + identityCard +
                 ", phoneNumber= " + phoneNumber +
                 ", email= " + email ;
     }

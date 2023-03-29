@@ -3,20 +3,20 @@ package case_study_module02.models;
 public class Employee extends Person {
     private String level;
     private String location;
-    private double wage;
+    private long wage;
 
     public Employee() {
 
 
     }
 
-    public Employee(String level, String location, double wage) {
+    public Employee(String level, String location, long wage) {
         this.level = level;
         this.location = location;
         this.wage = wage;
     }
 
-    public Employee(int employeeCode, String name, String brithday, String gender, int idNumber, int phoneNumber, String email, String level, String location, double wage) {
+    public Employee(int employeeCode, String name, String brithday, String gender, int idNumber, int phoneNumber, String email, String level, String location, long wage) {
         super(employeeCode, name, brithday, gender, idNumber, phoneNumber, email);
         this.level = level;
         this.location = location;
@@ -43,7 +43,7 @@ public class Employee extends Person {
         return wage;
     }
 
-    public void setWage(double wage) {
+    public void setWage(long wage) {
         this.wage = wage;
     }
 
