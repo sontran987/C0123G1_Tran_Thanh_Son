@@ -1,7 +1,7 @@
 package case_study_module02.models;
 
 
-public class Villa extends Facility{
+public class Villa extends Facility {
     //tiêu chuẩn phòng, diện tích hồ bơi, số tầng
     private String roomStandard;
     private double swimmingPoolArea;
@@ -16,8 +16,8 @@ public class Villa extends Facility{
         this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String serviceName, String usableArea, double rentalCosts, int maximumPeople, String rentalType, String roomStandard, double swimmingPoolArea, int numberOfFloors) {
-        super(serviceName, usableArea, rentalCosts, maximumPeople, rentalType);
+    public Villa(String idService, String serviceName, double usableArea, double rentalCosts, int maximumPeople, String rentalType, String roomStandard, double swimmingPoolArea, int numberOfFloors) {
+        super(idService, serviceName, usableArea, rentalCosts, maximumPeople, rentalType);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloors = numberOfFloors;
@@ -50,9 +50,14 @@ public class Villa extends Facility{
     @Override
     public String toString() {
         return "Villa: " +
-                super.toString() +
+                super.toString()+
                 ", roomStandard= " + roomStandard +
                 ", swimmingPoolArea= " + swimmingPoolArea +
-                ", numberOfFloors= " + numberOfFloors ;
+                ", numberOfFloors= " + numberOfFloors;
+    }
+
+    @Override
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + roomStandard + "," + swimmingPoolArea + "," + numberOfFloors;
     }
 }

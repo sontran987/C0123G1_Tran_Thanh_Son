@@ -77,6 +77,6 @@ public class Booking {
                 ", endDate= " + endDate +
                 ", codeCustomet= " + codeCustomet +
                 ", serviceName= " + serviceName +
-                ", typeOfService= " + typeOfService ;
+                ", typeOfService= " + typeOfService;
     }
 }

@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
     static List<Employee> listEmployee = new ArrayList<>();
+    static {
+        listEmployee.add(new Employee(1,"2","1","2",1,4,"1","2","4",1));
+    }
     static Scanner scanner = new Scanner(System.in);
     static String[] genderes = {
             "Male",
@@ -31,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public static String chooseGender() {
         String gender = null;
-        boolean flag ;
+        boolean flag;
         do {
             flag = true;
             System.out.println("---/---/---/---/---/---/---/---/---/---/---/---/---/---/---/---");
@@ -60,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public static String chooseLevel() {
-        boolean flag ;
+        boolean flag;
         String level = null;
         do {
             flag = true;
@@ -92,7 +95,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public static String chooseLocation() {
-        boolean flag ;
+        boolean flag;
         String location = null;
         do {
             flag = true;
@@ -140,18 +143,18 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void addEmploy() {
         int id;
-        boolean flag=true;
-       do {
-           System.out.println("Enter id:");
+        boolean flag = true;
+        do {
+            System.out.println("Enter id:");
             id = Integer.parseInt(scanner.nextLine());
-           for (int i = 0; i < listEmployee.size(); i++) {
-               if (listEmployee.get(i).getCode()==id){
-                   flag=false;
-               }else{
-                   flag=true;
-               }
-           }
-       }while(!flag);
+            for (int i = 0; i < listEmployee.size(); i++) {
+                if (listEmployee.get(i).getCode() == id) {
+                    flag = false;
+                } else {
+                    flag = true;
+                }
+            }
+        } while (!flag);
         System.out.println("Enter name:");
         String name = scanner.nextLine();
         System.out.println("Enter brithday:");
@@ -174,19 +177,19 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void editInformationEmploy() {
         int id;
-        boolean flag=true;
+        boolean flag = true;
         do {
             System.out.println("Enter id you want to edit:");
-             id = Integer.parseInt(scanner.nextLine());
+            id = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < listEmployee.size(); i++) {
-                if (listEmployee.get(i).getCode()==id){
-                    flag=false;
-                }else{
-                    flag=true;
+                if (listEmployee.get(i).getCode() == id) {
+                    flag = false;
+                } else {
+                    flag = true;
                     System.out.println("id không nằm trong danh sách");
                 }
             }
-        }while(flag);
+        } while (flag);
         System.out.println("Enter name:");
         String name = scanner.nextLine();
         System.out.println("Enter brithday:");
@@ -206,7 +209,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 , identityCard, phone, email, levels, location, wage);
         for (int i = 0; i < listEmployee.size(); i++) {
             if (listEmployee.get(i).getCode() == id) {
-                listEmployee.set(i, employee);
+                listEmployee.set(i,employee);
             }
         }
     }

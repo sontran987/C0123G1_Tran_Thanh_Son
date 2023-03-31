@@ -4,18 +4,18 @@ package case_study_module02.models;
 public class House extends Facility {
     //tiêu chuẩn phòng, số tầng.
     private String roomStandard;
-    private int numberOfFloors;
+    private String numberOfFloors;
 
     public House() {
     }
 
-    public House(String roomStandard, int numberOfFloors) {
+    public House(String roomStandard, String numberOfFloors) {
         this.roomStandard = roomStandard;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public House(String serviceName, String usableArea, double rentalCosts, int maximumPeson, String rentalType, String roomStandard, int numberOfFloors) {
-        super(serviceName, usableArea, rentalCosts, maximumPeson, rentalType);
+    public House(String idService, String serviceName, double usableArea, double rentalCosts, int maximumPeople, String rentalType, String roomStandard, String numberOfFloors) {
+        super(idService, serviceName, usableArea, rentalCosts, maximumPeople, rentalType);
         this.roomStandard = roomStandard;
         this.numberOfFloors = numberOfFloors;
     }
@@ -28,11 +28,11 @@ public class House extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public int getNumberOfFloors() {
+    public String getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(int numberOfFloors) {
+    public void setNumberOfFloors(String numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -41,6 +41,10 @@ public class House extends Facility {
         return "House: " +
                 super.toString() +
                 ", roomStandard= " + roomStandard +
-                ", numberOfFloors= " + numberOfFloors ;
+                ", numberOfFloors= " + numberOfFloors;
+    }
+
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + roomStandard + "," + numberOfFloors;
     }
 }

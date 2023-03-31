@@ -53,6 +53,11 @@ public class Employee extends Person {
                 super.toString() +
                 ", level= " + level +
                 ", location= " + location +
-                ", wage= " + wage ;
+                ", wage= " + wage;
+    }
+
+    @Override
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + level + "," + location + "," + wage;
     }
 }

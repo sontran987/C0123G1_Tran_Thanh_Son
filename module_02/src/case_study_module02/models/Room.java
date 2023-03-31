@@ -1,33 +1,38 @@
 package case_study_module02.models;
 
-public class Room extends Facility{
+public class Room extends Facility {
     //dịch vụ miễn phí đi kèm
-    private String treeServiceIncluded;
+    private String freeServiceIncluded;
 
     public Room() {
     }
 
     public Room(String treeServiceIncluded) {
-        this.treeServiceIncluded = treeServiceIncluded;
+        this.freeServiceIncluded = treeServiceIncluded;
     }
 
-    public Room(String serviceName, String usableArea, double rentalCosts, int maximumPeson, String rentalType, String treeServiceIncluded) {
-        super(serviceName, usableArea, rentalCosts, maximumPeson, rentalType);
-        this.treeServiceIncluded = treeServiceIncluded;
+    public Room(String idService, String serviceName, double usableArea, double rentalCosts, int maximumPeople, String rentalType, String freeServiceIncluded) {
+        super(idService, serviceName, usableArea, rentalCosts, maximumPeople, rentalType);
+        this.freeServiceIncluded = freeServiceIncluded;
     }
 
-    public String getTreeServiceIncluded() {
-        return treeServiceIncluded;
+    public String getFreeServiceIncluded() {
+        return freeServiceIncluded;
     }
 
-    public void setTreeServiceIncluded(String treeServiceIncluded) {
-        this.treeServiceIncluded = treeServiceIncluded;
+    public void setFreeServiceIncluded(String freeServiceIncluded) {
+        this.freeServiceIncluded = freeServiceIncluded;
     }
 
     @Override
     public String toString() {
-        return "Room= " +
+        return "Room: " +
                 super.toString() +
-                ", treeServiceIncluded= " + treeServiceIncluded ;
+                ", treeServiceIncluded= " + freeServiceIncluded;
+    }
+
+    @Override
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + freeServiceIncluded;
     }
 }

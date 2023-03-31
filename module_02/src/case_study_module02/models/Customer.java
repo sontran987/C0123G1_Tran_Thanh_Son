@@ -1,6 +1,6 @@
 package case_study_module02.models;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private String typeOfGuest;
     private String address;
 
@@ -37,8 +37,13 @@ public class Customer extends Person{
     @Override
     public String toString() {
         return "Customer: " +
-               super.toString() +
+                super.toString() +
                 ", typeOfGuest= " + typeOfGuest +
-                ", address= " + address  ;
+                ", address= " + address;
+    }
+
+    @Override
+    public String getInfoToCSV() {
+        return super.getInfoToCSV() + "," + typeOfGuest + "," + address;
     }
 }

@@ -65,6 +65,6 @@ public class Contract {
                 ", codeBooking= " + codeBooking +
                 ", advanceDepositAmount= " + advanceDepositAmount +
                 ", totalPaymentAmount= " + totalPaymentAmount +
-                ", codeCustomer= " + codeCustomer ;
+                ", codeCustomer= " + codeCustomer;
     }
 }

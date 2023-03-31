@@ -84,7 +84,7 @@ public class FuramaController {
     }
 
     public static void customerManagement() {
-        CustomerService customerService=new CustomerServiceImpl();
+        CustomerService customerService = new CustomerServiceImpl();
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
@@ -116,7 +116,7 @@ public class FuramaController {
     }
 
     public static void facilityManagement() {
-        FacilityService facilityService=new FacilityServiceImpl();
+        FacilityService facilityService = new FacilityServiceImpl();
         Scanner scanner = new Scanner(System.in);
         int choose;
         do {
@@ -124,8 +124,9 @@ public class FuramaController {
                     "Menu: \n" +
                             "1\tDisplay list facility\n" +
                             "2\tAdd new facility\n" +
-                            "3\tDisplay list facility maintenance\n" +
-                            "4\tReturn main menu\n");
+                            "3\tEdit facility\n" +
+                            "4\tDisplay list facility maintenance\n" +
+                            "5\tReturn main menu\n");
             System.out.println("Nhập số tương ứng với chức năng: ");
             choose = Integer.parseInt(scanner.nextLine());
             switch (choose) {
@@ -136,15 +137,18 @@ public class FuramaController {
                     facilityService.addNewFacility();
                     break;
                 case 3:
-                    facilityService.displayListFacilityMaintenance();
+                    facilityService.editFacility();
                     break;
                 case 4:
+                    facilityService.displayListFacilityMaintenance();
+                    break;
+                case 5:
                     System.out.println("Back to menu furama");
                     break;
                 default:
                     System.out.println("Hãy nhập lại");
             }
-        } while (choose != 4);
+        } while (choose != 5);
     }
 
     public static void bookingManagement() {
