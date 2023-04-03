@@ -1,19 +1,22 @@
 package case_study_module02.services.facility;
 
 import case_study_module02.models.House;
+import case_study_module02.repository.facility_repo.HouseRepo;
+import case_study_module02.repository.facility_repo.HouseRepoImpl;
+import case_study_module02.untils.ReadAndWriteFileHouse;
 
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class HouseServiceImpl implements HouseService {
     static Scanner scanner = new Scanner(System.in);
-    static LinkedHashMap<House, Integer> mapHouse = new LinkedHashMap<>();
+    static HouseRepo houseRepo = new HouseRepoImpl();
+    static LinkedHashMap<House, Integer> mapHouse = houseRepo.displayListHouse();
 
-    static {
-        mapHouse.put(new House("1", "House", 1, 1, 1, "1", "1", "1"), 0);
-
-    }
-
+    //    static {
+//        mapHouse.put(new House("1", "House", 1, 1, 1, "1", "1", 1), 0);
+//
+//    }
     static String[] listRentalType = {
             "Year",
             "Month",
@@ -38,6 +41,7 @@ public class HouseServiceImpl implements HouseService {
         }
         do {
             flag = true;
+            System.out.print("Choose Rental type: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -69,7 +73,7 @@ public class HouseServiceImpl implements HouseService {
             for (int i = 0; i < listRoomStandard.length; i++) {
                 System.out.println((i + 1) + ". " + listRoomStandard[i]);
             }
-            System.out.println("Enter choose room standard: ");
+            System.out.print("Choose room standard: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -96,18 +100,19 @@ public class HouseServiceImpl implements HouseService {
     @Override
     public void displayListHouse() {
         for (House h : mapHouse.keySet()) {
-            System.out.println(h + ", đã sử dụng: " + mapHouse.get(h) + " lần.");
+            System.out.println(h.getInfoToCSV() + ", đã sử dụng: " + mapHouse.get(h) + " lần.");
         }
     }
 
     @Override
     public void addNewHouse() {
-        String id, name, rentalType, roomStandard, numberOfFloors;
+        String id, name, rentalType, roomStandard;
         double usableArea, costs;
-        int maximumPeople;
-        int count = 0;
+        int maximumPeople, numberOfFloors;
+        int count;
         do {
-            System.out.println("Enter id service(SVHO-YYYY):");
+            count = 0;
+            System.out.print("Enter id service(SVHO-YYYY):");
             id = scanner.nextLine();
             for (House h : mapHouse.keySet()) {
                 if (h.getIdService() == id) {
@@ -115,47 +120,73 @@ public class HouseServiceImpl implements HouseService {
                 }
             }
             if (!regexIdService(id)) {
+                System.out.println("Not valid.");
                 count++;
             }
-        System.out.println("Enter name service: ");
-        name = scanner.nextLine();
-        if (!regexNameService(name)){
-            count++;
-        }
-        System.out.println("Enter usable area: ");
-        usableArea = Double.parseDouble(scanner.nextLine());
-        if (usableArea<30){
-            count++;
-        }
-        System.out.println("Enter rental costs: ");
-        costs = Double.parseDouble(scanner.nextLine());
-        if(costs<0){
-            count++;
-        }
-        System.out.println("Enter maximum people: ");
-        maximumPeople = Integer.parseInt(scanner.nextLine());
-        if (maximumPeople<0||maximumPeople>20){
-            count++;
-        }
-        rentalType = chooseRentalType();
-        roomStandard = chooseRoomStandard();
-        System.out.println("Enter number of floors: ");
-        numberOfFloors = scanner.nextLine();
-            if (count > 0) {
-                System.out.println("Hãy nhập lại. ");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter name service: ");
+            name = scanner.nextLine();
+            if (!regexNameService(name)) {
+                System.out.println("Not valid.");
+
+                count++;
             }
         } while (count > 0);
-        mapHouse.put(new House(id, name, usableArea, costs, maximumPeople, rentalType, roomStandard, numberOfFloors), 0);
+        do {
+            count = 0;
+            System.out.print("Enter usable area: ");
+            usableArea = Double.parseDouble(scanner.nextLine());
+            if (usableArea <= 30) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter rental costs: ");
+            costs = Double.parseDouble(scanner.nextLine());
+            if (costs < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter maximum people: ");
+            maximumPeople = Integer.parseInt(scanner.nextLine());
+            if (maximumPeople < 0 || maximumPeople >= 20) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        rentalType = chooseRentalType();
+        roomStandard = chooseRoomStandard();
+        do {
+            count = 0;
+            System.out.print("Enter number of floors: ");
+            numberOfFloors = Integer.parseInt(scanner.nextLine());
+            if (numberOfFloors < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        int value = 0;
+        mapHouse.put(new House(id, name, usableArea, costs, maximumPeople,
+                rentalType, roomStandard, numberOfFloors), value);
+        houseRepo.addNewHouse(mapHouse);
     }
 
     @Override
     public void editHouse() {
-        String id, name, rentalType, roomStandard, numberOfFloors;
-        int maximumPeople;
+        String id, name, rentalType, roomStandard;
+        int maximumPeople, numberOfFloors;
         double usableArea, costs;
-        int count = 0;
+        int count;
         do {
-            System.out.println("Enter id service: ");
+            count = 0;
+            System.out.print("Enter id service: ");
             id = scanner.nextLine();
             for (House h : mapHouse.keySet()) {
                 if (h.getIdService() != id) {
@@ -163,34 +194,56 @@ public class HouseServiceImpl implements HouseService {
                 }
             }
             if (!regexIdService(id)) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter name service: ");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter name service: ");
             name = scanner.nextLine();
             if (!regexNameService(name)) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter usable area: ");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter usable area: ");
             usableArea = Double.parseDouble(scanner.nextLine());
-            if (usableArea < 30) {
+            if (usableArea <= 30) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter rental costs: ");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter rental costs: ");
             costs = Double.parseDouble(scanner.nextLine());
             if (costs < 0) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter maximum people: ");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter maximum people: ");
             maximumPeople = Integer.parseInt(scanner.nextLine());
-            if (maximumPeople < 0 || maximumPeople > 20) {
+            if (maximumPeople < 0 || maximumPeople >= 20) {
+                System.out.println("Not valid.");
                 count++;
             }
-            rentalType = chooseRentalType();
-            roomStandard = chooseRoomStandard();
-            System.out.println("Enter number of floors: ");
-            numberOfFloors = scanner.nextLine();
-            if (count > 0) {
-                System.out.println("Hãy nhập lại. ");
+        } while (count > 0);
+        rentalType = chooseRentalType();
+        roomStandard = chooseRoomStandard();
+        do {
+            count = 0;
+
+            System.out.print("Enter number of floors: ");
+            numberOfFloors = Integer.parseInt(scanner.nextLine());
+            if (numberOfFloors < 0) {
+                System.out.println("Not valid.");
+                count++;
             }
         } while (count > 0);
         for (House h : mapHouse.keySet()) {
@@ -206,13 +259,14 @@ public class HouseServiceImpl implements HouseService {
 
             }
         }
+        houseRepo.editHouse(mapHouse);
     }
 
     @Override
     public void displayListHouseMaintenance() {
         for (House h : mapHouse.keySet()) {
             if (mapHouse.get(h) >= 5) {
-                System.out.println(h + ", đã sử dụng: " + mapHouse.get(h) + " lần, cần bảo trì.");
+                System.out.println(h.getInfoToCSV() + ", đã sử dụng: " + mapHouse.get(h) + " lần, cần bảo trì.");
             }
         }
     }

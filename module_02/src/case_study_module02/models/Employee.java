@@ -16,7 +16,7 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    public Employee(int employeeCode, String name, String brithday, String gender, int idNumber, int phoneNumber, String email, String level, String location, long wage) {
+    public Employee(int employeeCode, String name, String brithday, String gender, int idNumber, String phoneNumber, String email, String level, String location, long wage) {
         super(employeeCode, name, brithday, gender, idNumber, phoneNumber, email);
         this.level = level;
         this.location = location;
@@ -56,7 +56,7 @@ public class Employee extends Person {
                 ", wage= " + wage;
     }
 
-    @Override
+
     public String getInfoToCSV() {
         return super.getInfoToCSV() + "," + level + "," + location + "," + wage;
     }

@@ -82,9 +82,9 @@ public class Main {
     public static void printlnNation(List<String> nation) {
         List<Nation> list = new ArrayList<>();
         list.add(new Nation(Integer.parseInt(nation.get(0)), nation.get(1), nation.get(2)));
-//        for (Nation n : list) {
-//            System.out.println(n);
-//        }
+        for (Nation n : list) {
+            System.out.println(n);
+        }
         list.toString();
     }
 }

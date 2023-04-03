@@ -1,1 +1,842 @@
-<mxfile host="Electron" modified="2023-03-28T13:22:45.430Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.8.16 Chrome/106.0.5249.199 Electron/21.4.0 Safari/537.36" etag="wmKG6puKWDwMAbgmxIKP" version="20.8.16" type="device"><diagram name="Page-1" id="TyBmaetNNdY5Tzod-gkI">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</diagram></mxfile>
+<mxfile host="Electron" modified="2023-04-02T12:53:12.651Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="a2O7KNSCr9MD2t6SH8T1" version="21.1.2" type="device">
+  <diagram name="Page-1" id="TyBmaetNNdY5Tzod-gkI">
+    <mxGraphModel dx="3119" dy="3014" grid="1" gridSize="15" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-5" value="&lt;h1&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;K/n: OOP là kỹ thuật cho phép LTV ánh xạ đối tượng từ bên ngoài thực tế vào trong lập trình&amp;nbsp;&lt;/font&gt;&lt;/h1&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=25;labelBackgroundColor=none;labelBorderColor=none;shadow=0;glass=0;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="-1400" width="480" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-560" y="370" />
+              <mxPoint x="-560" y="1110" />
+            </Array>
+            <mxPoint x="-1050" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="1777" />
+            </Array>
+            <mxPoint x="-1050" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-57" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1049" y="370" />
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="2955" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-73" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1049" y="370" />
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="3863" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-90" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8tiabNdw2CEeQHUozWih-89" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1049" y="370" />
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="5010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontColor=#050505;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="V6GIZETxk0q46TcklZVO-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1049" y="370" />
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="6308" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="ZgAFSdvI10eyZjq5mSZ5-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1049" y="370" />
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="7927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="hRwxo7yOTdl56_jiXTJ8-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-885" y="900" as="sourcePoint" />
+            <mxPoint x="-1040" y="840" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-555" y="370" />
+              <mxPoint x="-555" y="9397" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="0Ex6OaLoyWFYxdWnyIGm-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="0Ex6OaLoyWFYxdWnyIGm-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="lJl8kAgrpkRiscPkJRMh-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="lJl8kAgrpkRiscPkJRMh-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="lJl8kAgrpkRiscPkJRMh-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="lJl8kAgrpkRiscPkJRMh-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="lJl8kAgrpkRiscPkJRMh-68" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WDhljRiHEO2yWM2faU9-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="8WDhljRiHEO2yWM2faU9-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-6" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Module 2&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;direction=east;" parent="1" vertex="1">
+          <mxGeometry x="-1095" y="285" width="225" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-7" target="Zhg1dpatJr-S98Y7JuOB-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-7" target="Zhg1dpatJr-S98Y7JuOB-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-315" y="-830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-7" target="Zhg1dpatJr-S98Y7JuOB-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-7" target="Zhg1dpatJr-S98Y7JuOB-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;1. Introduction to java&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-410" y="-1105" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-6" target="Zhg1dpatJr-S98Y7JuOB-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1020" y="370" as="sourcePoint" />
+            <mxPoint x="-470" y="-90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-560" y="370" />
+              <mxPoint x="-540" y="-1055" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-7" target="Zhg1dpatJr-S98Y7JuOB-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-360" y="-930" as="sourcePoint" />
+            <mxPoint x="-310" y="-980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="Zhg1dpatJr-S98Y7JuOB-13" target="Zhg1dpatJr-S98Y7JuOB-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-13" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;* Kiểu dữ liệu nguyên thuỷ:&lt;br&gt;+số nguyên:&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;-byte:1byte&lt;br&gt;-short:2byte&lt;br&gt;-int: 4byte&amp;nbsp;&lt;br&gt;- long: 8 byte&lt;br&gt;+ số thực:&lt;br&gt;-float: 4 byte&lt;br&gt;-double: 8 byte&lt;br&gt;+boolean: true or false&lt;br&gt;+char: Kiểu kí tự Unincode&lt;br&gt;*Kiểu đối tượng:&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="120" y="-1240" width="330" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-15" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;+Các loại toán tử:&lt;br&gt;-Toán tử số học&amp;nbsp;&lt;br&gt;-Toán tử số gán&amp;nbsp;&lt;br&gt;-Toán tử so sánh&amp;nbsp;&lt;br&gt;-Toán tử logic&amp;nbsp; &amp;nbsp;&lt;br&gt;-Toán tử bit&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="-930" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-17" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;-Dùng if-else khi: có ít mệnh đề điều kiện&amp;nbsp;&lt;br&gt;-dùng switch-case: khi thực hiện nhiều mệnh đề và có so sánh bằng&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-800" width="430" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-19" value="&lt;font size=&quot;3&quot;&gt;-Java là ngôn ngữ lập trình OOP&lt;br&gt;-Java được sử dụng rộng rãi&amp;nbsp;&lt;br&gt;+JDK(Java delopment kit): Bộ công cụ hỗ trợ lập trình Java gồm:&lt;br&gt;-Trình biên dịch compiler&lt;br&gt;-deburger&lt;br&gt;-JRE(Java runtime envisonment): Môi trường thực thi ứng dụng java gồm:&lt;br&gt;-Thư viện&lt;br&gt;-JVM(Java virtual machine): Máy ảo java&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="-620" width="590" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Zhg1dpatJr-S98Y7JuOB-21" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Nguyên thuỷ lưu value&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Object có method và hành vi&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;align=center;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="-1160" width="220" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-3" target="8tiabNdw2CEeQHUozWih-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-225" y="162" />
+              <mxPoint x="-110" y="162" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-3" target="8tiabNdw2CEeQHUozWih-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;2.Vòng lặp và Mảng&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-410" y="295" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-5" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Sự khac nhau của mảng trong java và java script:&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Java:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Mảng là biến đặc biệt có thể lưu nhiều giá trị&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Độ dài cố định (cần phải khai bào độ dài trước)&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Các phàn tử có cùng kiểu dữ liệu&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Chỉ có thuộc tính length().&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-300" y="-300" width="590" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-7" value="+Java Script:+Độ dài có thể thay đổi được&lt;br&gt;+Có thể có nhiều kiểu dữ liệu&lt;br&gt;+Có các thuộc tính Length(), join(),push(),pop(),shift(),unshift(),..." style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="290" y="-300" width="520" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-8" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;-Sự&amp;nbsp; khác nhau của for và for-each:&lt;/b&gt;&lt;br&gt;-for:+có thể thay đổi giá trị các phần tử trong mảng&amp;nbsp;&lt;br&gt;+Có thể duyệt mảng theo nhiều chiều và nhiều vị trí&lt;br&gt;-for-Each:+Không thể thay đổi giá trị các phần tử trong mảng&amp;nbsp;&lt;br&gt;+chỉ duyệt xuôi&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="110" width="880" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-10" target="8tiabNdw2CEeQHUozWih-18" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-235" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-10" target="8tiabNdw2CEeQHUozWih-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="1110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-10" target="8tiabNdw2CEeQHUozWih-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-235" y="1260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-10" target="8tiabNdw2CEeQHUozWih-25" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="1150" />
+              <mxPoint x="250" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-10" value="&lt;h1&gt;3.Method&lt;/h1&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-480" y="1020" width="490" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-18" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;+Là tập hợp các câu lệnh thực hiện một nhiệm vụ nhất định&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;+Đươc định nghĩa trong class&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;sub&gt;*AccessModifier static\ non stattic return data type method Name(parameters list,..){&lt;br&gt;// code&lt;br&gt;return ;&lt;br&gt;}&lt;/sub&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="640" width="430" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-21" value="&lt;font size=&quot;3&quot;&gt;-Có hai loại method :&lt;br&gt;+Có giá trị trả về&amp;nbsp;&lt;br&gt;+Không có giá trị trả về&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="900" width="490" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-23" value="&lt;font size=&quot;3&quot;&gt;-Ưu điểm:&lt;br&gt;+Sử dụng để tổ chức và tái sử dụng lại mã lệnh&lt;br&gt;+Xây dựng các khối code không phải lặp đi lặp lại, dễ quản lý mã nguồn hơn&lt;br&gt;+Giúp định nghĩa cấu trúc logic của úng dụng&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="1160" width="610" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-25" value="&lt;h1&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;-Phân biệt truyền tham trị và truyền tham chiếu :&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;+Truyền tham trị :Các tham số có kiểu dữ liệu nguyên thuỷ đều là truyền tham trị&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;+Truyền tham chiếu: Là kiểu dữ liệu đối tượng mới có thể truyền tham chiếu.&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="960" width="660" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-27" target="8tiabNdw2CEeQHUozWih-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-27" target="8tiabNdw2CEeQHUozWih-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1235" y="1748" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-27" value="&lt;hr id=&quot;null&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;4. Class and Object in Java&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="1665" width="335" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-29" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: medium; background-color: initial;&quot;&gt;-So sánh class và object:&lt;/span&gt;&lt;/div&gt;&lt;font size=&quot;3&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Class: Định nghĩa các thuộc tính và hành vi&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Object: Là thể hiện cụ thể của 1 class , object cũng có các thuộc tính và hành vi được khai báo ở class&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+mỗi Object riêng biệt có các giá trị cho thuộc tính và hành vi khac nhau&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="103.93" y="1404.32" width="487.5" height="217.5" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-31" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Constructor là biến đặc biệt sử dụng để khởi tạo đối tượng&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các đặc điểm nổi bật :&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Được gọi khi tạo đối tượng (sử dụng từ khoá new)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Phải cùng tên với tên lớp của nó&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Không có giá trị trả về&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Trong 1 class có nhiều constructor với các tham số khac nhau&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Nếu trong class không có constructor thì Java sẽ tự định nghĩa 1 constructor không tham số&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Một constructor có thể gọi 1 constructor khác thông qua tử khoá this (* cần đặt trên đầu constructor mà mình gọi)&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="647" y="1275" width="795" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-53" value="Constructor:&lt;br&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;-Cùng tên với tên class&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;-Được gọi bằng từ khoá new&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;-Nếu trong class không có bất kỳ constructor nào thì java sẽ tự động thêm vào 1 constructor không tham số&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;-Không có kết quả trả về&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: 700; background-color: initial;&quot;&gt;-Không thể đi cùng với các từ khoá Abstract, final, static,..&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1770" width="530" height="495" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-54" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Method:&lt;/span&gt;&lt;/div&gt;&lt;br&gt;-có thể cùng tên nhưng không nên&lt;br&gt;&lt;div style=&quot;&quot;&gt;-Gọi thông qua tên method&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-Muốn sử dụng method thì phải tạo&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;-Có kết quả trả về&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;-Có thể đi cùng với các từ khoá Abstract, final, static,.." style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;align=left;" parent="1" vertex="1">
+          <mxGeometry x="890" y="1770" width="547.5" height="495" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-55" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8tiabNdw2CEeQHUozWih-27" target="8tiabNdw2CEeQHUozWih-53" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="1835" as="sourcePoint" />
+            <mxPoint x="590" y="1785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;" parent="1" source="8tiabNdw2CEeQHUozWih-57" target="8tiabNdw2CEeQHUozWih-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="2955" />
+              <mxPoint x="120" y="2568" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-57" target="8tiabNdw2CEeQHUozWih-65" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-57" target="8tiabNdw2CEeQHUozWih-67" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="2955" />
+              <mxPoint x="120" y="3240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-57" target="8tiabNdw2CEeQHUozWih-70" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-188" y="3435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-57" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;5. Static and Acciss Modifier, Encapsulation&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-377" y="2880" width="377.5" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-59" target="8tiabNdw2CEeQHUozWih-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-59" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;K/n static: &lt;/b&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Dùng để quản lý bộ nhớ tốt hơn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Từ khoá Static thuộc về lớp và không thuộc về intance nào cả&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Từ khoá static dùng để khai báo trước :&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Thuộc tính:Biến Static.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Method: method Static.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Khối {}:Khối Static.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Class:Class static&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="375" y="2445" width="585" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-61" target="8tiabNdw2CEeQHUozWih-63" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-61" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Có thể truy cập vào các thành phần Static (thuộc tính, method) thông qua class or object(ko nên dùng)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Mục đích sử dụng Static:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Thuộc tính static: Tạo ra các biến dùng chung cho tất cả các đối tượng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Method Static: Tạo ra các class tiện ích(util)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Class Static:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;+Không cho phép khởi tạo object từ class này.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Không cho phép khai báo bất kỳ thành viên thông thường nào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="2385" width="525" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-63" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Ràng buộc :&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;-Method static chỉ có thể gọi trực tiếp method static&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không thể ghi đè phương thức static bằng method thường&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1680" y="2460" width="420" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-65" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Các loại biến:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Biến lucal: Được khai báo trong method và kể cả tham số&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Biến Instance: Biến khai báo trong class và ngoài constructor, method =&amp;gt; Đuọc gọi là biến instance or thuộc tính&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Biến Static: Là thuộc tính được khai báo thêm từ khoá static&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="2812.5" width="705" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-67" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Dùng để quy định phạm vi truy cập của thuộc tính, method, class&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Private: Chỉ cho phép truy cập nội bộ 1 class&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+(Default): chỉ nằm trong nội bộ package.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Protected: Nằm trong và ngoài package nhưng phải thông qua kế thừa&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Public: có thể truy cập bất cứ đâu trong project.Java, khác package thì phải khai báo import để xác định vị trí&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1095" y="3000" width="920" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-70" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Encapsulation:&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Ẩn thông tin đối tượng và hiển thị thông tin cần thiết&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-mục đích:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Bảo vệ thông tin của đối tượng (ko cho phép truy cập trực tiếp vào thuộc tính)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Giảm độ phức tạp của chương trình&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Để có được tính bao đóng :sử dụng private, getter/setter&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="258.38" y="3255" width="743.25" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;" parent="1" source="8tiabNdw2CEeQHUozWih-73" target="8tiabNdw2CEeQHUozWih-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-73" target="8tiabNdw2CEeQHUozWih-79" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="225" y="3863" />
+              <mxPoint x="225" y="4248" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-73" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;6. Inheritance&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-360.75" y="3765" width="345" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-75" target="8tiabNdw2CEeQHUozWih-77" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1755" y="3863" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-75" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;- Là cơ chế cho phép lớp con sử dụng lại những đặc điểm và hành vi của lớp cha mà ko cần khai báo lại&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mối quan hệ trong kế thừa : is-a.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Class cha :Super class, prarent class,base class&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Class con: sub class, child class, delivery&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Đặc điểm Inheritance:&lt;/span&gt;&lt;/div&gt;&lt;sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;* &lt;/sub&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Lớp con không thể kế thừa constructor của lóp cha&lt;/span&gt;&lt;/div&gt;&lt;/sub&gt;&lt;sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;*&lt;/sub&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Lớp con không thể truy cập vào tài sản private của lớp cha&lt;/span&gt;&lt;/div&gt;&lt;/sub&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="281.75" y="3665.63" width="1008.25" height="393.75" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-77" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Từ khoá&amp;nbsp; super dùng để :&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Gọi consructor của lớp cha&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Gọi thuộc tính và method của class cha&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Từ khoá final sử dụng trước:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Thuộc tính: Là hằng&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Method: không cho ghi đè&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Class: Không cho phép các class khác kế thừa =&amp;gt;class vô sinh&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="3525" width="630" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-87" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-79" target="8tiabNdw2CEeQHUozWih-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-79" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Polymorphism: Là khả năng 1 đối tượng có thể hiện / hành vi theo những cách khác nhau tuỳ theo ngữ cảnh&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Trong Java cung cấp 2 cơ chế thể hiện tính đa hình:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Overriding(ghi đè)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Overloading(nạp chồng)&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="405" y="4135" width="720" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-86" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;-Overriding&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Là cơ chế cho phép lớp con định nghĩa lại nội dung các phương thức đã có ở lớp cha&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Quy tắc để được overriding: Cùng tên, cùng tham số, cùng kiểu dữ liệu trả về, Access modifier class con phải lớn hơn ỏ bằng lớp cha&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Xảy ra trong mối quan hệ is-a&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Đa hình tại run-time&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;align=center;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1242.5" y="4121.25" width="555" height="252.5" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-88" value="&lt;b&gt;Overloading&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là cơ chế cho phép 1 class có thể định nghĩa ra nhiều method cùng tên nhưng khác tham số truyền vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Quy tắc để được overloading: Method phải cùng tên, nhưng khác tham số truyền vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;-Xảy ra trong 1 Class&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;-Đa hình tại compiler&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="1798" y="4121" width="497" height="259" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-93" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="8tiabNdw2CEeQHUozWih-89" target="8tiabNdw2CEeQHUozWih-92" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-89" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b style=&quot;&quot;&gt;7. Abstract class, Interface&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-374.5" y="4935" width="375" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="x9R9lQrZzuCB0FRW08tg-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontColor=#d71919;" parent="1" source="8tiabNdw2CEeQHUozWih-92" target="x9R9lQrZzuCB0FRW08tg-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x9R9lQrZzuCB0FRW08tg-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;fontColor=#d71919;" parent="1" source="8tiabNdw2CEeQHUozWih-92" target="x9R9lQrZzuCB0FRW08tg-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="398" y="5003" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8tiabNdw2CEeQHUozWih-92" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;K/n&amp;nbsp; Abstract Class&lt;/b&gt;: -Chỉ quan tâm đến kết quả đạt được, không quan tâm đến cách thức thục hiện&amp;nbsp;&lt;br&gt;-Trong Java thì tính trừu tượng được thể hiện qua abstract class và interface&lt;br&gt;=&amp;gt;Cụ thể abstract method (&lt;font style=&quot;&quot; color=&quot;#d71919&quot;&gt;method không có phần body&lt;/font&gt;).&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="150" y="4440" width="497" height="382.5" as="geometry" />
+        </mxCell>
+        <mxCell id="x9R9lQrZzuCB0FRW08tg-1" value="&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px;&quot;&gt;Abstract class&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;-Các tính chất:&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Method có abstract thì không cho phép khai báo nội dung, nó chỉ định nghĩa tên và tham số đầu vào&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Mức truy cập abstract class phải ở protected or public&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Không thể khởi tạo đối tượng, không hỗ trợ đa kế thừa&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Một lớp chứa abstract method thì lớp đó buộc phải là abstract class&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+abstract class có thể chứa thuộc tính và method bình thường&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Không sử dụng final cho abstract class&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Một Class bình thường khi cần kế thừa 1 abstract class thì cần triển khai lại toàn bộ các abstract method&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;+Một abstract class khi kế thừa 1 abstract class khác thì không cần thiết phải triển khai lại các abstract method.&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;align=center;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="915" y="4398.75" width="645" height="423.75" as="geometry" />
+        </mxCell>
+        <mxCell id="x9R9lQrZzuCB0FRW08tg-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;font style=&quot;font-weight: bold;&quot; color=&quot;#c8481e&quot;&gt;In terface&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là một bản thiết kế quy định hành vi chung cho các lớp triển khai nó(dùng từ khoá implement)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không thể khởi tạo đối tượng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các trường (thuộc tính) đều là hằng số&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các method phải là abstract method (từ JDK 8 thì có thêm default và static method)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không có constructor&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-1 class có thể implementnhiều interface&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-1 interface có thể extends nhiều interface&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Tất cả các phương thức trong interface luôn ở dạng public abstract mà không cần khai báo&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;align=center;rounded=1;arcSize=0;" parent="1" vertex="1">
+          <mxGeometry x="672.5" y="4857" width="767.5" height="348" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-1" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 36px; background-color: initial;&quot;&gt;&lt;font color=&quot;#050505&quot;&gt;Abstract Class&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot; color=&quot;#050505&quot;&gt;-Tương tự class bình thường&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot; color=&quot;#050505&quot;&gt;-Có thể có constructor&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot; color=&quot;#050505&quot;&gt;-Có thể có thuộc tính và method bình thường&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot; color=&quot;#050505&quot;&gt;-Một Class có thể extends 1 abstract class&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot; color=&quot;#050505&quot;&gt;-MQH: is-a&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;3&quot; style=&quot;&quot; color=&quot;#050505&quot;&gt;-Access modifier có thể điều chỉnh&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="690" y="5220" width="390" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-2" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-weight: bold; font-size: 36px;&quot;&gt;Interface&lt;/span&gt;&lt;font style=&quot;&quot;&gt;&lt;br&gt;&lt;div style=&quot;font-size: 24px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;-không phải 1 class mà là bản thiết kế&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 24px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không có contructor&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;-Thuộc tính nếu có thì là hằng số&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial; font-size: 12px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;từ JDK 8 có thêm default và static method )&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 24px; border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial; font-size: 12px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;-1 class có thể có implement nhiều interface&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 24px; border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial; font-size: 12px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;-MQH: can-do&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 24px; border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-weight: bold; background-color: initial; font-size: 12px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-size: 24px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); font-weight: normal;&quot;&gt;-Mặc định của method là public&lt;/span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="5220" width="510" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#050505;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="8tiabNdw2CEeQHUozWih-89" target="V6GIZETxk0q46TcklZVO-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="15" y="5435" as="sourcePoint" />
+            <mxPoint x="65" y="5385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-5" value="&lt;b&gt;K/n ép kiểu: &lt;/b&gt;là chuyển một tham chiếu đang có kiểu dữ liệu này sang kiểu dữ liệu khác&amp;nbsp;&lt;br&gt;-Có 2 loại ép kiểu:&amp;nbsp;&lt;br&gt;+Implicit(ngầm định):Hệ thống tự động ép kiểu&amp;nbsp;&lt;br&gt;+Explicit(tường minh): Thủ công&lt;br&gt;+cú pháp:(data type)variable Name;&lt;br&gt;+data type:kiểu dữ liệu cần ép về&lt;br&gt;+variable name:tên biến tham chiếu&lt;br&gt;&lt;sub&gt;*&lt;/sub&gt;Lưu ý:&amp;nbsp;&lt;br&gt;+Phải có ép kiểu ngầm định thì mới ép kiểu tường minh&lt;br&gt;+Ép kiểu phải thực hiện trong MQH kế thừa" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;fontColor=#050505;align=left;" parent="1" vertex="1">
+          <mxGeometry x="60" y="5376" width="615" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-6" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;fontColor=#050505;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="8tiabNdw2CEeQHUozWih-89" target="V6GIZETxk0q46TcklZVO-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="15" y="5585" as="sourcePoint" />
+            <mxPoint x="65" y="5535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;fontColor=#050505;" parent="1" source="V6GIZETxk0q46TcklZVO-7" target="V6GIZETxk0q46TcklZVO-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;fontColor=#050505;" parent="1" source="V6GIZETxk0q46TcklZVO-7" target="V6GIZETxk0q46TcklZVO-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;fontColor=#050505;" parent="1" source="V6GIZETxk0q46TcklZVO-7" target="V6GIZETxk0q46TcklZVO-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-7" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;8. Clean code&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-360" y="6210" width="360" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-9" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Mã sạch&lt;/b&gt; là thuật ngữ để chỉ đến những mã nguồn &quot;tốt&quot; (&lt;b style=&quot;&quot;&gt;clean code&lt;/b&gt;).&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Đặc điểm clean code&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Đơn giản, trục tiếp&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Dễ đọc, dễ cải tiến&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các định danh đều thể hiện rõ nghĩa&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Có ít sự phhụ thuộc&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không có mã bị trùng lặp&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Thể hiện được ý tưởng thiết kế (coding convention).&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="145" y="5805" width="755" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-11" value="&lt;font style=&quot;font-weight: bold; font-size: 24px;&quot;&gt;Mã bẩn &lt;/font&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;là mã nguồn gây khó khăn cho việc đọc, duy trì và mở rộng&amp;nbsp;&lt;br&gt;-1 số trường hợp:&lt;br&gt;+Đặt tên không tốt, phương thức quá dài&lt;br&gt;+Lớp quá dài&amp;nbsp;&lt;br&gt;+Method xử lý quá nhiều vệc, có quá nhiều tham số&lt;br&gt;+Lạm dụng quá nhiều comment cho mã nguồn&amp;nbsp;&lt;br&gt;+Mã nguồn bị trùng lặp &lt;br&gt;&lt;sub style=&quot;&quot;&gt;*&lt;/sub&gt; Yếu tố ảnh hưởng đến chất lượng:&amp;nbsp;&lt;br&gt;-Định danh, method, ghi chú, định dạng, (fomat), thiết kế kiến trúc.&lt;br&gt;&amp;nbsp;-Xử lý lỗi và ngoại lệ&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="885" y="6090" width="750" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="V6GIZETxk0q46TcklZVO-15" value="&lt;span style=&quot;border-color: var(--border-color); font-size: 36px;&quot;&gt;&lt;b&gt;Refactoring&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;- là tái cấu trúc mã nguồn nhưng không bị thay đổi tính đúng đắn của chương trình ban đầu&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 24px; font-weight: normal;&quot;&gt;-Mục đích:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 24px; font-weight: normal;&quot;&gt;+Bảo đảm clean code.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 24px; font-weight: normal;&quot;&gt;+Các kỹ thuật refactoring:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 24px; background-color: initial; font-weight: normal; border-color: var(--border-color);&quot;&gt;-Tách biế&lt;/font&gt;&lt;font style=&quot;font-size: 24px; background-color: initial; font-weight: normal; border-color: var(--border-color);&quot;&gt;n&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 24px; font-weight: normal;&quot;&gt;- Tách hằng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 24px; font-weight: normal;&quot;&gt;-Tách method&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="6450" width="910" height="465" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=36;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-1" target="ZgAFSdvI10eyZjq5mSZ5-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="7935" />
+              <mxPoint x="105" y="7275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=24;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-1" target="ZgAFSdvI10eyZjq5mSZ5-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=24;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-1" target="ZgAFSdvI10eyZjq5mSZ5-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="7935" />
+              <mxPoint x="105" y="8025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=24;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-1" target="hRwxo7yOTdl56_jiXTJ8-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="105" y="7935" />
+              <mxPoint x="105" y="7515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-1" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;9. Danh&amp;nbsp; sách&lt;/b&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-365" y="7815" width="349.25" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-3" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Java collection framwrok&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là khuôn khổ cung cấp 1 kiển trúc gồm các interface và các class lưu trữ, thao tác với các nhóm đối tượng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các thao tác: add, update, delete, read&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các interface:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+List:Danh sách có cấu trúc dữ liệu tuyến chính ( duy trì thứ tự thêm vào) và cho phép lưu trữ giá trị trùng lặp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Set: Tập hợp các phần tử không duy trì thứ tự thêm vào và không cho phép lưu trữ các giá trị trùng lặp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Queue(hàng đợi): Lưu trữ theo FIFO=&amp;gt;vào trước ra sau.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Map:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="193.59" y="7005" width="1036.41" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-5" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;List&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là một danh sách duy trì thứ tự thêm vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-List có thể chứa các phần tử trùng lặp.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Có chứa các đối tượng null&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="225" y="7650" width="450" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-7" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Set&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là tập hợp các phần tử không duy thứ tự thêm vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không chứa các phần tử trùng lăp&lt;/span&gt;&lt;/div&gt;-Có thể chứa null" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;align=left;" parent="1" vertex="1">
+          <mxGeometry x="770" y="7647" width="460" height="273" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-8" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Array List&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Dựa trên cơ chế mảng di động để lưu trữ các phần tử&amp;nbsp;&lt;/span&gt;&lt;/div&gt;-Truy xuất ngẫu nhiên nhanh hơn&lt;br&gt;-Xoá, chèn phần tử chậm hơn" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;align=left;" parent="1" vertex="1">
+          <mxGeometry x="240" y="8130" width="525" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-9" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Linked List&lt;/b&gt;&lt;/div&gt;-Sử dụng danh sách liên kết dựa trên các node&lt;br&gt;-Truy xuất ngẫu nhiên chậm&amp;nbsp;&lt;br&gt;-Xoá, chèn phần tử nhanh hơn" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;align=left;" parent="1" vertex="1">
+          <mxGeometry x="765" y="8130" width="525" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-10" value="" style="endArrow=classic;html=1;rounded=0;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-1" target="ZgAFSdvI10eyZjq5mSZ5-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-75" y="8285" as="sourcePoint" />
+            <mxPoint x="-25" y="8235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-12" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Array&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Độ dài cố định&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Có thể lưu trữ kiểu nguyên thuỷ và đối tượng&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Chỉ có thuộc tính length&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-tốc độ nhanh hơn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không có generic&amp;lt;&amp;gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="240" y="7920" width="420" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ZgAFSdvI10eyZjq5mSZ5-13" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Array List&lt;/b&gt;&lt;/div&gt;-Độ dài thay đổi được&amp;nbsp;&lt;br&gt;-Chỉ có thể lưu trữ kiểu Object=&amp;gt;từ JDK 5 trở đi có thể lưu kiểu nguyên thuỷ (nhờ cơ chế auto-boxing)&lt;br&gt;-Các method làm việc (size(), add(), remove(), get(),...)&lt;br&gt;-Tốc độ chậm hơn&amp;nbsp;&lt;br&gt;-Có generic&lt;span style=&quot;font-size: 20px;&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;align=left;" parent="1" vertex="1">
+          <mxGeometry x="660" y="7920" width="630" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-2" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Stack&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Là cấu trúc dữ liệu danh sách hoạt theo quy tắc FILO&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Trong Java Stack là 1 class&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các method cơ bản: pop(), push(), isEmpty(), peek(),size(),..&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="240" y="8370" width="525" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;Queue(hàng đợi)&lt;/b&gt;&lt;br&gt;-Là cấu trúc dữ liệu danh sách hoạt động dựa trên quy tắc FIFO&lt;br&gt;-Queue trong Java là 1 Interface&lt;br&gt;-Các method cơ bản:&amp;nbsp;&lt;br&gt;+add()/offer(): thêm mới phần tử&lt;br&gt;+remove()/poll(): xoá element&lt;br&gt;+peek()/element(): lấy ra xem nhưng không xoá&amp;nbsp;&lt;br&gt;-Một số class triển khai của queue:&amp;nbsp;&lt;br&gt;+Linked List&lt;br&gt;+Array Deque&lt;br&gt;+Priority queue&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="765" y="8370" width="525" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-4" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=24;entryX=0;entryY=0.5;entryDx=0;entryDy=0;width=24.444444444444443;startSize=7.422222222222222;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startWidth=19.01234567901235;" parent="1" source="ZgAFSdvI10eyZjq5mSZ5-5" target="ZgAFSdvI10eyZjq5mSZ5-7" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="540" y="7960" as="sourcePoint" />
+            <mxPoint x="640" y="7860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=24;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-5" target="hRwxo7yOTdl56_jiXTJ8-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-5" value="&lt;b&gt;Generic &lt;/b&gt;là cơ chế cho phép sử dụng kiểu dữ liệu như là tham số&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="300" y="7440" width="870" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-7" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Ưu điểm&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Phát hiện được lỗi tại thời điểm compile&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Không cần phải ép kiểu&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Xây dựng các method, class tổng quát để tái sử dụng mã nguồn&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="1318" y="7362" width="452" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-8" value="&lt;b&gt;Nhược điểm&lt;/b&gt;&lt;br&gt;-Không thể truy cập trực tiếp vào các thành phần&amp;nbsp;&lt;br&gt;-Có thể làm chậm quá trình biên dịch&amp;nbsp;&lt;br&gt;-Không thể sử dụng static cho Generic&lt;br&gt;-Không thể tạo instance của kiểu dữ liệu" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="1770" y="7362" width="465" height="303" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-10" target="0Ex6OaLoyWFYxdWnyIGm-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-10" target="0Ex6OaLoyWFYxdWnyIGm-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-10" target="0Ex6OaLoyWFYxdWnyIGm-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-10" target="0Ex6OaLoyWFYxdWnyIGm-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=36;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="hRwxo7yOTdl56_jiXTJ8-10" target="0Ex6OaLoyWFYxdWnyIGm-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="10215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hRwxo7yOTdl56_jiXTJ8-10" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;10.Map and tree&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="-390.75" y="9330" width="375" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-1" target="0Ex6OaLoyWFYxdWnyIGm-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-1" target="0Ex6OaLoyWFYxdWnyIGm-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-1" target="0Ex6OaLoyWFYxdWnyIGm-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-1" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 36px; background-color: initial;&quot;&gt;Map(interface):&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Dùng để lưu trữ dữ liệu theo dạng (key,value)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mỗi key là 1 value&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Key không được trùng lặp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mỗi cặp (key,value) là 1 entry(phần tử lưu trữ)&lt;/span&gt;&lt;/div&gt;&lt;sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;*&lt;/sub&gt;&lt;span style=&quot;font-size: 36px; background-color: initial;&quot;&gt;Các class triển khai Map&lt;/span&gt;&lt;/div&gt;&lt;/sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Hash Map&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Linked Hash Map&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tree Map&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="135" y="8850" width="812.5" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-4" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Hash Map: Triển khai từ Map, ngoài ra:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Chỉ cho phép 1 key null, value có nhiều giá trị null&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Không duy trì thứ tự thêm vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="1125" y="8790" width="945" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-6" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Linked Hash Map: Triển khai từ Map, ngoài ra:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Chỉ cho phép 1 key null, value có nhiều giá trị null.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Duy trì thứ tự thêm vào&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="1122" y="8970" width="963" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-8" value="Tree Map: Triển khai từ Map, ngoài ra:&lt;br&gt;+Không cho phép key null, duy trì phần tử thêm vào (entry)mặc định tăng dần theo key=&amp;gt; có sắp xếp" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1125" y="9135" width="960" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-10" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Tree(Cây): Lưu dữ liệu trên các node&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Các node có mối quan hệ với nhau(cha- con)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Node trên cùng là node gốc (root)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="150" y="9345" width="765" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-12" value="Binary Tree: Là 1 tree (cây) mà các node cha chứa tối đa là 2 tree con&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;align=left;" parent="1" vertex="1">
+          <mxGeometry x="150" y="9511" width="780" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Binary search tree: Là Binary tree và tuân thủ theo quy tắc:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tất cả các giá trị các node bên phải thì lớn hơn cha&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tất cả các giá trị các node bên trái thì nhỏ hơn cha&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="150" y="9660" width="870" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-17" value="Các cách duyệt&amp;nbsp;&lt;br&gt;+inorder: left-cha-right&lt;br&gt;+Postorder: left-right-cha&lt;br&gt;+Preorder: cha-left-right&lt;br&gt;+Breath-first: duyệt theo level&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;align=left;" parent="1" vertex="1">
+          <mxGeometry x="290" y="9924" width="536" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-18" target="0Ex6OaLoyWFYxdWnyIGm-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-18" value="&lt;b&gt;11. Search Algorithms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="10395" width="410" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-20" target="0Ex6OaLoyWFYxdWnyIGm-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-20" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Tìm kiếm tuyến tính( linear search): kiểm tra từng phần tử trong mảng/danh sách.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Tìm kiếm nhị phân(binary search):&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Mảng phải được sắp xếp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+B1: SS phần tử ở giữa mảng và element cần tìm&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Nếu arr[ mid] =value search =&amp;gt;vị trí mid&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Nếu arr[ mid] &amp;lt; value search=&amp;gt; element cần tìm kiếm nằm ở bên phải element mid&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Nếu arr[ mid] &amp;gt;value search =&amp;gt; element cần tìm kiếm nằm ở bên trái element mid&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+B2:&amp;nbsp; Lặp lại bước 1&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Duyệt đến hết mảng, không thấy trả về -1&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="169" y="10200" width="944" height="615" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-22" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Linear search&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-không cần phải sắp xếp&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mảng/list nhỏ ( ít phần tử)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Độ phức tạp:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tốt nhất: O&lt;/span&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;(1)&lt;/sub&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Xấu nhất: O&lt;/span&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;(n)&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="1335" y="10230" width="435" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-24" value="&lt;b&gt;Binary search&lt;/b&gt;&lt;br&gt;-Cần phải sắp xếp&amp;nbsp;&lt;br&gt;-Array/list lớn ( nhiều element)&lt;br&gt;-Độ phức tạp:&lt;br&gt;+Tốt nhất: O&lt;sub&gt;(1)&lt;br&gt;&lt;/sub&gt;+Xấu nhất:log&lt;sub&gt;2&lt;/sub&gt;n" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1771" y="10230" width="314" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=36;" parent="1" source="0Ex6OaLoyWFYxdWnyIGm-25" target="0Ex6OaLoyWFYxdWnyIGm-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-25" value="&lt;b&gt;12.Sorting Algorithms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;arcSize=23;" parent="1" vertex="1">
+          <mxGeometry x="-374.5" y="11205" width="404.5" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-28" value="Mục đích: dễ quản lý và dễ tìm kiếm ( nâng cao hiệu quả search)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="345" y="10845" width="585" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-30" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Bubble Sort:&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Ý tưởng: So sánh các phần tử liền kề nhau và hoán đổi thứ tự nếu chúng không đảm bảo đang được sắp xếp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Độ phức tạp:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+tối ưu: Khi mảng được sắp xếp (O&lt;/span&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;(n)&lt;/sub&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Xấu nhất: mảng chưa được xắp xếp (O(n&lt;/span&gt;&lt;sup style=&quot;background-color: initial;&quot;&gt;2&lt;/sup&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;))&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;" parent="1" vertex="1">
+          <mxGeometry x="205" y="11070" width="1025" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ex6OaLoyWFYxdWnyIGm-31" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Selection Sort&lt;/b&gt;&lt;/div&gt;-chọn element(lớn/nhỏ) nhất trong element ban đầu&lt;br&gt;-Đưa phần tử(lớn/nhỏ) nhất lên đầu mảng&amp;nbsp;&lt;br&gt;-Loại bỏ phần tử đầu ra khỏi dãy hiện hành(dãy cần xét)&amp;nbsp;&lt;br&gt;-Dãy hiện hành còn n-1 phần tử của dãy ban đầu (bắt đầu từ element thứ hai)&lt;br&gt;-Độ phức tạp:&lt;br&gt;+Tốt nhất: O(n&lt;sup style=&quot;border-color: var(--border-color);&quot;&gt;2&lt;/sup&gt;)&lt;br&gt;+Xấu nhất: O(n&lt;sup&gt;2&lt;/sup&gt;)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=36;align=left;" parent="1" vertex="1">
+          <mxGeometry x="193.8" y="11385" width="1293.2" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-4" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 36px; background-color: initial;&quot;&gt;InSertion Sort&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Duy trì mảng con luôn được sắp xếp(mới đầu chỉ có 1 element)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Sắp xếp chèn là chèn thêm 1 phần tử vào mảng con đã được sắp xếp&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Phần tử được chèn vào vị trí thích hợp sao cho vẫn đảm bảo rằng mảng đó vẫn được sắp xếp(Tăng/giảm dần)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Độ phức tạp:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tốt nhất: O(&lt;/span&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;n&lt;/sub&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)sắp xếp&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Xấu nhất: O(n&lt;/span&gt;&lt;sup style=&quot;background-color: initial;&quot;&gt;2&lt;/sup&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;) không sắp xếp&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="11775" width="1365" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-5" target="lJl8kAgrpkRiscPkJRMh-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-5" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;13.Exception&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-406.5" y="12915" width="407" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-7" target="lJl8kAgrpkRiscPkJRMh-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 36px; background-color: initial;&quot;&gt;&lt;b&gt;K/n&lt;/b&gt;:Trong quá trình thực thi chương trình có thể xảy ra:&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Error: Là lỗi nghiêm trọng liên quan đến môi trường thực thi của JVM, hệ thống LTV không thể kiểm soát được =&amp;gt; dẫn đến chết chương trình&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Exception(ngoại lệ): Là sự kiện bất thường xảy ra trong quá trình thực thi chuuơng trình có thể làm chết chương trình =&amp;gt; Có thể xử lý được.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;-Có 2 loại Exception:&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Unchecked Exception: Là ngoại lệ xảy ra tại thời điểm thực thi của chương trình(runtime) không chắc chắn xảy ra =&amp;gt; Exception này sẽ bỏ qua trong quá trình biên dịch=&amp;gt; nên xử lý.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Checked Exception: Là ngoại lệ xảy ra tại thời điểm biên dịch(compile-time), không thể bỏ qua trong quá trình biên dịch =&amp;gt; Exception cần được xử lý.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="187.5" y="12375" width="1575" height="495" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-9" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 36px; background-color: initial;&quot;&gt;Cách xử lý:&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;+Xử lý tại chỗ(try-catch):&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Những đoạn code nghi ngờ xảy ra thì bỏ vào khối try{}&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Những đoạn code cần xử lý khi xảy ra Exception thì bỏ vào khối catch{}.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;+Dùng throws:&lt;/b&gt; Ném ngoại lệ ra ngoài cho nơinào gọi thì nơi đó xử lý&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;sub style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;*&lt;/b&gt;&lt;/sub&gt;&lt;span style=&quot;font-size: 36px; background-color: initial;&quot;&gt;&lt;b&gt;Lưu ý:&lt;/b&gt; Khi dùng try/catch:&lt;/span&gt;&lt;/div&gt;&lt;/sub&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Tại 1 thời điểm thì chỉ có 1 Exception xảy ra và chỉ 1 khối catch được thực thi&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Khối try thì có thể có 1 or nhiều khối catch nhưng chỉ có 1 khối finally&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các khối catch phải sắp xếp từ class con rồi đến class cha&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Khối finally luôn chạy cho dù có xảy ra Exception hay không&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-finally dùng để ngắt kết nối, đóng file.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1935" y="12285" width="1215" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-11" target="lJl8kAgrpkRiscPkJRMh-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-11" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;14.Text file&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="13485" width="440" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-13" target="lJl8kAgrpkRiscPkJRMh-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-13" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 36px; background-color: initial;&quot;&gt;K/n: Stream Là hoạt động nhập/xuất (input/output) dữ liệu&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 36px; background-color: initial;&quot;&gt;-Có 2 loại:&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Charactor stream: thiết kế để hỗ trợ(nhập xuất) dữ liệu dạng ký tự Unicode&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Byte Stream: Thiết kế hỗ trợ(nhập/xuất) dữ liệu dạng byte&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="510.00000000000006" y="13447.5" width="1141.2" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-17" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1995" y="13350" width="1035" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-17" vertex="1">
+          <mxGeometry width="1035" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-19" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Abstract class&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-18" vertex="1">
+          <mxGeometry width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-20" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Class triển khai&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-18" vertex="1">
+          <mxGeometry x="345" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-21" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Class đọc ghi file&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-18" vertex="1">
+          <mxGeometry x="690" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-22" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-17" vertex="1">
+          <mxGeometry y="75" width="1035" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-23" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Reader&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-22" vertex="1">
+          <mxGeometry width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-24" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;File reader&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-22" vertex="1">
+          <mxGeometry x="345" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-25" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Buffer Reader&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-22" vertex="1">
+          <mxGeometry x="690" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-17" vertex="1">
+          <mxGeometry y="150" width="1035" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-27" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Writer&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-26" vertex="1">
+          <mxGeometry width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-28" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;File write&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-26" vertex="1">
+          <mxGeometry x="345" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-29" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Buffer Write&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-26" vertex="1">
+          <mxGeometry x="690" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-31" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1500" y="14165" width="1035" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-32" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-31" vertex="1">
+          <mxGeometry width="1035" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-33" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-32" vertex="1">
+          <mxGeometry width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-34" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-32" vertex="1">
+          <mxGeometry x="345" width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-35" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-32" vertex="1">
+          <mxGeometry x="690" width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-36" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-31" vertex="1">
+          <mxGeometry y="70" width="1035" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-37" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Input Stream&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-36" vertex="1">
+          <mxGeometry width="345" height="80" as="geometry">
+            <mxRectangle width="345" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-38" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;File Input Stream&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-36" vertex="1">
+          <mxGeometry x="345" width="345" height="80" as="geometry">
+            <mxRectangle width="345" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-39" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Buffer Input Stream&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-36" vertex="1">
+          <mxGeometry x="690" width="345" height="80" as="geometry">
+            <mxRectangle width="345" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-40" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-31" vertex="1">
+          <mxGeometry y="150" width="1035" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-41" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Output Stream&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-40" vertex="1">
+          <mxGeometry width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-42" value="&lt;h4&gt;&lt;font style=&quot;font-size: 24px; font-weight: normal;&quot;&gt;File Output Stream&lt;/font&gt;&lt;/h4&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-40" vertex="1">
+          <mxGeometry x="345" width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-43" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Buffer Output Stream&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="lJl8kAgrpkRiscPkJRMh-40" vertex="1">
+          <mxGeometry x="690" width="345" height="70" as="geometry">
+            <mxRectangle width="345" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-44" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Abstract class&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1500" y="14165" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-45" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Class triển khai&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="1845" y="14160" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-46" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Class đọc ghi file&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="2190" y="14165" width="345" height="75" as="geometry">
+            <mxRectangle width="345" height="75" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-51" target="lJl8kAgrpkRiscPkJRMh-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-51" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;15. Binary File and Serialization&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-405.5" y="14190" width="437" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-53" target="lJl8kAgrpkRiscPkJRMh-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-53" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Serialization là cơ chế chuyển đổi trạng thái vào 1 dòng byte Stream&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Deserialization là chuyển từ byte sang object.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;*&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;Lưu ý :&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Class cha implement serializable thì class con không cần implement serializable&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Nếu 1 thuộc tính áp dụng transient thì không được Serialization&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Thuộc tính Static thuộc về class nên không thể serialization&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="313.5" y="14160" width="916.5" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-56" target="lJl8kAgrpkRiscPkJRMh-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-56" target="lJl8kAgrpkRiscPkJRMh-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-56" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;16. String and Regex&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-405" y="14640" width="405" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-58" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;&lt;b&gt;String&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;String sử dụng để lưu và làm việc với chuỗi/ văn bản&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Có 2 cách tạo:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+String s1=&quot;value&quot;;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+String s2=new String(&quot;value&quot;);&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;=&amp;gt; String vừa có tính nguyên thuỷ vừa có tính đối tượng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;=&amp;gt; String là bất biến(immutable)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;=&amp;gt; một số method hỗ trợ của string: split(),...&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="207.5" y="14445" width="650" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-59" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;String Builder and String Buffer&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Cả hai đều dùng để lưu trữ và làm việc với chuỗi giống với String&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Tuy nhiên có 1 vài điểm khác:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ Cả hai đều có thể thay đổi được(mutable)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+String buider: là bất đồng bộ .&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+String buffer: là đồng bộ.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+method hỗ trợ: delete, append,...&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="860" y="14445" width="705" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-61" target="lJl8kAgrpkRiscPkJRMh-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-61" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Regular Expression&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;Regex :&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Biểu thức chính quy dùng để xử lý chuỗi nâng cao&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Nguyên tắc: Là so sánh khớp dựa trên khôn mẫu&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mục đích:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Validate(kiểm tính hợp lệ của dữ liệu )&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tìm kiếm&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Thay thế&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="208" y="14790" width="692" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-66" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://f.howkteam.vn/Upload/cke/images/2_IMAGE%20TUTORIAL/1_C%23_AutoC%23/1_C%23%20C%C4%83n%20b%E1%BA%A3n/B28_Regular%20Expression%20trong%20C%23/2_Regular%20Expression%20trong%20C%23_Howkteam_com.png;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="14805" width="520" height="463" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-68" target="lJl8kAgrpkRiscPkJRMh-70" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-68" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;17. SOLID&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-405" y="15540" width="405" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-70" target="lJl8kAgrpkRiscPkJRMh-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-70" target="lJl8kAgrpkRiscPkJRMh-73" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-70" target="lJl8kAgrpkRiscPkJRMh-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="lJl8kAgrpkRiscPkJRMh-70" target="lJl8kAgrpkRiscPkJRMh-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-70" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;K/n:Là nguyên lý thiết kế giúp chúng ta xây dựng ứng dụng OOP hiệu quả&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Mục đích: Giúp lập trình viên viết ra những đoạn code dễ đọc, mở rộng và bảo dưỡng.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Gồm 5 nguyên lý:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+S: Single Responsibility principle(nguyên lý trách nhiệm duy nhất)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+O: Open/close principle(nguyên lý đóng mở)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+L:Liskov Substitution principle(nguyên lý thay thế liskov)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+I: Interface Segregation principle(nguyên lý phân tách)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+D: Denpenclency inversion principle(nguyên lý đảo ngược)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="15540" width="865" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-72" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;S&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Mỗi class nên đảm nhận 1 nhiệm vụ duy nhất&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Lý do:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Dễ quản lý, bảo dưỡng, mở rộng&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Có thể phát triển đồng thời các lớp độc lập&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1845" y="15405" width="600" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-73" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;O&lt;br&gt;&lt;/b&gt;Có thể thoả mái mở rộng 1 class nhưng không sửa đổi bên trong class đó&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1837.5" y="15765" width="660" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-75" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;L&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các đối tượng của lớp con có thể thay thế lớp cha mà không làm thay đổi tình đúng đắn của chương trình&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Tránh sai sót khi mở rộng&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1837.5" y="16095" width="645" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-78" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;I&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Thay vì dùng 1 interface(có nhiều method) thì nên tách thành nhiều interface nhỏ với mục đích cụ thể&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Lý do: Đảm bảo không dư thừa mã nguồn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1837.5" y="16425" width="660" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="lJl8kAgrpkRiscPkJRMh-81" edge="1" source="lJl8kAgrpkRiscPkJRMh-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1321" y="15686" as="sourcePoint" />
+            <mxPoint x="1860" y="16545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lJl8kAgrpkRiscPkJRMh-81" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;D&lt;/b&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Các module cấp cao không nên phụ thuộc vào module cấp thấp mà cả hai nên phụ thuộc vào trừu tượng Abstraction&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Trừu tượng không nên phụ thuộc vào cái chi tiết(class cụ thể )mà ngược lại.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="16755" width="660" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="8WDhljRiHEO2yWM2faU9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="8WDhljRiHEO2yWM2faU9-1" target="8WDhljRiHEO2yWM2faU9-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WDhljRiHEO2yWM2faU9-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;18. Design Pattern&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-365" y="17490" width="376" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="8WDhljRiHEO2yWM2faU9-3" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 24px; background-color: initial;&quot;&gt;K/n: &lt;/b&gt;&lt;span style=&quot;font-size: 24px; background-color: initial;&quot;&gt;Design pattern(mẫu thiết kế)là 1 giải pháp tổng thể để giải quyết vấn đề chung trong thiết kế phần mềm&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Design pattern không phải là ngôn ngữ lập trình cụ thể mà là mẫu thiết kế&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Được sử dụng phổ biến trong lập trình OOP&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Lợi ích:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tăng tốc độ phát triển phần mềm&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Hạn chế rủi ro tiềm ẩn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Tái sử dụng mã nguồn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Giúp đọc code dễ dàng hơn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+LTV làm viêc nhóm cũng giao tiếp thuận lợi hơn&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;b&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;-Phân làm 3 nhóm:&lt;/b&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Creation(khởi tạo): giải quyết vấn đề khởi tạo đối tượng (Singleton, Factory mothod,..) 5 cái.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Structural(cấu trúc): thiết kế các thành phần của lớp và các đối tượng (Proxy, Facade,..)7 cái.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+Behavior(hành vi): giải quyết các vấn đề liên quan đến tương tác giữa các đối tượng (Observer, Strategy,..)11 cái.&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="405" y="17040" width="1260" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="8WDhljRiHEO2yWM2faU9-5" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;thiên long độc chướng&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="17850" width="420" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

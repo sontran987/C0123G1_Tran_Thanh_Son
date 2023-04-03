@@ -1,17 +1,15 @@
 package case_study_module02.services.facility;
 
 import case_study_module02.models.Villa;
-
+import case_study_module02.repository.facility_repo.VillaRepo;
+import case_study_module02.repository.facility_repo.VillaRepoImpl;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class VillaServiceImpl implements VillaService {
-    static LinkedHashMap<Villa, Integer> mapVilla = new LinkedHashMap<>();
+    static VillaRepo villaRepo =new VillaRepoImpl();
+    static LinkedHashMap<Villa, Integer> mapVilla = villaRepo.displayListVilla();
     Scanner scanner = new Scanner(System.in);
-
-    static {
-        mapVilla.put(new Villa("1", "villa", 1, 1, 1, "1", "1", 1, 1), 0);
-    }
 
     static String[] listRentalType = {
             "Year",
@@ -37,6 +35,7 @@ public class VillaServiceImpl implements VillaService {
         }
         do {
             flag = true;
+            System.out.print("Choose rental type: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -68,7 +67,7 @@ public class VillaServiceImpl implements VillaService {
             for (int i = 0; i < listRoomStandard.length; i++) {
                 System.out.println((i + 1) + ". " + listRoomStandard[i]);
             }
-            System.out.println("Enter choose room standard: ");
+            System.out.print("Enter choose room standard: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -90,65 +89,105 @@ public class VillaServiceImpl implements VillaService {
         } while (!flag);
         return roomStandard;
     }
+    public static boolean regexIdVilla(String id) {
+        return id.matches(REGEX_ID_VILLA);
+    }
+
+    public static boolean regexNameVilla(String name) {
+        return name.matches(REGEX_NAME_VILLA);
+    }
 
     @Override
     public void displayListVilla() {
         for (Villa v : mapVilla.keySet()) {
-            System.out.println(v + ", đã sử dụng: " + mapVilla.get(v));
+            System.out.println(v.getInfoToCSV() + ", đã sử dụng: " + mapVilla.get(v));
         }
     }
 
     @Override
     public void addNewVilla() {
-        String id,name,type,room;
-        double area,areapool;
-        int costs,people,number ;
-        int count = 0;
+        String id, name;
+        double area, areapool;
+        int costs = 0, people, number;
+        int count;
         do {
-            System.out.println("Enter id service(SVVL-YYYY):");
+            count = 0;
+            System.out.print("Enter id service(SVVL-YYYY):");
             id = scanner.nextLine();
             for (Villa v : mapVilla.keySet()) {
                 if (v.getIdService() == id) {
                     count++;
                 }
             }
-            if (!regexIdVilla(id)){
+            if (!regexIdVilla(id)) {
+                System.out.println("Not valid.");
                 count++;
             }
-        System.out.println("Enter name service:");
-         name = scanner.nextLine();
-         if (!regexNameVilla(name)){
-             count++;
-         }
-        System.out.println("Enter usable area:");
-         area = Double.parseDouble(scanner.nextLine());
-            if (area < 30) {
-            count++;
-            }
-        System.out.println("Enter rental costs:");
-         costs = Integer.parseInt(scanner.nextLine());
-         if (costs<0){
-             count++;
-         }
-        System.out.println("Enter maximum people:");
-         people = Integer.parseInt(scanner.nextLine());
-         if (people<0||people>20){
-             count++;
-         }
-         type = chooseRentalType();
-         room = chooseRoomStandard();
-        System.out.println("Enter swimming pool area:");
-         areapool = Double.parseDouble(scanner.nextLine());
-         if (areapool<30){
-             count++;
-         }
-        System.out.println("Enter number of floors:");
-         number = Integer.parseInt(scanner.nextLine());
-         if (count>0){
-             System.out.println("Hãy nhập lại. ");
-         }
         } while (count > 0);
-        mapVilla.put(new Villa(id, name, area, costs, people, type, room, areapool, number), 0);
+        do {
+            count = 0;
+            System.out.print ("Enter name service:");
+            name = scanner.nextLine();
+            if (!regexNameVilla(name)) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+
+            System.out.print ("Enter usable area:");
+            area = Double.parseDouble(scanner.nextLine());
+            if (area <= 30) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            try {
+                System.out.print("Enter rental costs:");
+                costs = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                e.getMessage();
+            }
+            if (costs < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter maximum people:");
+            people = Integer.parseInt(scanner.nextLine());
+            if (people < 0 || people >= 20) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+         String type = chooseRentalType();
+         String room = chooseRoomStandard();
+        do {
+            count = 0;
+            System.out.print("Enter swimming pool area:");
+            areapool = Double.parseDouble(scanner.nextLine());
+            if (areapool <= 30) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter number of floors:");
+            number = Integer.parseInt(scanner.nextLine());
+            if (number < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        int value=0;
+        mapVilla.put(new Villa(id,name,area,costs,people,type,room,areapool,number),value);
+        villaRepo.addNewVilla(mapVilla);
     }
 
     @Override
@@ -156,50 +195,76 @@ public class VillaServiceImpl implements VillaService {
         String id, name, type, room;
         double area, areaPool;
         int costs, people, number;
-        int count = 0;
+        int count;
+        boolean flag;
         do {
-            System.out.println("Enter id service:");
+           flag=true;
+            System.out.print("Enter id service:");
             id = scanner.nextLine();
             for (Villa v : mapVilla.keySet()) {
                 if (v.getIdService() != id) {
-                    count++;
+                    flag=false;
                 }
-
             }
             if (!regexIdVilla(id)) {
-                count++;
+                System.out.println("Not valid.");
+                flag=true;
             }
-            System.out.println("Enter name service:");
+        } while (flag);
+        do {
+            count = 0;
+            System.out.print("Enter name service:");
             name = scanner.nextLine();
             if (!regexNameVilla(name)) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter usable area:");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter usable area:");
             area = Double.parseDouble(scanner.nextLine());
-            if (area < 30) {
+            if (area <= 30) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter rental costs:");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter rental costs:");
             costs = Integer.parseInt(scanner.nextLine());
             if (costs < 0) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter maximum people:");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter maximum people:");
             people = Integer.parseInt(scanner.nextLine());
-            if (people < 0 || count > 20) {
+            if (people < 0 || count >= 20) {
+                System.out.println("Not valid.");
                 count++;
             }
-            type = chooseRentalType();
-            room = chooseRoomStandard();
-            System.out.println("Enter swimming pool area:");
+        } while (count > 0);
+        type = chooseRentalType();
+        room = chooseRoomStandard();
+        do {
+            count = 0;
+            System.out.print("Enter swimming pool area:");
             areaPool = Double.parseDouble(scanner.nextLine());
-            if (areaPool < 30) {
+            if (areaPool <= 30) {
+                System.out.println("Not valid.");
                 count++;
             }
-            System.out.println("Enter number of floors:");
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter number of floors:");
             number = Integer.parseInt(scanner.nextLine());
-            if (count > 0 || number < 0) {
-                System.out.println("Hãy nhập lại. ");
+            if (number < 0) {
+                System.out.println("Not valid.");
+                count++;
             }
         } while (count > 0);
         for (Villa v : mapVilla.keySet()) {
@@ -213,6 +278,7 @@ public class VillaServiceImpl implements VillaService {
             v.setSwimmingPoolArea(areaPool);
             v.setNumberOfFloors(number);
         }
+        villaRepo.editVilla(mapVilla);
     }
 
     @Override
@@ -224,13 +290,7 @@ public class VillaServiceImpl implements VillaService {
         }
     }
 
-    public static boolean regexIdVilla(String id) {
-        return id.matches(REGEX_ID_VILLA);
-    }
 
-    public static boolean regexNameVilla(String name) {
-        return name.matches(REGEX_NAME_VILLA);
-    }
 
 
 }

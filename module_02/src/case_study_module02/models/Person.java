@@ -6,13 +6,13 @@ public abstract class Person {
     private String brithday;
     private String gender;
     private int identityCard;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
 
     public Person() {
     }
 
-    public Person(int code, String name, String brithday, String gender, int identityCard, int phoneNumber, String email) {
+    public Person(int code, String name, String brithday, String gender, int identityCard, String phoneNumber, String email) {
         this.code = code;
         this.name = name;
         this.brithday = brithday;
@@ -62,11 +62,11 @@ public abstract class Person {
         this.identityCard = identityCard;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

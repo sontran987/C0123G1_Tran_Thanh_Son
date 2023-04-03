@@ -7,8 +7,10 @@ public class Villa extends Facility {
     private double swimmingPoolArea;
     private int numberOfFloors;
 
-    public Villa() {
-    }
+//    public Villa(String splitDatum, String datum, String s, String splitDatum1, String datum1,
+//                 String s1, String splitDatum2) {
+//    }
+
 
     public Villa(String roomStandard, double swimmingPoolArea, int numberOfFloors) {
         this.roomStandard = roomStandard;
@@ -16,7 +18,8 @@ public class Villa extends Facility {
         this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String idService, String serviceName, double usableArea, double rentalCosts, int maximumPeople, String rentalType, String roomStandard, double swimmingPoolArea, int numberOfFloors) {
+    public Villa(String idService, String serviceName, double usableArea, double rentalCosts, int maximumPeople,
+                 String rentalType, String roomStandard, double swimmingPoolArea, int numberOfFloors) {
         super(idService, serviceName, usableArea, rentalCosts, maximumPeople, rentalType);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
@@ -49,15 +52,15 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
+        return super.getInfoToCSV() + "," + roomStandard + "," + swimmingPoolArea + "," + numberOfFloors;
+    }
+    @Override
+    public String getInfoToCSV() {
         return "Villa: " +
                 super.toString()+
                 ", roomStandard= " + roomStandard +
                 ", swimmingPoolArea= " + swimmingPoolArea +
                 ", numberOfFloors= " + numberOfFloors;
-    }
 
-    @Override
-    public String getInfoToCSV() {
-        return super.getInfoToCSV() + "," + roomStandard + "," + swimmingPoolArea + "," + numberOfFloors;
     }
 }

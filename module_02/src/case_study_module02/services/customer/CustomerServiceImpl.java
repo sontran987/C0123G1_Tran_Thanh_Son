@@ -1,13 +1,17 @@
 package case_study_module02.services.customer;
 
 import case_study_module02.models.Customer;
+import case_study_module02.repository.customer_repo.CustomerRepo;
+import case_study_module02.repository.customer_repo.CustomerRepoImpl;
+import case_study_module02.services.Validate;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    static List<Customer> customerList = new LinkedList<>();
+    static CustomerRepo customerRepo = new CustomerRepoImpl();
+    static List<Customer> customerList = customerRepo.displayCostomer();
     static Scanner scanner = new Scanner(System.in);
 
     static String[] genderes = {
@@ -32,6 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
             for (int i = 0; i < genderes.length; i++) {
                 System.out.println((i + 1) + ". " + genderes[i]);
             }
+            System.out.print("Choose gender: ");
             String choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -60,7 +65,7 @@ public class CustomerServiceImpl implements CustomerService {
             for (int i = 0; i < typeOfGuest.length; i++) {
                 System.out.println((i + 1) + " ." + typeOfGuest[i]);
             }
-            System.out.println("Enter type of guest: ");
+            System.out.print("Choose type of guest: ");
             String choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -96,43 +101,123 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void addCustomer() {
-        System.out.println("Enter id: ");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter brithday: ");
-        String brithday = scanner.nextLine();
+        String name, brithday, numberPhone, email;
+        int id;
+        boolean flag;
+        do {
+            flag = true;
+            System.out.print("Enter id: ");
+            id = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < customerList.size(); i++) {
+                if (customerList.get(i).getCode() == id) {
+                    System.out.println("id already available ");
+                    flag = false;
+                }
+            }
+        } while (!flag);
+        do {
+            flag = true;
+            System.out.print("Enter name: ");
+            name = scanner.nextLine();
+            if (!Validate.regexName(name)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
+        do {
+            flag = true;
+            System.out.print("Enter brithday: ");
+            brithday = scanner.nextLine();
+            if (!Validate.regexBrithday(brithday)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
         String gender = chooseGender();
-        System.out.println("Enter identily card: ");
+        System.out.print("Enter identily card: ");
         int identityCard = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter number phone: ");
-        int numberPhone = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter email: ");
-        String email = scanner.nextLine();
+        do {
+            flag = true;
+            System.out.print("Enter number phone: ");
+            numberPhone = scanner.nextLine();
+            if (!Validate.regexPhone(numberPhone)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
+        do {
+            flag = true;
+            System.out.print("Enter email: ");
+            email = scanner.nextLine();
+            if (!Validate.regexEmail(email)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
         String guest = chooseTypeOfGuest();
-        System.out.println("Enter address: ");
+        System.out.print("Enter address: ");
         String address = scanner.nextLine();
         customerList.add(new Customer(id, name, brithday, gender,
                 identityCard, numberPhone, email, guest, address));
+        customerRepo.addCustomer(customerList);
     }
 
     @Override
     public void editInfomationCostomer() {
-        System.out.println("Enter id you want to edit: ");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter brithday: ");
-        String brithday = scanner.nextLine();
+        String name, brithday, numberPhone, email;
+        int id;
+        boolean flag;
+        do {
+            flag = true;
+            System.out.print("Enter id: ");
+            id = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < customerList.size(); i++) {
+                if (customerList.get(i).getCode() == id) {
+                    flag=false;
+                }
+            }
+        } while (flag);
+        do {
+            flag = true;
+            System.out.print("Enter name: ");
+            name = scanner.nextLine();
+            if (!Validate.regexName(name)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
+        do {
+            flag = true;
+            System.out.print("Enter brithday: ");
+            brithday = scanner.nextLine();
+            if (!Validate.regexBrithday(brithday)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
         String gender = chooseGender();
-        System.out.println("Enter identily card: ");
+        System.out.print("Enter identily card: ");
         int identityCard = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter number phone: ");
-        int numberPhone = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter email: ");
-        String email = scanner.nextLine();
+        do {
+
+            System.out.print("Enter number phone: ");
+            numberPhone = scanner.nextLine();
+            if (!Validate.regexPhone(numberPhone)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
+        do {
+            flag = true;
+            System.out.print("Enter email: ");
+            email = scanner.nextLine();
+            if (!Validate.regexEmail(email)) {
+                System.out.println("Not valid.");
+                flag = false;
+            }
+        } while (!flag);
         String guest = chooseTypeOfGuest();
-        System.out.println("Enter address: ");
+        System.out.print("Enter address: ");
         String address = scanner.nextLine();
         Customer customer = new Customer(id, name, brithday, gender,
                 identityCard, numberPhone, email, guest, address);
@@ -141,5 +226,6 @@ public class CustomerServiceImpl implements CustomerService {
                 customerList.set(i, customer);
             }
         }
+        customerRepo.editInformationCustomer(customerList);
     }
 }

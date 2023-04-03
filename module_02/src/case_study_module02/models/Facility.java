@@ -20,7 +20,7 @@ public abstract class Facility {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Facility facility = (Facility) o;
-        return serviceName.equals(facility.serviceName);
+        return this.serviceName.equals(facility.serviceName);
     }
 
     @Override
@@ -85,16 +85,18 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+
     @Override
     public String toString() {
-        return " service Name= " + serviceName +
-                ", usable Area= " + usableArea +
-                ", rental Costs= " + rentalCosts +
-                ", maximum Peson= " + maximumPeople +
+        return " idService= " + idService +
+                ", serviceName= " + serviceName +
+                ", usableArea= " + usableArea +
+                ", rentalCosts= " + rentalCosts +
+                ", maximumPeople= " + maximumPeople +
                 ", rentalType= " + rentalType;
     }
 
     public String getInfoToCSV() {
-        return serviceName + "," + usableArea + "," + rentalCosts + "," + maximumPeople + "," + rentalType;
+        return idService + "," + serviceName + "," + usableArea + "," + rentalCosts + "," + maximumPeople + "," + rentalType;
     }
 }

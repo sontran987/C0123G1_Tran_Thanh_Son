@@ -1,13 +1,16 @@
 package case_study_module02.services.facility;
 
 import case_study_module02.models.Room;
+import case_study_module02.repository.facility_repo.RoomRepo;
+import case_study_module02.repository.facility_repo.RoomRepoImpl;
 
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class RoomServiceImpl implements RoomService {
     static Scanner scanner = new Scanner(System.in);
-    static LinkedHashMap<Room, Integer> mapRoom = new LinkedHashMap<>();
+    static RoomRepo roomRepo=new RoomRepoImpl();
+    static LinkedHashMap<Room, Integer> mapRoom = roomRepo.displayListRoom();
 
     static {
         mapRoom.put(new Room("1", "Room", 1, 1, 1, "1", "1"), 0);
@@ -33,6 +36,7 @@ public class RoomServiceImpl implements RoomService {
         }
         do {
             flag = true;
+            System.out.print("Choose rental type: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -55,13 +59,6 @@ public class RoomServiceImpl implements RoomService {
         return rentalType;
     }
 
-    public String idService() {
-        boolean flag;
-        String id = null;
-
-        return id;
-    }
-
     @Override
     public void displayListRoom() {
         for (Room r : mapRoom.keySet()) {
@@ -74,9 +71,10 @@ public class RoomServiceImpl implements RoomService {
         String id, name, freeServiceIncluded, rentalType;
         double usableArea, rentalCosts;
         int maximumPeople;
-        int count = 0;
+        int count;
         do {
-            System.out.println("Enter id service(SVRO-YYYY):");
+            count = 0;
+            System.out.print("Enter id service(SVRO-YYYY):");
             id = scanner.nextLine();
             for (Room r : mapRoom.keySet()) {
                 if (r.getIdService() == id) {
@@ -84,46 +82,63 @@ public class RoomServiceImpl implements RoomService {
                 }
             }
             if (!regexIdRoom(id)) {
+                System.out.println("Not valid.");
                 count++;
-            }
-            System.out.println("Enter name service: ");
-            name = scanner.nextLine();
-            if (!regexNameRoom(name)) {
-                count++;
-            }
-            System.out.println("Enter usable area: ");
-            usableArea = Double.parseDouble(scanner.nextLine());
-            if (usableArea < 30) {
-                count++;
-            }
-            System.out.println("Enter rental costs: ");
-            rentalCosts = Double.parseDouble(scanner.nextLine());
-            if (rentalCosts < 0) {
-                count++;
-            }
-            System.out.println("Enter the maximum of people");
-            maximumPeople = Integer.parseInt(scanner.nextLine());
-            if (maximumPeople < 0 || maximumPeople > 20) {
-                count++;
-            }
-            rentalType = chooseRentalType();
-            System.out.println("Enter Free service included");
-            freeServiceIncluded = scanner.nextLine();
-            if (count > 0) {
-                System.out.println("Hãy nhập lại. ");
             }
         } while (count > 0);
-        mapRoom.put(new Room(id, name, usableArea, rentalCosts, maximumPeople, rentalType, freeServiceIncluded), 0);
+        do {
+            count = 0;
+            System.out.print("Enter name service: ");
+            name = scanner.nextLine();
+            if (!regexNameRoom(name)) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter usable area: ");
+            usableArea = Double.parseDouble(scanner.nextLine());
+            if (usableArea <= 30) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter rental costs: ");
+            rentalCosts = Double.parseDouble(scanner.nextLine());
+            if (rentalCosts < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter the maximum of people");
+            maximumPeople = Integer.parseInt(scanner.nextLine());
+            if (maximumPeople < 0 || maximumPeople >= 20) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        rentalType = chooseRentalType();
+        System.out.print("Enter Free service included");
+        freeServiceIncluded = scanner.nextLine();
+        int value=0;
+        mapRoom.put(new Room(id, name, usableArea, rentalCosts, maximumPeople, rentalType, freeServiceIncluded),value);
+    roomRepo.addNewRoom(mapRoom);
     }
 
     @Override
     public void editRoom() {
         String id, name, rentalType, freeServiceIncluded;
-        int count = 0;
+        int count;
         double usableArea, rentalCosts;
         int maximumPeople;
         do {
-            System.out.println("Enter id service: ");
+            count = 0;
+            System.out.print("Enter id service: ");
             id = scanner.nextLine();
             for (Room r : mapRoom.keySet()) {
                 if (r.getIdService() != id) {
@@ -131,35 +146,49 @@ public class RoomServiceImpl implements RoomService {
                 }
             }
             if (!regexIdRoom(id)) {
+                System.out.println("Not valid.");
                 count++;
             }
-        System.out.println("Enter name service: ");
-        name = scanner.nextLine();
-        if (!regexNameRoom(name)){
-            count++;
-        }
-        System.out.println("Enter usable area: ");
-        usableArea = Double.parseDouble(scanner.nextLine());
-        if (usableArea<30){
-            count++;
-        }
-        System.out.println("Enter rental costs: ");
-        rentalCosts = Double.parseDouble(scanner.nextLine());
-        if (rentalCosts<0){
-            count++;
-        }
-        System.out.println("Enter the maximum of people");
-        maximumPeople = Integer.parseInt(scanner.nextLine());
-        if (maximumPeople<0||maximumPeople>20){
-            count++;
-        }
-        rentalType = chooseRentalType();
-        System.out.println("Enter Free service included");
-        freeServiceIncluded = scanner.nextLine();
-        if (count>0){
-            System.out.println("Hãy nhập lại. ");
-        }
         } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter name service: ");
+            name = scanner.nextLine();
+            if (!regexNameRoom(name)) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter usable area: ");
+            usableArea = Double.parseDouble(scanner.nextLine());
+            if (usableArea <= 30) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter rental costs: ");
+            rentalCosts = Double.parseDouble(scanner.nextLine());
+            if (rentalCosts < 0) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        do {
+            count = 0;
+            System.out.print("Enter the maximum of people");
+            maximumPeople = Integer.parseInt(scanner.nextLine());
+            if (maximumPeople < 0 || maximumPeople >= 20) {
+                System.out.println("Not valid.");
+                count++;
+            }
+        } while (count > 0);
+        rentalType = chooseRentalType();
+        System.out.print("Enter Free service included");
+        freeServiceIncluded = scanner.nextLine();
         for (Room r : mapRoom.keySet()) {
             r.setIdService(id);
             r.setServiceName(name);
@@ -169,6 +198,7 @@ public class RoomServiceImpl implements RoomService {
             r.setRentalType(rentalType);
             r.setFreeServiceIncluded(freeServiceIncluded);
         }
+        roomRepo.editRoom(mapRoom);
     }
 
     @Override
