@@ -49,15 +49,14 @@ public class ReadAndWriteFileHouse {
                     sb.append(',');
                     sb.append(value == null ? "(this Map)" : value);
                     if (!i.hasNext())
-                        return sb.append('\n').toString();
+                        return sb.toString();
                     sb.append(',').append('\n');
                 }
             }
         };
-
         try {
             bufferedwriter = new BufferedWriter(new FileWriter(file, false));
-            bufferedwriter.write(linkedHashMap.toString());
+            bufferedwriter.write(String.valueOf(linkedHashMap1));
             bufferedwriter.newLine();
             bufferedwriter.close();
 

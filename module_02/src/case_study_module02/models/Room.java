@@ -26,13 +26,14 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "Room: " +
-                super.toString() +
-                ", treeServiceIncluded= " + freeServiceIncluded;
+        return super.getInfoToCSV() + "," + freeServiceIncluded;
+
     }
 
     @Override
     public String getInfoToCSV() {
-        return super.getInfoToCSV() + "," + freeServiceIncluded;
+        return "Room: " +
+                super.toString() +
+                ", treeServiceIncluded= " + freeServiceIncluded;
     }
 }

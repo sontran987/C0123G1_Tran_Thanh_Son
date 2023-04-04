@@ -16,9 +16,9 @@ public class ReadAndWriteFileRoom {
             bufferedReader = new BufferedReader(new FileReader(file));
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
-                String []splitData=line.split(",");
-                linkedHashMap.put(new Room(splitData[0],splitData[1],Double.parseDouble(splitData[2]),Double.parseDouble(splitData[3]),
-                        Integer.parseInt(splitData[4]),splitData[5],splitData[6]), Integer.parseInt(splitData[7]));
+                String[] splitData = line.split(",");
+                linkedHashMap.put(new Room(splitData[0], splitData[1], Double.parseDouble(splitData[2]), Double.parseDouble(splitData[3]),
+                        Integer.parseInt(splitData[4]), splitData[5], splitData[6]), Integer.parseInt(splitData[7]));
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
@@ -28,33 +28,33 @@ public class ReadAndWriteFileRoom {
         }
         return linkedHashMap;
     }
-    public static void writeFileRoom(String pathFile,LinkedHashMap<Room,Integer>linkedHashMap){
-        File file=new File(pathFile);
-        BufferedWriter bufferedWriter=null;
-        LinkedHashMap<Room,Integer>linkedHashMap1=new LinkedHashMap<Room,Integer>(linkedHashMap){
+
+    public static void writeFileRoom(String pathFile, LinkedHashMap<Room, Integer> linkedHashMap) {
+        File file = new File(pathFile);
+        BufferedWriter bufferedWriter = null;
+        LinkedHashMap<Room, Integer> linkedHashMap1 = new LinkedHashMap<Room, Integer>(linkedHashMap) {
             @Override
             public String toString() {
-                Iterator<Map.Entry<Room,Integer>> i = entrySet().iterator();
-                if (! i.hasNext())
+                Iterator<Map.Entry<Room, Integer>> i = entrySet().iterator();
+                if (!i.hasNext())
                     return "{}";
-
                 StringBuilder sb = new StringBuilder();
-                for (;;) {
-                    Map.Entry<Room,Integer> e = i.next();
+                for (; ; ) {
+                    Map.Entry<Room, Integer> e = i.next();
                     Room key = e.getKey();
                     Integer value = e.getValue();
-                    sb.append(key ==null ? "(this Map)" : key);
-                    sb.append('=');
-                    sb.append(value ==null ? "(this Map)" : value);
-                    if (! i.hasNext())
-                        return sb.append('\n').toString();
+                    sb.append(key == null ? "(this Map)" : key);
+                    sb.append(',');
+                    sb.append(value == null ? "(this Map)" : value);
+                    if (!i.hasNext())
+                        return sb.toString();
                     sb.append(',').append('\n');
                 }
             }
         };
         try {
-            bufferedWriter=new BufferedWriter(new FileWriter(file));
-            bufferedWriter.write(linkedHashMap.toString());
+            bufferedWriter = new BufferedWriter(new FileWriter(file, false));
+            bufferedWriter.write(String.valueOf(linkedHashMap1));
             bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (IOException e) {

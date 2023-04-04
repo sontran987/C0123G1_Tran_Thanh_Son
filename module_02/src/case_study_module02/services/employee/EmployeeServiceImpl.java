@@ -146,16 +146,19 @@ public class EmployeeServiceImpl implements EmployeeService {
         String name,brithday,email,phone;
         boolean flag;
         do {
-            flag = false;
+            flag = true;
             System.out.print("Enter id:");
             id = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < listEmployee.size(); i++) {
-                if (listEmployee.get(i).getCode() == id) {
+                if (listEmployee.get(i).getCode()==id) {
                     System.out.println("id is duplicated");
-                    flag = true;
+                    flag = false;
+                    break;
+                }else{
+                    flag=true;
                 }
             }
-        }while (flag) ;
+        }while (!flag) ;
             do {
                 flag = true;
                 System.out.print("Enter name:");
@@ -217,14 +220,17 @@ public class EmployeeServiceImpl implements EmployeeService {
             System.out.print("Enter id you want to edit:");
             id = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < listEmployee.size(); i++) {
-                if (listEmployee.get(i).getCode() == id) {
-                    flag = false;
+                if(listEmployee.get(i).getCode()==id){
+                    flag = true;
+                    break;
+                }else {
+                    flag=false;
                 }
             }
-            if (flag == true){
-                System.out.print("id not is duplicated");
+            if (!flag){
+                System.out.println("not id ");
             }
-        } while (flag);
+        } while (!flag);
         do {
             flag=true;
             System.out.print("Enter name:");
@@ -244,7 +250,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
         } while (!flag);
         String gender = chooseGender();
-        System.out.print("Enter chứng minh nhân dân:");
+        System.out.print("Enter identity card:");
         int identityCard = Integer.parseInt(scanner.nextLine());
         do {
             flag=true;

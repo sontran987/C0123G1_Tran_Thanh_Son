@@ -1,5 +1,9 @@
 package case_study_module02.controllers;
 
+import case_study_module02.services.booking.BookingService;
+import case_study_module02.services.booking.BookingServiceImpl;
+import case_study_module02.services.contract.ContractService;
+import case_study_module02.services.contract.ContractServiceImpl;
 import case_study_module02.services.customer.CustomerService;
 import case_study_module02.services.customer.CustomerServiceImpl;
 import case_study_module02.services.employee.EmployeeService;
@@ -10,23 +14,24 @@ import case_study_module02.services.facility.FacilityServiceImpl;
 import java.util.Scanner;
 
 public class FuramaController {
-   static EmployeeService employeeService = new EmployeeServiceImpl();
-   static FacilityService facilityService = new FacilityServiceImpl();
-
+    static EmployeeService employeeService = new EmployeeServiceImpl();
+    static FacilityService facilityService = new FacilityServiceImpl();
+    static CustomerService customerService = new CustomerServiceImpl();
+    static BookingService bookingService = new BookingServiceImpl();
+static ContractService contractService=new ContractServiceImpl();
     public static void displayMainMenu() {
-
         Scanner scanner = new Scanner(System.in);
         String choose;
         do {
             System.out.println(
-                    "Furama management program\n" +
+                    "--------Furama management program-------\n" +
                             "1.\tEmployee Management\n" +
                             "2.\tCustomer Management\n" +
                             "3.\tFacility Management\n" +
                             "4.\tBooking Management\n" +
                             "5.\tPromotion Management\n" +
                             "6.\tExit\n");
-            System.out.print("Choose number of function: ");
+            System.out.print("Choose number of the function: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -54,17 +59,18 @@ public class FuramaController {
     }
 
     public static void employeeManagement() {
-
         Scanner sc = new Scanner(System.in);
         String choose;
+        boolean flag;
         do {
+            flag=true;
             System.out.println(
-                    "Function Emloyee Management: \n" +
+                    "---------Function Emloyee Management--------- \n" +
                             "1.\tDisplay list employees\n" +
                             "2.\tAdd new employees\n" +
                             "3.\tEdit employees\n" +
                             "4.\tReturn main menu");
-            System.out.print("Choose number: ");
+            System.out.print("Choose number of the function: ");
             choose = sc.nextLine();
             switch (choose) {
                 case "1":
@@ -77,26 +83,28 @@ public class FuramaController {
                     employeeService.editInformationEmploy();
                     break;
                 case "4":
-                    System.out.println("Back to menu furama.");
+                    System.out.println("Back to menu furama😘");
+                    flag=false;
                     break;
                 default:
-                    System.out.println("Try again.");
+                    System.out.println("Try again(●'◡'●)");
             }
-        } while (choose != "4");
+        } while (flag);
     }
 
     public static void customerManagement() {
-        CustomerService customerService = new CustomerServiceImpl();
         Scanner scanner = new Scanner(System.in);
         String choose;
+        boolean flag;
         do {
+            flag=true;
             System.out.println(
-                    "Function Customer Management: \n" +
+                    "-----------Function Customer Management-----------\n" +
                             "1.\tDisplay list customers\n" +
                             "2.\tAdd new customer\n" +
                             "3.\tEdit customer\n" +
                             "4.\tReturn main menu\n");
-            System.out.print("Choose number: ");
+            System.out.print("Choose number of the function: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -109,26 +117,29 @@ public class FuramaController {
                     customerService.editInfomationCostomer();
                     break;
                 case "4":
-                    System.out.println("Back to menu furama.");
+                    System.out.println("Back to menu furama😘");
+                    flag=false;
                     break;
                 default:
-                    System.out.println("Try again.");
+                    System.out.println("Try again(❁´◡`❁)");
             }
-        } while (choose != "4");
+        } while (flag);
     }
 
     public static void facilityManagement() {
         Scanner scanner = new Scanner(System.in);
         String choose;
+        boolean flag;
         do {
+            flag=true;
             System.out.println(
-                    "Function Facility Management:\n" +
+                    "-------Function Facility Management---------\n" +
                             "1\tDisplay list facility\n" +
                             "2\tAdd new facility\n" +
                             "3\tEdit facility\n" +
                             "4\tDisplay list facility maintenance\n" +
                             "5\tReturn main menu\n");
-            System.out.print("Choose number: ");
+            System.out.print("Choose number of the function: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -144,60 +155,70 @@ public class FuramaController {
                     facilityService.displayListFacilityMaintenance();
                     break;
                 case "5":
-                    System.out.println("Back to menu Furama");
+                    System.out.println("Back to menu Furama😘");
+                    flag=false;
                     break;
                 default:
-                    System.out.println("Try again.");
+                    System.out.println("Try again😅");
             }
-        } while (choose != "5");
+        } while (flag);
     }
 
     public static void bookingManagement() {
-
         Scanner scanner = new Scanner(System.in);
         String choose;
+        boolean flag;
         do {
+            flag=true;
             System.out.println(
-                    "Function Booking Management:\n" +
+                    "--------Function Booking Management----------\n" +
                             "1.\tAdd new booking\n" +
                             "2.\tDisplay list booking\n" +
                             "3.\tCreate new contract\n" +
                             "4.\tDisplay list contracts\n" +
                             "5.\tEdit contracts\n" +
                             "6.\tReturn main menu\n");
-            System.out.print("Choose number: ");
+            System.out.print("Choose number of the function: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
+                    bookingService.addNewBooking();
                     break;
                 case "2":
+                    bookingService.displayListBooking();
                     break;
                 case "3":
+                    contractService.createNewContract();
                     break;
                 case "4":
+                    contractService.displayListContracts();
                     break;
                 case "5":
+                    contractService.editContracts();
                     break;
                 case "6":
-                    System.out.println("Back to menu Furama");
+                    System.out.println("Back to menu Furama😘");
+                    flag=false;
                     break;
                 default:
-                    System.out.println("Try again.");
+                    System.out.println("Try again(❁´◡`❁)");
             }
-        } while (choose != "6");
+        } while (flag);
     }
 
     public static void promotionManagement() {
 
         Scanner scanner = new Scanner(System.in);
         String choose;
+        boolean flag;
         do {
+            flag=true;
             System.out.println(
-                    "Menu: \n" +
+                    "---------Function Promotion Management--------- \n" +
                             "1.\tDisplay list customers use service\n" +
                             "2.\tDisplay list customers get voucher\n" +
                             "3.\tReturn main menu\n");
-            System.out.print("Nhập số tương ứng với chức năng: ");
+            System.out.print("Choose number of the function: ");
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
@@ -205,11 +226,12 @@ public class FuramaController {
                 case "2":
                     break;
                 case "3":
-                    System.out.println("Back to menu Furama.");
+                    System.out.println("Back to menu Furama😘");
+                    flag=false;
                     break;
                 default:
-                    System.out.println("Hãy nhập lại");
+                    System.out.println("Try again(❁´◡`❁)");
             }
-        } while (choose != "3");
+        } while (flag);
     }
 }

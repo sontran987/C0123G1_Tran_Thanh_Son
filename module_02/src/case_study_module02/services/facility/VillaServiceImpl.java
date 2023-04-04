@@ -100,7 +100,7 @@ public class VillaServiceImpl implements VillaService {
     @Override
     public void displayListVilla() {
         for (Villa v : mapVilla.keySet()) {
-            System.out.println(v.getInfoToCSV() + ", đã sử dụng: " + mapVilla.get(v));
+            System.out.println(v.getInfoToCSV() + ", used: " + mapVilla.get(v)+"times.");
         }
     }
 
@@ -115,7 +115,7 @@ public class VillaServiceImpl implements VillaService {
             System.out.print("Enter id service(SVVL-YYYY):");
             id = scanner.nextLine();
             for (Villa v : mapVilla.keySet()) {
-                if (v.getIdService() == id) {
+                if (v.getIdService().equals(id)) {
                     count++;
                 }
             }
@@ -202,7 +202,7 @@ public class VillaServiceImpl implements VillaService {
             System.out.print("Enter id service:");
             id = scanner.nextLine();
             for (Villa v : mapVilla.keySet()) {
-                if (v.getIdService() != id) {
+                if (!v.getIdService().equals(id)) {
                     flag=false;
                 }
             }
@@ -285,7 +285,7 @@ public class VillaServiceImpl implements VillaService {
     public void displayListVillaMaintenance() {
         for (Villa v : mapVilla.keySet()) {
             if (mapVilla.get(v) >= 5) {
-                System.out.println(v + ", đã sử dụng: " + mapVilla + " cần bảo trì.");
+                System.out.println(v.getInfoToCSV() + ", used: " + mapVilla.get(v) + " times, need maintennance. ");
             }
         }
     }

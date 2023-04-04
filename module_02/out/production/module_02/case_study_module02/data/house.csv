@@ -1,1 +1,3 @@
-{House:  idService= SVHO-1235, serviceName= Son, usableArea= 123.0, rentalCosts= 123.0, maximumPeople= 12, rentalType= Month, roomStandard= Superior, numberOfFloors= 12=0}
+SVHO-1235,Son,123.0,123.0,12,Month,Superior,12,0
+SVHO-1231,Sdaa,123.0,123.0,12,Year,Standard,1,0
+SVHO-1230,Osad,123.0,123.0,12,Day,Superior,2,0

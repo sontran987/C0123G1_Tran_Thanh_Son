@@ -12,12 +12,6 @@ public class RoomServiceImpl implements RoomService {
     static RoomRepo roomRepo=new RoomRepoImpl();
     static LinkedHashMap<Room, Integer> mapRoom = roomRepo.displayListRoom();
 
-    static {
-        mapRoom.put(new Room("1", "Room", 1, 1, 1, "1", "1"), 0);
-        mapRoom.put(new Room("2", "Room1", 1, 1, 1, "1", "1"), 1);
-        mapRoom.put(new Room("3", "Room2", 1, 1, 1, "1", "1"), 2);
-    }
-
     static String[] listRentalType = {
             "year",
             "month",
@@ -62,7 +56,7 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public void displayListRoom() {
         for (Room r : mapRoom.keySet()) {
-            System.out.println(r + ", đã sử dụng: " + mapRoom.get(r) + " lần.");
+            System.out.println(r.getInfoToCSV() + ", used: " + mapRoom.get(r) + " times.");
         }
     }
 
@@ -72,20 +66,21 @@ public class RoomServiceImpl implements RoomService {
         double usableArea, rentalCosts;
         int maximumPeople;
         int count;
+        boolean flag;
         do {
-            count = 0;
+            flag=true;
             System.out.print("Enter id service(SVRO-YYYY):");
             id = scanner.nextLine();
             for (Room r : mapRoom.keySet()) {
-                if (r.getIdService() == id) {
-                    count++;
+                if (r.getIdService().equals(id)) {
+                    flag=false;
                 }
             }
             if (!regexIdRoom(id)) {
                 System.out.println("Not valid.");
-                count++;
+                flag=false;
             }
-        } while (count > 0);
+        } while (!flag);
         do {
             count = 0;
             System.out.print("Enter name service: ");
@@ -115,7 +110,7 @@ public class RoomServiceImpl implements RoomService {
         } while (count > 0);
         do {
             count = 0;
-            System.out.print("Enter the maximum of people");
+            System.out.print("Enter the maximum of people: ");
             maximumPeople = Integer.parseInt(scanner.nextLine());
             if (maximumPeople < 0 || maximumPeople >= 20) {
                 System.out.println("Not valid.");
@@ -123,7 +118,7 @@ public class RoomServiceImpl implements RoomService {
             }
         } while (count > 0);
         rentalType = chooseRentalType();
-        System.out.print("Enter Free service included");
+        System.out.print("Enter Free service included: ");
         freeServiceIncluded = scanner.nextLine();
         int value=0;
         mapRoom.put(new Room(id, name, usableArea, rentalCosts, maximumPeople, rentalType, freeServiceIncluded),value);
@@ -141,7 +136,7 @@ public class RoomServiceImpl implements RoomService {
             System.out.print("Enter id service: ");
             id = scanner.nextLine();
             for (Room r : mapRoom.keySet()) {
-                if (r.getIdService() != id) {
+                if (!r.getIdService().equals(id)) {
                     count++;
                 }
             }
@@ -179,7 +174,7 @@ public class RoomServiceImpl implements RoomService {
         } while (count > 0);
         do {
             count = 0;
-            System.out.print("Enter the maximum of people");
+            System.out.print("Enter the maximum of people: ");
             maximumPeople = Integer.parseInt(scanner.nextLine());
             if (maximumPeople < 0 || maximumPeople >= 20) {
                 System.out.println("Not valid.");
@@ -187,7 +182,7 @@ public class RoomServiceImpl implements RoomService {
             }
         } while (count > 0);
         rentalType = chooseRentalType();
-        System.out.print("Enter Free service included");
+        System.out.print("Enter Free service included: ");
         freeServiceIncluded = scanner.nextLine();
         for (Room r : mapRoom.keySet()) {
             r.setIdService(id);
@@ -205,7 +200,7 @@ public class RoomServiceImpl implements RoomService {
     public void displayListRoomMaintenance() {
         for (Room r : mapRoom.keySet()) {
             if (mapRoom.get(r) >= 5) {
-                System.out.println(r + ", đã sử dụng: " + mapRoom.get(r) + " lần cần bảo trì.");
+                System.out.println(r.getInfoToCSV() + ", used: " + mapRoom.get(r) + "times, need maintennance.");
             }
         }
     }

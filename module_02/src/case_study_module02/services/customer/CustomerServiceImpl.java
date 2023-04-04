@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
                     gender = genderes[2];
                     break;
                 default:
-                    System.out.println("Try again.");
+                    System.out.println("Try again😘");
                     flag = false;
             }
         } while (!flag);
@@ -109,7 +109,7 @@ public class CustomerServiceImpl implements CustomerService {
             System.out.print("Enter id: ");
             id = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < customerList.size(); i++) {
-                if (customerList.get(i).getCode() == id) {
+                if (customerList.get(i).getCode()==id) {
                     System.out.println("id already available ");
                     flag = false;
                 }
@@ -172,11 +172,17 @@ public class CustomerServiceImpl implements CustomerService {
             System.out.print("Enter id: ");
             id = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < customerList.size(); i++) {
-                if (customerList.get(i).getCode() == id) {
-                    flag=false;
+                if (customerList.get(i).getCode()!=id) {
+                  flag=false;
+                }else {
+                    flag=true;
+                    break;
                 }
             }
-        } while (flag);
+            if (!flag){
+                System.out.println("id not is duplicated");
+            }
+        } while (!flag);
         do {
             flag = true;
             System.out.print("Enter name: ");

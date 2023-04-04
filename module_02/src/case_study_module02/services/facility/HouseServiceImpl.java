@@ -100,7 +100,7 @@ public class HouseServiceImpl implements HouseService {
     @Override
     public void displayListHouse() {
         for (House h : mapHouse.keySet()) {
-            System.out.println(h.getInfoToCSV() + ", đã sử dụng: " + mapHouse.get(h) + " lần.");
+            System.out.println(h.getInfoToCSV() + ", used: " + mapHouse.get(h) + " times.");
         }
     }
 
@@ -115,7 +115,7 @@ public class HouseServiceImpl implements HouseService {
             System.out.print("Enter id service(SVHO-YYYY):");
             id = scanner.nextLine();
             for (House h : mapHouse.keySet()) {
-                if (h.getIdService() == id) {
+                if (h.getIdService().equals(id)) {
                     count++;
                 }
             }
@@ -189,7 +189,7 @@ public class HouseServiceImpl implements HouseService {
             System.out.print("Enter id service: ");
             id = scanner.nextLine();
             for (House h : mapHouse.keySet()) {
-                if (h.getIdService() != id) {
+                if (!h.getIdService().equals(id)) {
                     count++;
                 }
             }
@@ -266,7 +266,7 @@ public class HouseServiceImpl implements HouseService {
     public void displayListHouseMaintenance() {
         for (House h : mapHouse.keySet()) {
             if (mapHouse.get(h) >= 5) {
-                System.out.println(h.getInfoToCSV() + ", đã sử dụng: " + mapHouse.get(h) + " lần, cần bảo trì.");
+                System.out.println(h.getInfoToCSV() + ", used: " + mapHouse.get(h) + " times,need maintenance");
             }
         }
     }

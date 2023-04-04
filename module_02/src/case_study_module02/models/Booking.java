@@ -1,6 +1,8 @@
 package case_study_module02.models;
 
-public class Booking {
+import java.util.Objects;
+
+public class Booking implements Comparable<Booking>{
 
     private int codeBooking;
     private String startDay;
@@ -78,5 +80,28 @@ public class Booking {
                 ", codeCustomet= " + codeCustomet +
                 ", serviceName= " + serviceName +
                 ", typeOfService= " + typeOfService;
+    }
+
+public String getInfoToCSV(){
+        return codeBooking+","+startDay+","+endDate+
+                ","+codeCustomet+","+serviceName+","+typeOfService;
+}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return startDay.equals(booking.startDay) || endDate.equals(booking.endDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startDay, endDate);
+    }
+
+    @Override
+    public int compareTo(Booking o) {
+        return 0;
     }
 }
