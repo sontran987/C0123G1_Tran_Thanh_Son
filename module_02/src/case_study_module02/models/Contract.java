@@ -67,4 +67,9 @@ public class Contract {
                 ", totalPaymentAmount= " + totalPaymentAmount +
                 ", codeCustomer= " + codeCustomer;
     }
+
+    public String getInfoToCSV() {
+        return numberContract + "," + codeBooking + "," + advanceDepositAmount + ","
+                + totalPaymentAmount + "," + codeCustomer;
+    }
 }

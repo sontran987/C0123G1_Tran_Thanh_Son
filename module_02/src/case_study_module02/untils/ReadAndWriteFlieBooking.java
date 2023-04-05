@@ -3,6 +3,8 @@ package case_study_module02.untils;
 import case_study_module02.models.Booking;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -13,7 +15,7 @@ public class ReadAndWriteFlieBooking {
         Set<Booking> listBooking = new TreeSet<>();
         try {
             bufferedReader = new BufferedReader(new FileReader(file));
-            String line = "";
+            String line = null;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] splitData = line.split(",");
                 listBooking.add(new Booking(Integer.parseInt(splitData[0]), splitData[1],

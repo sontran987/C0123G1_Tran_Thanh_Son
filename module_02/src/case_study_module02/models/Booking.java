@@ -1,5 +1,6 @@
 package case_study_module02.models;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Booking implements Comparable<Booking>{
@@ -92,16 +93,23 @@ public String getInfoToCSV(){
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Booking booking = (Booking) o;
-        return startDay.equals(booking.startDay) || endDate.equals(booking.endDate);
+        return codeBooking==booking.codeBooking ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(startDay, endDate);
+        return Objects.hash(codeBooking);
     }
 
     @Override
     public int compareTo(Booking o) {
-        return 0;
+        if (startDay.equals(o.startDay)){
+            Date endDate=new Date(getEndDate());
+            Date endDate1=new Date(o.endDate);
+            return endDate.after(endDate1) ? 1 :-1;
+        }
+        Date startDate = new Date(startDay);
+        Date startDateObj = new Date(o.startDay);
+        return startDate.after(startDateObj) ? 1 : -1;
     }
 }

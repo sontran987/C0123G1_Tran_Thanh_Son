@@ -28,38 +28,25 @@ public class BookingServiceImpl implements BookingService {
     static LinkedHashMap<Room, Integer> roomMap = roomRepo.displayListRoom();
     static LinkedHashMap<Villa, Integer> villaMap = villaRepo.displayListVilla();
     static Scanner scanner = new Scanner(System.in);
-    static String[] typeOfService = {
-            "Villa",
-            "House",
-            "Room"};
 
-    public static String chooseTypeOfService() {
-        String typeService = null;
-        for (int i = 0; i < typeOfService.length; i++) {
-            System.out.println((i + 1) + ". " + typeOfService[i]);
-        }
-        String choose;
-        boolean flag;
-        do {
-            flag = false;
-            System.out.print("Choose Service: ");
-            choose = scanner.nextLine();
-            switch (choose) {
-                case "1":
-                    typeService = typeOfService[0];
-                    break;
-                case "2":
-                    typeService = typeOfService[1];
-                    break;
-                case "3":
-                    typeService = typeOfService[2];
-                    break;
-                default:
-                    System.out.println("Try again🤤🤤");
-                    flag = true;
+    public static boolean checkEndDate(String startDate, String endDate) {
+        Date start = new Date(startDate);
+        Date end = new Date(endDate);
+        return start.before(end) ? true : false;
+    }
+    public static boolean checkStartDate(String startDate,String nameService,String typeOfService){
+        Date start= new Date(startDate);
+        for (Booking b : listBooking) {
+            Date end=new Date(b.getEndDate());
+            if (b.getServiceName().equals(nameService)&&b.getTypeOfService().equals(typeOfService)){
+                if (start.after(end)){
+                    return true;
+                }else {
+                    return false;
+                }
             }
-        } while (flag);
-        return typeService;
+        }
+        return false;
     }
 
     @Override
@@ -86,26 +73,7 @@ public class BookingServiceImpl implements BookingService {
                 }
             }
         } while (!flag);
-        String startDay;
-        do {
-            flag = true;
-            System.out.print("Enter start day: ");
-             startDay = scanner.nextLine();
-            if (!Validate.regexDate(startDay)) {
-                System.out.println("Not valid🤯🤯🤯");
-                flag = false;
-            }
-        } while (!flag);
-        String endDate;
-        do {
-            flag = true;
-            System.out.print("Enter end day: ");
-             endDate = scanner.nextLine();
-            if (!Validate.regexDate(endDate)) {
-                System.out.println("Not valid🤯🤯🤯");
-                flag = false;
-            }
-        } while (!flag);
+
         int idCustomer;
         do {
             flag = true;
@@ -118,39 +86,75 @@ public class BookingServiceImpl implements BookingService {
                 }
             }
         } while (flag);
-        String nameService;
-
+        String nameService = null;
+        String typeOfService = null;
         do {
             flag = true;
-            System.out.print("Enter name service: ");
-            nameService = scanner.nextLine();
+            System.out.print("Enter id service: ");
+           String  idService = scanner.nextLine();
             for (House h : houseMap.keySet()) {
-                if (h.getServiceName().equals(nameService)) {
-                    int value=houseMap.get(h)+1;
-
+                if (h.getIdService().equals(idService)) {
+                    nameService=h.getServiceName();
+                    typeOfService="House";
+                    houseMap.put(h,houseMap.get(h)+1);
+                    houseRepo.addNewHouse(houseMap);
                     flag = false;
                     break;
                 }
             }
             for (Room r : roomMap.keySet()) {
-                if (r.getServiceName().equals(nameService)) {
+                if (r.getIdService().equals(idService)) {
+                    nameService=r.getServiceName();
+                    typeOfService="Room";
+                    roomMap.put(r,roomMap.get(r)+1);
+                    roomRepo.addNewRoom(roomMap);
                     flag = false;
                     break;
                 }
             }
             for (Villa v : villaMap.keySet()) {
-                if (v.getServiceName().equals(nameService)) {
+                if (v.getIdService().equals(idService)) {
+                    nameService=v.getServiceName();
+                    typeOfService="Villa";
+                    villaMap.put(v,villaMap.get(v)+1);
+                    villaRepo.addNewVilla(villaMap);
                     flag = false;
                     break;
                 }
             }
         } while (flag);
-        String typeOfService=chooseTypeOfService();
-        bookingRepository.addBooking(new Booking(idBooking,startDay,endDate,idCustomer,nameService,typeOfService));
+        String startDay;
+        do {
+            flag = true;
+            System.out.print("Enter start day: ");
+            startDay = scanner.nextLine();
+            if (!Validate.regexDate(startDay)) {
+                System.out.println("Not valid🤯🤯🤯");
+                flag = false;
+            }
+           flag= checkStartDate(startDay,nameService,typeOfService);
+        } while (!flag);
+        String endDate;
+        do {
+            flag = true;
+            System.out.print("Enter end day: ");
+            endDate = scanner.nextLine();
+            if (!Validate.regexDate(endDate)) {
+                System.out.println("Not valid🤯🤯🤯");
+                flag = false;
+            }
+            flag=checkEndDate(startDay,endDate);
+        } while (!flag);
+
+        Booking booking=new Booking(idBooking, startDay, endDate, idCustomer, nameService, typeOfService);
+        listBooking.add(booking);
+        bookingRepository.addBooking(booking);
+        System.out.println("add booking already");
     }
 
     @Override
     public void displayListBooking() {
+        listBooking = bookingRepository.displayListBooking();
         for (Booking b : listBooking) {
             System.out.println(b.toString());
         }
