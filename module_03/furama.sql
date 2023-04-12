@@ -104,7 +104,10 @@ CREATE TABLE dich_vu_di_kem (
 INSERT INTO dich_vu_di_kem VALUES				
 (1,"Karaoke",100000,"giờ",'tiện nghi,hiện tại'),				
 (2,"thuê xe máy",10000,"chiếc",'tiện nghi,hiện tại'),				
-(3,"thuê xe đạp",20000,"chiếc",'tiện nghi,hiện tại');				
+(3,"thuê xe đạp",20000,"chiếc",'tiện nghi,hiện tại'),
+(4,	"Buffet buổi sáng",15000,"suất","đầy đủ đồ ăn, tráng miệng"),
+(5,"Buffet buổi trưa",90000,"suất","đầy đủ đồ ăn, tráng miệng"),
+(6,"Buffet buổi tối",16000,"suất","đầy đủ đồ ăn, tráng miệng");				
 CREATE TABLE loai_dich_vu (
     ma_loai_dich_vu INT PRIMARY KEY,
     ten_loai_dich_vu VARCHAR(45)
@@ -157,8 +160,8 @@ CREATE TABLE hop_dong (
     FOREIGN KEY (ma_dich_vu)
         REFERENCES dich_vu (ma_dich_vu)
 );				
- INSERT INTO hop_dong VALUES( 				
-(1, "2020-12-08","2020-12-09",00,3,1,3),	
+ INSERT INTO hop_dong VALUES			
+(1, "2020-12-08","2020-12-09",0.0,3,1,3),	
  (2,"2020-07-14","2020-07-21",20000,7,3,1),			
  (3,"2021-03-15","2021-03-17",50000,3,4,2),			
  (4,"2021-01-14","2021-01-18",100000,7,5,5),		
@@ -167,9 +170,9 @@ CREATE TABLE hop_dong (
 (7,	"2021-09-02","2021-09-05",100000,7,4,4),		
  (8,"2021-06-17","2021-06-18",150000,3,4,1),		
  (9,"2020-11-19","2020-11-19",0,3,4,3),		
- (10,"2021-04-12","2021-04-14",0,10,3,5),				
+ (10,"2021-04-12","2021-04-14",0,10,3,5),
  (11,"2021-04-25","2021-04-25",0,2,2,1),				
-(12,"2021-05-25","2021-05-27",0,7,10,1));				
+(12,"2021-05-25","2021-05-27",0,7,10,1);				
 CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong_chi_tiet INT PRIMARY KEY,
     so_luong INT,
