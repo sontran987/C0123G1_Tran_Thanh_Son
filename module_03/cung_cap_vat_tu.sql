@@ -54,8 +54,12 @@ CREATE TABLE chi_tiet_phieu_nhap (
 );
 CREATE TABLE chi_tiet_don_dat_hang (
     id INT PRIMARY KEY,
-    ma_vat_tu INT, FOREIGN KEY(ma_vat_tu) REFERENCES vat_tu(ma_vat_tu),
-    so_don_hang INT, FOREIGN KEY(so_don_hang) REFERENCES don_dat_hang(so_don_hang)
+    ma_vat_tu INT,
+    FOREIGN KEY (ma_vat_tu)
+        REFERENCES vat_tu (ma_vat_tu),
+    so_don_hang INT,
+    FOREIGN KEY (so_don_hang)
+        REFERENCES don_dat_hang (so_don_hang)
 );
 
 
