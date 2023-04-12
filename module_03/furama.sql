@@ -190,10 +190,14 @@ INSERT INTO hop_dong_chi_tiet VALUES
 (4,1,3,1),				
 (5,12,3,2),				
 (6,3,1,2),				
-(7,2,12,2);				
-SELECT 				
-    *				
-FROM				
-    nhan_vien				
-WHERE				
-    ho_ten REGEXP '^[HTK]|(([A-Z][a-z]*)(\\s[A-Z][a-z]*)){1,14}$';				
+(7,2,12,2);
+-- -- -- -- -- --task 2----------------- 
+			
+SELECT *FROM nhan_vien WHERE ho_ten LIKE 'H%'OR ho_ten LIKE  'T%' OR ho_ten LIKE 'K%' AND length(ho_ten) <=15;			
+
+-- -- -- -- -- -- task 3-- -- -- -- -- 
+
+SELECT * FROM khach_hang WHERE ((YEAR(CURDATE()) - YEAR(ngay_sinh) BETWEEN 18 AND 50)) AND 
+(dia_chi LIKE '%Đà Nẵng'or dia_chi LIKE '%Quảng Trị');
+
+-- -- -- -- -- -- task 4-- -- -- -- -- 
