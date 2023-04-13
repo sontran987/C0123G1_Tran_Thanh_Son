@@ -78,4 +78,4 @@ SELECT student.student_name ,subjects.sub_name ,mark
 FROM mark 
 INNER JOIN student ON student.student_id=mark.student_id
 INNER JOIN subjects ON subjects.sub_id=mark.sub_id
-ORDER BY mark DESC , mark;
+ORDER BY mark DESC ,student.student_name;

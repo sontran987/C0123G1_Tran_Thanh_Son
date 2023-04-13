@@ -64,10 +64,21 @@ customer.name_cus, product.name_p
 FROM order_detail
 INNER JOIN product ON product.id_p = order_detail.id_p
 INNER JOIN orders ON orders.id_odr =order_detail.id_o
-INNER JOIN customer ON customer.id_cus =orders.id_cus
-
-
+INNER JOIN customer ON customer.id_cus = orders.id_cus;
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
-
+SELECT 
+customer.name_cus
+FROM customer
+WHERE 
+customer.id_cus NOT IN(SELECT DISTINCT id_cus FROM orders);
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng
 -- tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
+SELECT orders.id_odr, orders.date_odr, SUM(order_detail.od_quatity*product.price_p) AS 'price' 
+FROM orders
+JOIN order_detail od ON od.id_o=orders.id_odr
+JOIN product p ON p.id_p=product.id_p
+GROUP BY orders.id_odr;
+
+
+
+
