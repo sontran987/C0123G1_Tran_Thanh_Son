@@ -9,15 +9,14 @@ CREATE TABLE phieu_nhap (
     ngay_nhap DATETIME
 );
 CREATE TABLE sdt (
-    sdt VARCHAR(45) PRIMARY KEY
+    sdt VARCHAR(45) PRIMARY KEY,
+    ma_ncc INT,
+    FOREIGN KEY (ma_ncc) REFERENCES nha_cung_cap(ma_ncc)
 );
 CREATE TABLE nha_cung_cap (
     ma_ncc INT PRIMARY KEY,
     ten_ncc VARCHAR(50),
-    dia_chi TEXT,
-    SDT VARCHAR(45),
-    FOREIGN KEY (SDT)
-        REFERENCES sdt (sdt)
+    dia_chi TEXT
 );
 CREATE TABLE don_dat_hang (
     so_don_hang INT PRIMARY KEY,

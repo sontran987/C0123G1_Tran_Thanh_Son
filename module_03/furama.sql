@@ -193,11 +193,35 @@ INSERT INTO hop_dong_chi_tiet VALUES
 (7,2,12,2);
 -- -- -- -- -- --task 2----------------- 
 			
-SELECT *FROM nhan_vien WHERE ho_ten LIKE 'H%'OR ho_ten LIKE  'T%' OR ho_ten LIKE 'K%' AND length(ho_ten) <=15;			
+SELECT 
+    *
+FROM
+    nhan_vien
+WHERE
+    ho_ten LIKE 'H%' OR ho_ten LIKE 'T%'
+        OR ho_ten LIKE 'K%'
+        AND LENGTH(ho_ten) <= 15;			
 
 -- -- -- -- -- -- task 3-- -- -- -- -- 
 
-SELECT * FROM khach_hang WHERE ((YEAR(CURDATE()) - YEAR(ngay_sinh) BETWEEN 18 AND 50)) AND 
-(dia_chi LIKE '%Đà Nẵng'or dia_chi LIKE '%Quảng Trị');
+SELECT 
+    *
+FROM
+    khach_hang
+WHERE
+    ((YEAR(CURDATE()) - YEAR(ngay_sinh) BETWEEN 18 AND 50))
+        AND (dia_chi LIKE '%Đà Nẵng'
+        OR dia_chi LIKE '%Quảng Trị');
 
 -- -- -- -- -- -- task 4-- -- -- -- -- 
+
+SELECT 
+    ma_khach_hang, ho_ten,COUNT(ma_loai_khach) AS "so_luong"
+FROM
+    khach_hang
+--  WHERE 
+--  loai_khach.ten_loai_khach="Diamond"
+GROUP BY 
+   ma_loai_khach
+ORDER BY 
+so_luong ;
