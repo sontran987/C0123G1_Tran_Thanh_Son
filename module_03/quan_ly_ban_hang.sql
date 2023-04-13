@@ -73,7 +73,7 @@ WHERE
 customer.id_cus NOT IN(SELECT DISTINCT id_cus FROM orders);
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng
 -- tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
-SELECT orders.id_odr, orders.date_odr, SUM(order_detail.od_quatity*product.price_p) AS 'price' 
+SELECT orders.id_odr, orders.date_odr, SUM(od.od_quatity * product.price_p) AS 'price' 
 FROM orders
 JOIN order_detail od ON od.id_o=orders.id_odr
 JOIN product p ON p.id_p=product.id_p

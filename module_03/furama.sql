@@ -214,14 +214,21 @@ WHERE
         OR dia_chi LIKE '%Quảng Trị');
 
 -- -- -- -- -- -- task 4-- -- -- -- -- 
-
+SET SQL_SAFE_UPDATES=0;
 SELECT 
-    ma_khach_hang, ho_ten,COUNT(ma_loai_khach) AS "so_luong"
+	kh.ma_khach_hang,kh.ho_ten,COUNT(ho_ten) AS "so_lan_dat_phong"
 FROM
-    khach_hang
---  WHERE 
---  loai_khach.ten_loai_khach="Diamond"
-GROUP BY 
-   ma_loai_khach
-ORDER BY 
-so_luong ;
+    khach_hang kh
+GROUP BY
+    kh.ho_ten
+ORDER BY
+    so_luong_dat_phong ASC;
+    
+    -- : Chi Phí Thuê + Số Lượng * Giá, với Số Lượng và Giá là từ bảng dich_vu_di_kem, hop_dong_chi_tiet
+    -- --- -- -- task 5-- -- --
+SELECT 
+    kh.ma_khach_hang,kh.ho_ten,lh.ten_loai_khach,hd.ma_hop_dong,dich_vu.ten_dich_vu,
+    hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,SUM(hop_dong_chi_tiet.so_luong*dich_vu_di_kem.gia) AS 'tong_tien'
+FROM khach_hang kh
+INNER JOIN loai_khach lh ON lh.ma_loai_khach = kh.ma_loai_khach
+INNER JOIN hop_dong hd ON hd.ma_dich_vu = dich_vu.ma_dich_vu
