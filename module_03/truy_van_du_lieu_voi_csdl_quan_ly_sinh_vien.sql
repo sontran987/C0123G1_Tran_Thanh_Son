@@ -38,14 +38,14 @@ VALUES (1, 'CF', 5, 1),
        (2, 'C', 6, 1),
        (3, 'HDJ', 5, 1),
        (4, 'RDBMS', 10, 1);
-CREATE TABLE mark(
+CREATE TABLE marks(
 mark_id INT PRIMARY KEY,
 sub_id INT,FOREIGN KEY(sub_id) REFERENCES subjects(sub_id),
 student_id INT, FOREIGN KEY(student_id) REFERENCES student(student_id),
 mark INT,
 exam_times INT
 );
-INSERT INTO mark
+INSERT INTO marks
 VALUES (1,1, 1, 8, 1),
        (2,1, 2, 10, 2),
        (3,2, 1, 12, 1);
@@ -55,7 +55,7 @@ SELECT * FROM student
 WHERE student_name LIKE "h%";
 -- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
 SELECT * FROM classes
-WHERE start_date LIKE "%12%";
+WHERE MONTH(start_date)=12 ;
 -- Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.
 SELECT * FROM subjects 
 WHERE credit BETWEEN 3 AND 5;
@@ -74,8 +74,8 @@ FROM
     student;
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp 
 -- theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
-SELECT student.student_name ,subjects.sub_name ,mark  
-FROM mark 
-INNER JOIN student ON student.student_id=mark.student_id
-INNER JOIN subjects ON subjects.sub_id=mark.sub_id
-ORDER BY mark DESC ,student.student_name;
+SELECT student.student_name ,subjects.sub_name ,marks  
+FROM marks 
+INNER JOIN student ON student.student_id=marks.student_id
+INNER JOIN subjects ON subjects.sub_id=marks.sub_id
+ORDER BY marks DESC ,student.student_name;

@@ -252,7 +252,7 @@ FROM
     LEFT JOIN 
     dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
     ORDER BY 
-    kh.ma_khach_hang;
+    tong_tien desc;
     
     -- --- -- ------task 6--------
     -- 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu
@@ -333,10 +333,37 @@ FROM khach_hang kh;
 -- --------task 9-- --------
 -- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng
 -- trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
-SELECT MONTH(hd.ngay_lam_hop_dong) AS thang, COUNT(hd.ma_khach_hang) AS so_luong_doanh_thu
-FROM hop_dong hd
-GROUP BY thang
-ORDER BY 
-thang 
+SELECT 
+    MONTH(hd.ngay_lam_hop_dong) AS thang,
+    COUNT(hd.ma_khach_hang) AS doanh_thu
+FROM
+    hop_dong hd
+WHERE (YEAR(hd.ngay_lam_hop_dong))=2021
+GROUP BY 
+ thang
+ORDER BY thang;
   
+  -- ----------task 10-------------
+  -- 10.Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm.
+ --  Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem 
+  -- (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
+  
+  
+  SELECT hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, IFNULL(SUM(hdct.so_luong),0) AS so_luong_dich_vu_di_kem
+  FROM hop_dong hd
+  LEFT JOIN hop_dong_chi_tiet hdct ON hdct.ma_hop_dong=hd.ma_hop_dong
+  GROUP BY 
+  hd.ma_hop_dong;
+  
+  -- ------ task 11 ----------
+  -- 11.Hiển thị thông tin các dịch vụ đi kèm đã được sử dụng 
+  -- bởi những khách hàng có ten_loai_khach là “Diamond” và có dia_chi ở “Vinh” hoặc “Quảng Ngãi”.
+  
+  
+  
+  -- --------task 12 -----------
+  -- 12.Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng),
+  -- so_dien_thoai (khách hàng), ten_dich_vu, so_luong_dich_vu_di_kem (được tính dựa trên 
+  -- việc sum so_luong ở dich_vu_di_kem), tien_dat_coc của tất cả các dịch vụ đã từng được 
+  -- khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
   
