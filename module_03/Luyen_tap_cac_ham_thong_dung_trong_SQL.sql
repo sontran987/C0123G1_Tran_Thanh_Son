@@ -35,9 +35,9 @@ mark DESC
 LIMIT 1;
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 
-SELECT s.student_id ,s.student_name , s.address ,s.phone ,s.statuss,s.classes_id,ROUND(AVG(m.mark),0) AS diem_trung_binh
+SELECT s.*,ROUND(AVG(m.mark),0) AS diem_trung_binh
 FROM student s
-INNER JOIN mark m ON m.student_id=s.student_id
+INNER JOIN marks m ON m.student_id=s.student_id
 GROUP BY
 s.student_id
 ORDER BY

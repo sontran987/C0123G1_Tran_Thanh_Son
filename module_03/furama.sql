@@ -183,15 +183,15 @@ CREATE TABLE hop_dong_chi_tiet (
     FOREIGN KEY (ma_dich_vu_di_kem)
         REFERENCES dich_vu_di_kem (ma_dich_vu_di_kem)
 );				
-INSERT INTO hop_dong_chi_tiet VALUES				
-(1,5,2,4),				
-(2,8,3,5),				
-(3,7,2,6),				
-(4,1,3,1),				
-(5,12,3,2),				
-(6,3,1,2),				
-(7,2,12,2);
--- -- -- -- -- --task 2----------------- 
+INSERT INTO hop_dong_chi_tiet VALUES
+(1,5,2,4),
+(2,8,2,5),
+(3,15,2,6),
+(4,1,3,1),
+(5,11,3,2),
+(6,1,1,3),
+(7,2,1,2),
+(8,2,12,2);-- -- -- -- -- --task 2----------------- 
 			
 SELECT 
     *
@@ -329,7 +329,11 @@ kh.ho_ten;
 SELECT DISTINCT kh.ho_ten 
 FROM khach_hang kh;
   -- way 3: 
-
+SELECT kh.ho_ten 
+FROM khach_hang kh 
+UNION 
+SELECT kh.ho_ten 
+FROM khach_hang kh ;
 -- --------task 9-- --------
 -- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng
 -- trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
@@ -464,22 +468,27 @@ ORDER BY hd.ma_hop_dong;
 -- ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi mới chỉ lập được tối đa 
 -- 3 hợp đồng từ năm 2020 đến 2021.
 
-SELECT COUNT(nv.ma_nhan_vien) AS ma_nhan_vien,
- nv.ho_ten,
- td.ten_trinh_do,
- bp.ten_bo_phan,
- nv.so_dien_thoai,
- nv.dia_chi
- FROM nhan_vien nv
- INNER JOIN trinh_do td ON td.ma_trinh_do=nv.ma_nhan_vien
- INNER JOIN bo_phan bp ON bp.ma_bo_phan=nv.ma_bo_phan
- INNER JOIN hop_dong hd ON hd.ma_nhan_vien=nv.ma_nhan_vien
-WHERE (YEAR(hd.ngay_lam_hop_dong)BETWEEN 2020 AND 2021)
-GROUP BY
- nv.ho_ten,
- td.ten_trinh_do,
- bp.ten_bo_phan,
- nv.so_dien_thoai,
- nv.dia_chi;
+SELECT 
+    hd.ma_nhan_vien,
+    nv.ho_ten,
+    td.ten_trinh_do,
+    bp.ten_bo_phan,
+    nv.so_dien_thoai,
+    nv.dia_chi,
+    COUNT(hd.ma_nhan_vien)
+FROM
+    nhan_vien nv
+        INNER JOIN
+    trinh_do td ON td.ma_trinh_do = nv.ma_trinh_do
+        INNER JOIN
+    bo_phan bp ON bp.ma_bo_phan = nv.ma_bo_phan
+        INNER JOIN
+    hop_dong hd ON hd.ma_nhan_vien = nv.ma_nhan_vien
+WHERE
+    (YEAR(hd.ngay_lam_hop_dong) BETWEEN 2020 AND 2021)
+GROUP BY hd.ma_nhan_vien
+HAVING COUNT(hd.ma_nhan_vien) < 4
+ORDER BY nv.ma_nhan_vien;
+
 
 
