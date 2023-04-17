@@ -61,10 +61,10 @@ FROM
 -- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
 SELECT 
 customer.name_cus, product.name_p
-FROM order_detail
-INNER JOIN product ON product.id_p = order_detail.id_p
-INNER JOIN orders ON orders.id_odr =order_detail.id_o
-INNER JOIN customer ON customer.id_cus = orders.id_cus;
+FROM customer
+INNER JOIN orders ON customer.id_cus = orders.id_cus
+INNER JOIN order_detail ON orders.id_odr =order_detail.id_o
+INNER JOIN product ON product.id_p = order_detail.id_p;
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
 SELECT 
 customer.name_cus

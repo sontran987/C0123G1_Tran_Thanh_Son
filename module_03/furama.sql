@@ -439,7 +439,7 @@ SELECT
     hd.ma_hop_dong,
     ldv.ten_loai_dich_vu,
     dvdk.ten_dich_vu_di_kem,
-    COUNT(hdct.ma_dich_vu_di_kem) = 1 AS so_lan_su_dung
+    COUNT(hdct.ma_dich_vu_di_kem) AS so_lan_su_dung
 FROM
     hop_dong hd
         INNER JOIN
@@ -451,13 +451,20 @@ FROM
         INNER JOIN
     dich_vu_di_kem dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 GROUP BY hd.ma_hop_dong , ldv.ten_loai_dich_vu , dvdk.ten_dich_vu_di_kem
+HAVING dvdk.ten_dich_vu_di_kem IN (
+SELECT dvdk.ten_dich_vu_di_kem
+FROM hop_dong_chi_tiet AS hdct
+INNER JOIN dich_vu_di_kem AS dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+GROUP BY hdct.ma_dich_vu_di_kem
+HAVING COUNT(*) =1
+)
 ORDER BY hd.ma_hop_dong;
 -- ------------task 15 -------------
 -- 15.Hiển thi thông tin của tất cả nhân viên bao gồm ma_nhan_vien, 
 -- ho_ten, ten_trinh_do, ten_bo_phan, so_dien_thoai, dia_chi mới chỉ lập được tối đa 
 -- 3 hợp đồng từ năm 2020 đến 2021.
 
-SELECT MAX(nv.ma_nhan_vien) AS ma_nhan_vien,
+SELECT COUNT(nv.ma_nhan_vien) AS ma_nhan_vien,
  nv.ho_ten,
  td.ten_trinh_do,
  bp.ten_bo_phan,

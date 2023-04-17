@@ -74,8 +74,8 @@ FROM
     student;
 -- Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp 
 -- theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.
-SELECT student.student_name ,subjects.sub_name ,marks  
+SELECT student.student_name ,subjects.sub_name ,marks.mark
 FROM marks 
 INNER JOIN student ON student.student_id=marks.student_id
 INNER JOIN subjects ON subjects.sub_id=marks.sub_id
-ORDER BY marks DESC ,student.student_name;
+ORDER BY marks.mark DESC ,student.student_name;
