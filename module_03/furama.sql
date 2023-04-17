@@ -38,7 +38,7 @@ CREATE TABLE nhan_vien (
     dia_chi VARCHAR(45),
     ma_vi_tri INT,
     FOREIGN KEY (ma_vi_tri)
-        REFERENCES vi_tri (ma_vi_tri),
+        REFERENCES vi_tri (ma_vi_tri) ,
     ma_trinh_do INT,
     FOREIGN KEY (ma_trinh_do)
         REFERENCES trinh_do (ma_trinh_do),
