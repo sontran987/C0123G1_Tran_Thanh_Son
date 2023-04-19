@@ -16,7 +16,7 @@ INSERT INTO products VALUES
 (4,"SS-05","Iphone 18","12300000",120,"cos cac chuc nang","tot"),
 (5,"SS-06","Iphone 18 Promax","12300000",120,"cos cac chuc nang","tot");
  
-CREATE INDEX i_productCode ON products(productCode);
+CREATE UNIQUE INDEX i_productCode ON products(productCode);
 CREATE INDEX i_producName_price ON products(productName,productPrice);
 DROP INDEX i_productCode ON products;
 EXPLAIN SELECT * FROM products WHERE products.productCode ='SS-03' ;
@@ -50,13 +50,7 @@ CALL add_products(8,"IP-11","Iphone 11","1000002",12,null,"ok" );
 DELIMITER //
 CREATE PROCEDURE edit_products(IN p_id INT,IN productCode VARCHAR(45),IN productName VARCHAR(50),IN productPrice VARCHAR(50),IN productAmount INT,IN productDescription VARCHAR(50),IN productStatus VARCHAR(50))
 BEGIN 
-UPDATE  products SET id=id WHERE id=p_id ;
-UPDATE  products SET productCode=productCode WHERE id=p_id ;
-UPDATE  products SET productName=productName WHERE id=p_id;
-UPDATE  products SET productPrice=productPrice WHERE id=p_id;
-UPDATE  products SET productAmount=productAmount WHERE id=p_id;
-UPDATE  products SET productDescription=productDescription WHERE id=p_id;
-UPDATE  products SET productStatus=productStatus WHERE id=p_id;
+UPDATE  products SET id=id , productCode=productCode , productName=productName, productPrice=productPrice, productAmount=productAmount, productDescription=productDescription,  productStatus=productStatus WHERE id=p_id;
 END //
 DELIMITER ;
 CALL edit_products(8,"IP-120","Iphone 9212","9012",902,null,"nat" );
