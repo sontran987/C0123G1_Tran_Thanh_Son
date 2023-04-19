@@ -76,17 +76,33 @@ SELECT * FROM w_khach_hang;
 
  -- -------- task 18 ----------
  -- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
- 
- DELETE FROM khach_hang AS kh
- WHERE hd.ma_khach_hang IN (SELECT hd.ma_khach_hang FROM (SELECT * FROM khach_hang) hop_dong AS hd WHERE (YEAR(hd.ngay_lam_hop_dong))<2021);
+ SET FOREIGN_KEY_CHECKS =0;
+DELETE FROM 
+khach_hang AS kh
+WHERE kh.ma_khach_hang IN (
+SELECT hd.ma_khach_hang FROM hop_dong As hd
+WHERE YEAR(hd.ngay_lam_hop_dong)<2021 );
  
  -- ----------task 19 --------------
  -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
- UPDATE  dich_vu_di_kem AS dvdk
- SET dvdk.gia=(dvdk.gia*10) WHERE dvdk.ma_dich_vu_di_kem IN (SELECT hdct.ma_dich_vu_di_kem FROM dich_vu_di_kem dvdk
- INNER JOIN hop_dong_chi_tiet AS hdct ON hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
- INNER JOIN hop_dong AS hd ON hd.ma_hop_dong=hdct.ma_hop_dong
- WHERE YEAR(hd.ngay_lam_hop_dong)=2020
- );
+UPDATE  dich_vu_di_kem AS dvdk
+SET dvdk.gia=(dvdk.gia*2) 
+WHERE dvdk.ma_dich_vu_di_kem IN(
+SELECT hdct.ma_dich_vu_di_kem 
+FROM hop_dong_chi_tiet AS hdct
+INNER JOIN hop_dong AS hd ON hd.ma_hop_dong=hdct.ma_hop_dong
+WHERE YEAR(hd.ngay_lam_hop_dong)=2020
+GROUP BY 
+hdct.ma_dich_vu_di_kem
+HAVING
+SUM(hdct.so_luong) >10
+);
  
+ -- ------------- task 20 -------------
+ -- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, 
+ -- thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
+ 
+ SELECT nv.ma_nhan_vien, nv.ho_ten, nv.email, nv.so_dien_thoai, nv.ngay_sinh, nv.dia_chi FROM nhan_vien AS nv
+ UNION ALL
+ SELECT kh.ma_khach_hang, kh.ho_ten, kh.email, kh.so_dien_thoai, kh.ngay_sinh, kh.dia_chi FROM khach_hang AS kh
  
