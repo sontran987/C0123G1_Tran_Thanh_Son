@@ -424,9 +424,10 @@ FROM
   -- -------- task 13 -----------
   -- 13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
   -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+  WITH source as(
   SELECT 
-    dvdk.ma_dich_vu_di_kem,
-    dvdk.ten_dich_vu_di_kem,
+    dvdk.ma_dich_vu_di_kem AS ma_dich_vu_di_kem ,
+    dvdk.ten_dich_vu_di_kem AS ten_dich_vu_di_kem ,
     SUM(hdct.so_luong) AS so_luong_dich_di_kem
 FROM
     dich_vu_di_kem dvdk
@@ -435,7 +436,9 @@ FROM
 GROUP BY dvdk.ma_dich_vu_di_kem,
  dvdk.ten_dich_vu_di_kem
  ORDER BY 
- dvdk.ma_dich_vu_di_kem;
+ dvdk.ma_dich_vu_di_kem
+  )
+  SELECT s.ma_dich_vu_di_kem, s.ten_dich_vu_di_kem, MAX(so_luong_dich_di_kem)FROM source AS s GROUP BY s.ma_dich_vu_di_kem;
   -- -------- task 14 ----------
   -- 14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
   -- Thông tin hiển thị bao gồm ma_hop_dong, ten_loai_dich_vu, ten_dich_vu_di_kem, so_lan_su_dung

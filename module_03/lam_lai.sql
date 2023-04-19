@@ -55,22 +55,94 @@ FROM
     -- 6.Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu 
     -- của tất cả các loại dịch vụ chưa từng được khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
     
-    SELECT dv.ma_dich_vu, dv.ten_dich_vu, dv.dien_tich, dv.chi_phi_thue, ldv.ten_loai_dich_vu FROM dich_vu AS dv 
-    INNER JOIN loai_dich_vu AS ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
-    INNER JOIN hop_dong AS hd ON hd.ma_dich_vu = dv.ma_dich_vu 
-    WHERE dv.ma_dich_vu NOT IN (SELECT dv.ma_dich_vu FROM dich_vu AS dv
-    INNER JOIN hop_dong AS hd ON hd.ma_dich_vu =dv.ma_dich_vu
-    WHERE YEAR(hd.ngay_lam_hop_dong)=2021 AND quarter(hd.ngay_lam_hop_dong)=1
-    )
-    GROUP BY 
-    dv.ma_dich_vu
-    ORDER BY 
-    dv.ma_dich_vu ;
+    SELECT 
+    dv.ma_dich_vu,
+    dv.ten_dich_vu,
+    dv.dien_tich,
+    dv.chi_phi_thue,
+    ldv.ten_loai_dich_vu
+FROM
+    dich_vu AS dv
+        INNER JOIN
+    loai_dich_vu AS ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+WHERE
+    dv.ma_dich_vu NOT IN (SELECT 
+            hd.ma_dich_vu
+        FROM
+           hop_dong AS hd 
+        WHERE
+            YEAR(hd.ngay_lam_hop_dong) = 2021
+                AND QUARTER(hd.ngay_lam_hop_dong) = 1)
+GROUP BY dv.ma_dich_vu
+ORDER BY dv.ma_dich_vu;
     
     -- 7.Hiển thị thông tin ma_dich_vu, ten_dich_vu, dien_tich, so_nguoi_toi_da, chi_phi_thue, 
     -- ten_loai_dich_vu của tất cả các loại dịch vụ đã từng được khách hàng đặt phòng trong năm 
     -- 2020 nhưng chưa từng được khách hàng đặt phòng trong năm 2021.
-    SELECT * FROM dich_vu AS dv 
+    SELECT 
+    dv.ma_dich_vu,
+    dv.ten_dich_vu,
+    dv.dien_tich,
+    dv.so_nguoi_toi_da,
+    dv.chi_phi_thue,
+    ldv.ten_loai_dich_vu
+FROM
+    dich_vu AS dv
+        INNER JOIN
+    loai_dich_vu AS ldv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+        INNER JOIN
+    hop_dong AS hd ON hd.ma_dich_vu = dv.ma_dich_vu
+WHERE
+    YEAR(hd.ngay_lam_hop_dong) = 2020
+        AND dv.ma_dich_vu NOT IN (SELECT 
+            hd.ma_dich_vu
+        FROM
+            hop_dong AS hd
+        WHERE
+            YEAR(hd.ngay_lam_hop_dong) = 2021)
+GROUP BY dv.ma_dich_vu;
+
+    -- 8.	Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
+	-- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên.
+SELECT kh.ho_ten FROM khach_hang AS kh 
+GROUP BY 
+kh.ho_ten;
+SELECT DISTINCT kh.ho_ten 
+FROM
+khach_hang AS kh ;
+SELECT kh.ho_ten FROM khach_hang AS kh 
+UNION 
+SELECT kh.ho_ten FROM khach_hang AS kh;
+	-- 9.Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu doanh thu.
     
-    
+WITH source as (
+	SELECT 
+hd.ma_hop_dong,
+    MONTH(hd.ngay_lam_hop_dong) AS thang,
+    IFNULL(IFNULL(SUM(hdct.so_luong * dvdk.gia),0) + dv.chi_phi_thue, 0) AS doanh_thu
+FROM
+    hop_dong AS hd
+	left JOIN
+    dich_vu AS dv ON dv.ma_dich_vu = hd.ma_dich_vu
+	left	JOIN
+    hop_dong_chi_tiet AS hdct ON hdct.ma_hop_dong = hd.ma_hop_dong
+       left  JOIN
+    dich_vu_di_kem AS dvdk ON dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+WHERE
+    YEAR(hd.ngay_lam_hop_dong) = 2021
+GROUP BY hd.ma_hop_dong, thang
+ORDER BY thang
+)
+SELECT s.thang, SUM(s.doanh_thu) FROM source AS s GROUP BY s.thang;
+   
+
+
+SELECT ma_khach_hang,
+    MONTH(ngay_lam_hop_dong), COUNT(ma_khach_hang)
+FROM
+    hop_dong
+
+WHERE
+    YEAR(ngay_lam_hop_dong) = 2021
+GROUP BY MONTH(ngay_lam_hop_dong),ma_khach_hang;
     
