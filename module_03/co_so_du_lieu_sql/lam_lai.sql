@@ -135,14 +135,16 @@ ORDER BY thang
 )
 SELECT s.thang, SUM(s.doanh_thu) FROM source AS s GROUP BY s.thang;
    
+-- 10.	Hiển thị thông tin tương ứng với từng hợp đồng thì đã sử dụng bao nhiêu dịch vụ đi kèm. Kết quả hiển thị bao gồm ma_hop_dong, ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, so_luong_dich_vu_di_kem (được tính dựa trên việc sum so_luong ở dich_vu_di_kem).
+
+SELECT hd.ma_hop_dong, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, hd.tien_dat_coc, SUM(hdct.so_luong) FROM hop_dong AS hd
+INNER JOIN hop_dong_chi_tiet AS hdct On hdct.ma_hop_dong = hd.ma_hop_dong
+GROUP BY 
+hd.ma_hop_dong
 
 
-SELECT ma_khach_hang,
-    MONTH(ngay_lam_hop_dong), COUNT(ma_khach_hang)
-FROM
-    hop_dong
 
-WHERE
-    YEAR(ngay_lam_hop_dong) = 2021
-GROUP BY MONTH(ngay_lam_hop_dong),ma_khach_hang;
+
+
+
     
