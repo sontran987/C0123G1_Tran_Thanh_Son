@@ -13,14 +13,16 @@
     margin-top: 0;
     justify-content: left;
     text-align: left;
+    position: fixed;
 
 }
 .menu{
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: grey;
     justify-content: space-between;
     text-align: center;
     border: none;
+
 
 }
 ul{
@@ -40,6 +42,21 @@ li{
     height: 50px;
 }
 .right{
+
+}
+.center{
+    background-color: coral;
+    margin-top: 70px;
+}
+.img{
+    width: 100%;
+}
+.footer{
+    height: 36px;
+    text-align: center;
+    background-color: black;
+    color: white;
+
 
 }
 

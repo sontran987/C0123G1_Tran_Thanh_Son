@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52911e70-8cf3-4a9d-95c1-6213834283c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/trang_web_hoat_hinh.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/web_hoat_hinh.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thiet_ke_bo_cuc_trang_web/css_tao_layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thiet_ke_bo_cuc_trang_web/kisspng-logo-cartoon-network-arabic-television-5b6fd55266cf51.8967659215340557624211 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thiet_ke_bo_cuc_trang_web/tao_layout_voi_RWD.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS_Cascading_style_sheets/dinh_dang_van_ban_voi_css.html" beforeDir="false" afterPath="$PROJECT_DIR$/CSS_Cascading_style_sheets/dinh_dang_van_ban_voi_css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/trang_web_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/trang_web_hoat_hinh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/web_hoat_hinh.css" beforeDir="false" afterPath="$PROJECT_DIR$/Phat_trien_trang_web_xem_hoat_hinh/web_hoat_hinh.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1681960282548" duration="4000" />
       <workItem from="1681960296871" duration="9120000" />
       <workItem from="1682047520817" duration="21543000" />
-      <workItem from="1682078897740" duration="4382000" />
+      <workItem from="1682078897740" duration="6609000" />
     </task>
     <servers />
   </component>
