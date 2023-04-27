@@ -19,16 +19,16 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String Product_Description =req.getParameter("Product-Description");
-        double List_Price = Double.parseDouble(req.getParameter("List-Price"));
-        double Discount_Percent = Double.parseDouble(req.getParameter("Discount-Percent"));
-        double Discount_Amount =List_Price * Discount_Percent * 0.01;
-        double Discount_Price =List_Price-Discount_Amount;
-        req.setAttribute("Product_Description",Product_Description);
-        req.setAttribute("List_Price",List_Price);
-        req.setAttribute("Discount_Percent",Discount_Percent);
-        req.setAttribute("Discount_Amount",Discount_Amount);
-        req.setAttribute("Discount_Price",Discount_Price);
+        String productDescription =req.getParameter("Product-Description");
+        double listPrice = Double.parseDouble(req.getParameter("List-Price"));
+        double discountPercent = Double.parseDouble(req.getParameter("Discount-Percent"));
+        double discountAmount =listPrice * discountPercent * 0.01;
+        double discountPrice =listPrice-discountAmount;
+        req.setAttribute("Product_Description",productDescription);
+        req.setAttribute("List_Price",listPrice);
+        req.setAttribute("Discount_Percent",discountPercent);
+        req.setAttribute("Discount_Amount",discountAmount);
+        req.setAttribute("Discount_Price",discountPrice);
         RequestDispatcher requestDispatcher= req.getRequestDispatcher("display-discount.jsp");
         requestDispatcher.forward(req,resp);
     }
