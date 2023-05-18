@@ -38,5 +38,7 @@ SELECT * FROM w_max
 GROUP BY
 w_max.id
 HAVING max(so_lan_muon)
-
+ORDER BY
+MAX(so_lan_muon) DESC
+LIMIT 0,1;
 
