@@ -234,27 +234,26 @@ ORDER BY so_lan_dat_phong;
     -- --- -- -- task 5-- -- --
 SELECT 
     kh.ma_khach_hang,
-    kh.ho_ten ,
+    kh.ho_ten,
     lk.ten_loai_khach,
     hd.ma_hop_dong,
     dich_vu.ten_dich_vu,
     hd.ngay_lam_hop_dong,
     hd.ngay_ket_thuc,
-    (dich_vu.chi_phi_thue+ifnull((hdct.so_luong * dvdk.gia),0)) AS tong_tien
+    (dich_vu.chi_phi_thue + IFNULL((hdct.so_luong * dvdk.gia), 0)) AS tong_tien
 FROM
-    khach_hang kh
+    khach_hang AS kh
         INNER JOIN
-    loai_khach lk ON lk.ma_loai_khach = kh.ma_loai_khach
-    LEFT JOIN 
-    hop_dong hd ON hd.ma_khach_hang=kh.ma_khach_hang
-    LEFT JOIN
+    loai_khach AS lk ON lk.ma_loai_khach = kh.ma_loai_khach
+        LEFT JOIN
+    hop_dong hd ON hd.ma_khach_hang = kh.ma_khach_hang
+        LEFT JOIN
     dich_vu ON hd.ma_dich_vu = dich_vu.ma_dich_vu
-    LEFT JOIN 
-    hop_dong_chi_tiet hdct ON hd.ma_hop_dong=hdct.ma_hop_dong
-    LEFT JOIN 
-    dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem=dvdk.ma_dich_vu_di_kem
-    ORDER BY 
-    tong_tien desc;
+        LEFT JOIN
+    hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
+        LEFT JOIN
+    dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+ORDER BY tong_tien DESC;
     
     -- --- -- ------task 6--------
     -- 6.	Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue, ten_loai_dich_vu

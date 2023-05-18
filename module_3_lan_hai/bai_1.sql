@@ -24,4 +24,3 @@ where books.id=5;
 
 DROP TABLE books;
 DROP DATABASE book_management;
-
