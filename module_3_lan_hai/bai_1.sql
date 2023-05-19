@@ -2,7 +2,7 @@ create DATABASE book_management;
 use book_management;
 CREATE TABLE books(
 id int primary key,
-name_books varchar(50) NOT NULL,
+name_book varchar(50) NOT NULL,
 page_size int ,
 author VARCHAR(50) not null
 );
@@ -16,9 +16,9 @@ INSERT INTO books VALUES
 
 set sql_safe_updates =0;
 UPDATE books 
-SET page_size=500
-WHERE books.name_books = "Sử%";
-
+SET page_size=50
+WHERE books.name_book = "Sử%";
+set sql_safe_updates =1;
 DELETE from books 
 where books.id=5;
 

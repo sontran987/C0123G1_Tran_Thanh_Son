@@ -41,7 +41,6 @@ HAVING max(so_lan_muon)
 ORDER BY
 MAX(so_lan_muon);
 
-SELECT max(w_max.so_lan_muon)FROM w_max;
 SELECT * FROM w_max
 WHERE w_max.so_lan_muon IN ( SELECT MAX(w_max.so_lan_muon) FROM w_max);
 

@@ -76,13 +76,14 @@ SELECT * FROM w_khach_hang;
 
  -- -------- task 18 ----------
  -- 18.	Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
- SET FOREIGN_KEY_CHECKS =0;
+SET FOREIGN_KEY_CHECKS =0;
 DELETE FROM 
 khach_hang AS kh
 WHERE kh.ma_khach_hang IN (
 SELECT hd.ma_khach_hang FROM hop_dong As hd
 WHERE YEAR(hd.ngay_lam_hop_dong)<2021 );
- 
+ SET foreign_key_checks =1;
+
  -- ----------task 19 --------------
  -- 19.	Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 UPDATE  dich_vu_di_kem AS dvdk

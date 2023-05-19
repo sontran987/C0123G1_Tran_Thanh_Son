@@ -2,7 +2,7 @@ CREATE DATABASE library;
 USE library;
 
 CREATE TABLE students (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name_student VARCHAR(50) NOT NULL,
     brithday VARCHAR(50) NOT NULL,
     class_name VARCHAR(50) NULL
@@ -20,7 +20,7 @@ CREATE TABLE cate_gory (
 CREATE TABLE books (
     id INT PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
-    page_size INT,
+    page_size INT NOT NULL,
     author_id INT NOT NULL,
     FOREIGN KEY (author_id)
         REFERENCES authors (id),
@@ -29,10 +29,10 @@ CREATE TABLE books (
         REFERENCES cate_gory (id)
 );
 CREATE TABLE borrows(
-id INT PRIMARY KEY,
-id_student INT,FOREIGN KEY(id_student) REFERENCES students(id),
-id_books INT,FOREIGN KEY(id_books) REFERENCES books(id),
-borrow_date VARCHAR(50),
-return_date VARCHAR(50)
+id INT PRIMARY KEY ,
+id_student INT NOT NULL ,FOREIGN KEY(id_student) REFERENCES students(id),
+id_books INT NOT NULL ,FOREIGN KEY(id_books) REFERENCES books(id),
+borrow_date VARCHAR(50) NOT NULL,
+return_date VARCHAR(50) NOT NULL
 
 );

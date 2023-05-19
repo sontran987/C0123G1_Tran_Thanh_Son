@@ -3538,7 +3538,7 @@ textarea.form-control-lg {
   display: none;
   min-width: 10rem;
   padding: 0.5rem 0;
-  margin: 0;
+  margin: 1em;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -7108,7 +7108,7 @@ textarea.form-control-lg {
 }
 
 .align-content-center {
-  align-: center !important;
+  align-content: center !important;
 }
 
 .align-content-between {

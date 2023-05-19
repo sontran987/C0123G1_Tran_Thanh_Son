@@ -33,7 +33,7 @@ INSERT INTO borrows VALUES
 (8,3,3,'12-8-2022','12-14-2022'),
 (9,1,2,'12-6-2022','12-30-2022');
 
-SELECT b.*,cate.name_cate_gory,au.name_authors FROM books AS b
+SELECT b.*,cate.name_cate_gory AS the_loai,au.name_authors AS tac_gia FROM books AS b
 INNER JOIN authors AS au ON au.id = b.author_id
 INNER JOIN cate_gory AS cate ON cate.id=b.cate_gory_id;
 
@@ -44,16 +44,14 @@ GROUP BY
 s.id
 ORDER BY s.name_student ASC;
 
-SELECT 
-    books.*
-FROM
-    books
-        INNER JOIN
-    borrows AS bor ON bor.id_books = books.id
+SELECT books.*
+FROM books
+INNER JOIN borrows AS bor ON bor.id_books = books.id
+
 GROUP BY bor.id_books
 HAVING COUNT(bor.id_books)
 ORDER BY COUNT(bor.id_books) DESC
-LIMIT 0 , 2;
+LIMIT 2;
 
 
 
