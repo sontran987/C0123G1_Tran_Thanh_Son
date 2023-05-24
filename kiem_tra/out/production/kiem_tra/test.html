@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .login{
+            text-align: center;
+            border: 200px;
+            margin-left: 15em;
+        }
+        label{
+            text-align: right;
+        }
+        input{
+            text-align: left;
+            margin: 5px;
+            padding: 5px;
+        }
+        button{
+            margin-left: -55px;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <h1>Login</h1>
+    <br/>
+    <form action="/hello-servlet" method="post">
+        <label for="user" >Username: </label>
+        <input type="text" id="user" placeholder="username">
+        <br>
+        <label for="pass">Password: </label>
+        <input type="text" id="pass" placeholder="password">
+        <br>
+        <button type="submit"> Login</button>
+    </form>
+</div>
+</body>
+</html>
