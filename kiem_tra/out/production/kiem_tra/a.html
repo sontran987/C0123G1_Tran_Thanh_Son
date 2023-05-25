@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            margin-left: 0px;
+            background-color: plum;
+            color: orangered;
+            display: flex;
+            justify-content: space-between;
+            height: 70px;
+            border: none;
+            padding: 15px;
+            left: 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 0px;
+            position: fixed
+        }
+
+        ul {
+            list-style-type: none;
+
+        }
+
+        li {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .left {
+            background-color: #bdc3c7;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .center{
+            background-color: coral;
+            margin-top: 70px;
+        }
+        .right{
+            background-color: blue;
+            margin-top: 70px;
+        }
+
+        .footer {
+            border: 1px solid #CDCDCD;
+            background-color: #7f8c8d;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .row {
+            /*cho phép thẻ div (col) nổi lên trên*/
+            display: flex;
+            /*Các thẻ div (col)  không đủ chỗ chứa trên 1 hàng thì rớt xuống*/
+            flex-wrap: wrap;
+        }
+
+        /*for desktop */
+        @media only screen and (min-width: 760px) {
+            .col-m-1 {
+                width: 8.33%;
+            }
+
+            .col-m-2 {
+                width: 16.66%;
+            }
+
+            .col-m-3 {
+                width: 25%;
+            }
+
+            .col-m-4 {
+                width: 33.33%;
+            }
+
+            .col-m-5 {
+                width: 41.66%;
+            }
+
+            .col-m-6 {
+                width: 50%;
+            }
+
+            .col-m-7 {
+                width: 58.33%;
+            }
+
+            .col-m-8 {
+                width: 66.66%;
+            }
+
+            .col-m-9 {
+                width: 75%;
+            }
+
+            .col-m-10 {
+                width: 83.33%;
+            }
+
+            .col-m-11 {
+                width: 91.66%;
+            }
+
+            .col-m-12 {
+                width: 100%;
+            }
+
+        }
+
+        /*for mobile phone */
+        @media only screen and (max-width: 760px) {
+            .col-l-1 {
+                width: 8.33%;
+            }
+
+            .col-l-2 {
+                width: 16.66%;
+            }
+
+            .col-l-3 {
+                width: 25%;
+            }
+
+            .col-l-4 {
+                width: 33.33%;
+            }
+
+            .col-l-5 {
+                width: 41.66%;
+            }
+
+            .col-l-6 {
+                width: 50%;
+            }
+
+            .col-l-7 {
+                width: 58.33%;
+            }
+
+            .col-l-8 {
+                width: 66.66%;
+            }
+
+            .col-l-9 {
+                width: 75%;
+            }
+
+            .col-l-10 {
+                width: 83.33%;
+            }
+
+            .col-l-11 {
+                width: 91.66%;
+            }
+
+            .col-l-12 {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="col-m-12 col-l-12 header">
+    <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contract</li>
+    </ul>
+    <ul>
+        <li>Login</li>
+    </ul>
+</div>
+<div class="row">
+    <div class="col-m-12 col-l-3 left">
+        <p><a href="#"> Link </a></p>
+        <p><a href="#"> Link </a></p>
+        <p><a href="#"> Link </a></p>
+    </div>
+    <div class="col-m-12 col-l-6 center ">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <h3>Test</h3>
+        <p>Lorem ipsum...
+        </p>
+    </div>
+    <div class="col-m-12 col-l-3 right">
+        <button>ADS</button>
+        <button>ADS</button>
+    </div>
+</div>
+
+<div class="col-m-12 col-12 footer">
+    <p>Trang web này độc quyền bởi Tuấn Kiệt</p>
+</div>
+
+</body>
+</html>
