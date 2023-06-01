@@ -42,6 +42,12 @@ public class BookRepoImpl implements BookRepo {
 
     @Override
     public boolean deleteBook(int id) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId()==id){
+                list.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 

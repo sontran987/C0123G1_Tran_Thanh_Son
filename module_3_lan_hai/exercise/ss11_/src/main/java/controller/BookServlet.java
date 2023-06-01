@@ -27,6 +27,9 @@ public class BookServlet extends HttpServlet {
             case"edit":
                 formEdit(request, response);
                 break;
+            case "delete":
+                delete(request, response);
+                break;
             default:
                 List<Book> list = bookService.DisplayBook();
                 request.setAttribute("list",list);
@@ -65,13 +68,24 @@ public class BookServlet extends HttpServlet {
             case "edit":
                 edit(request, response);
                 break;
-            case "delete":
-                break;
             case "search":
                 search(request, response);
                 break;
 
         }
+    }
+
+    private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+       if (bookService.deleteBook(id)){
+           RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+           requestDispatcher.forward(request, response);
+       }else {
+           RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+           requestDispatcher.forward(request, response);
+       }
+
+
     }
 
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

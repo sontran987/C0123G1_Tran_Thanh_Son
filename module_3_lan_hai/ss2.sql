@@ -16,9 +16,8 @@ CREATE TABLE cate_gory (
     id INT PRIMARY KEY,
     name_cate_gory VARCHAR(50) NOT NULL
 );
-
 CREATE TABLE books (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(50) NOT NULL,
     page_size INT NOT NULL,
     author_id INT NOT NULL,
@@ -36,3 +35,4 @@ borrow_date VARCHAR(50) NOT NULL,
 return_date VARCHAR(50) NOT NULL
 
 );
+UPDATE 
