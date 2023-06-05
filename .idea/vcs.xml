@@ -2,9 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kiem_tra/demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kiem_tra/demo1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module_03/ss10_/bai_1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module_03/ss10_/bai_2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module_03/ss9/bai_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module_3_lan_hai/ss10" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module_3_lan_hai/ss11" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module_3_lan_hai/ss9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module_3_lan_hai/test" vcs="Git" />
   </component>
 </project>
